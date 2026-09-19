@@ -25,14 +25,15 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
       - run: python scripts/update_tournaments.py
-      - name: Commit only when calendar changed
+      - name: Commit calendar and leaderboard data when changed
         run: |
-          if git diff --quiet -- data/tournaments.json; then
-            echo "No tournament changes"
+          git add -N data/tournaments.json data/rankings.json 2>/dev/null || true
+          if git diff --quiet -- data/tournaments.json data/rankings.json; then
+            echo "No tournament or leaderboard changes"
             exit 0
           fi
           git config user.name "fn-compass-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/tournaments.json
-          git commit -m "chore: update Fortnite tournament calendar"
+          git add data/tournaments.json data/rankings.json
+          git commit -m "chore: update Fortnite calendar and leaderboards"
           git push
