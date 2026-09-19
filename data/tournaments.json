@@ -1,8 +1,36 @@
 {
-  "updatedAt": "2026-09-19T10:45:00-05:00",
-  "source": "Fortnite Competitive official calendar",
+  "updatedAt": "2026-09-19T20:25:08.353597+00:00",
+  "source": "Fortnite Competitive official schedule",
+  "regionStatus": {
+    "NAC": "fallback:2 (S39_RankedCupDuos: RuntimeError: Cloudflare challenge | S42_RankedCupSolo: 0 parsed | S36_RankedCupTrios: RuntimeError: Cloudflare challenge | S39_ReloadEliteSeriesFinal: RuntimeError: Cloudflare challenge)",
+    "BR": "fallback:0 (S39_RankedCupDuos: RuntimeError: Cloudflare challenge | S42_RankedCupSolo: 0 parsed | S36_RankedCupTrios: RuntimeError: Cloudflare challenge | S39_ReloadEliteSeriesFinal: RuntimeError: Cloudflare challenge)"
+  },
   "events": [
-    {"id":"nac-cyberpunk-trio-br-20260919","name":"Override Series: Cyberpunk: Edgerunners Cup Battle Royale","region":"NAC","format":"TRIO","mode":"BR","zeroBuild":false,"platform":"MULTI","start":"2026-09-19T18:00:00-05:00","end":"2026-09-19T21:00:00-05:00","sourceUrl":"https://www.fortnite.com/competitive/events/S40_PerformanceEvaluation/schedule?region=NAC","mapUrl":"https://fortnite.gg/"},
-    {"id":"nac-cyberpunk-trio-zb-20260919","name":"Override Series: Cyberpunk: Edgerunners Cup Zero Build","region":"NAC","format":"TRIO","mode":"BR","zeroBuild":true,"platform":"MULTI","start":"2026-09-19T18:00:00-05:00","end":"2026-09-19T21:00:00-05:00","sourceUrl":"https://www.fortnite.com/competitive/events/S40_PerformanceEvaluation/schedule?region=NAC","mapUrl":"https://fortnite.gg/"}
+    {
+      "id": "nac-cyberpunk-trio-br-20260919",
+      "name": "Override Series: Cyberpunk: Edgerunners Cup Battle Royale",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-19T18:00:00-05:00",
+      "end": "2026-09-19T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S40_PerformanceEvaluation/schedule?region=NAC",
+      "mapUrl": "https://fortnite.gg/"
+    },
+    {
+      "id": "nac-cyberpunk-trio-zb-20260919",
+      "name": "Override Series: Cyberpunk: Edgerunners Cup Zero Build",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-19T18:00:00-05:00",
+      "end": "2026-09-19T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S40_PerformanceEvaluation/schedule?region=NAC",
+      "mapUrl": "https://fortnite.gg/"
+    }
   ]
 }
