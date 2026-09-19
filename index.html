@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#070b14" />
+  <title>FN Compass</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">FN</div><div><strong>FN COMPASS</strong><span>COMPETITIVE TRACKER</span></div></div>
+      <button id="refreshBtn" class="icon-btn" aria-label="Actualizar torneos" title="Actualizar">↻</button>
+    </header>
+
+    <main class="content">
+      <section id="activeBanner" class="active-banner"></section>
+
+      <section class="tab active" data-tab="home">
+        <div class="card">
+          <div class="title-row"><div><span class="eyebrow">SEGUIMIENTO MANUAL</span><h1>Tu torneo, tu plan</h1></div><span class="badge">PLAN</span></div>
+          <div class="grid-2 form-grid">
+            <label><span>NICK EPIC</span><input id="nick" placeholder="Tu nick" autocomplete="off" /></label>
+            <label><span>MÁX. PARTIDAS</span><input id="maxGames" type="number" min="1" inputmode="numeric" value="10" /></label>
+          </div>
+          <label class="field"><span>CORTE / OBJETIVO</span><input id="cut" type="number" min="0" inputmode="numeric" placeholder="Ej. 300" /></label>
+          <div class="add-row"><input id="gamePoints" type="number" min="0" inputmode="numeric" placeholder="Puntos de esta partida" /><button id="addGame" class="btn primary">+ Añadir</button></div>
+          <div id="history" class="history"></div>
+          <div class="text-actions"><button id="undoGame">Deshacer última</button><button id="newSession">Nueva sesión</button></div>
+        </div>
+
+        <div class="card score-card"><span class="eyebrow">TUS PUNTOS</span><div id="totalPoints" class="score">0</div><div id="progressText" class="muted-line">0/10 partidas</div><div class="progress"><i id="progressBar"></i></div></div>
+        <div class="metric-grid"><div class="metric"><span>FALTAN</span><strong id="gap">—</strong></div><div class="metric"><span>OBJETIVO / PARTIDA</span><strong id="perGame">—</strong></div></div>
+        <div class="card plan-card"><span class="eyebrow">PLAN · PRÓXIMA PARTIDA</span><h2 id="planTitle">Configura el corte</h2><p id="planText">FN Compass calculará el ritmo que necesitas para seguir en carrera.</p></div>
+      </section>
+
+      <section class="tab" data-tab="map">
+        <div class="embed-head"><div><strong>Mapa del torneo activo</strong><span id="mapSubtitle">Selecciona un torneo</span></div><span id="mapBadge" class="badge">—</span></div>
+        <div class="embed-wrap"><iframe id="mapFrame" title="Mapa Fortnite.GG" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe><div id="mapState" class="embed-state hidden"></div></div>
+      </section>
+
+      <section class="tab" data-tab="ranking">
+        <div class="embed-head"><div><strong>Clasificación del torneo activo</strong><span id="rankSubtitle">Selecciona un torneo</span></div><span class="badge">RANK</span></div>
+        <div class="embed-wrap"><iframe id="rankFrame" title="Clasificación Fortnite Tracker" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe><div id="rankState" class="embed-state"></div></div>
+      </section>
+
+      <section class="tab" data-tab="tournament">
+        <div class="card">
+          <div class="title-row"><div><span class="eyebrow">CALENDARIO AUTOMÁTICO</span><h1>Torneos</h1></div><span id="calendarStatus" class="badge">CARGANDO</span></div>
+          <p class="notice">NAC y Brasil · Solo, Dúo y Trío · horarios en Perú. Se actualiza automáticamente sin que tengas que reemplazar la web.</p>
+          <div class="grid-2 filter-grid">
+            <label><span>REGIÓN</span><select id="filterRegion"><option value="ALL">NAC + BR</option><option value="NAC">NAC</option><option value="BR">Brasil</option></select></label>
+            <label><span>FORMATO</span><select id="filterFormat"><option value="ALL">Solo + Dúo + Trío</option><option value="SOLO">Solo</option><option value="DUO">Dúo</option><option value="TRIO">Trío</option></select></label>
+            <label><span>MODO</span><select id="filterMode"><option value="ALL">Todos</option><option value="BR">Battle Royale</option><option value="RELOAD">Reload</option></select></label>
+            <label><span>PLATAFORMA</span><select id="filterPlatform"><option value="ALL">Todas</option><option value="MULTI">PC / Multi</option><option value="MOBILE">Móvil</option><option value="CONSOLE">Consola</option></select></label>
+          </div>
+          <div id="lastUpdate" class="last-update">Última actualización: —</div>
+        </div>
+        <div id="tournamentList" class="tournament-list"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <button class="nav-btn active" data-go="home"><b>⌂</b><span>Inicio</span></button>
+      <button class="nav-btn" data-go="map"><b>⌖</b><span>Mapa</span></button>
+      <button class="nav-btn" data-go="ranking"><b>≡</b><span>Clasif.</span></button>
+      <button class="nav-btn" data-go="tournament"><b>🏆</b><span>Torneo</span></button>
+    </nav>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>

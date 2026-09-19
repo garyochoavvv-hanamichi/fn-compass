@@ -1,0 +1,4 @@
+[
+  "tests/test_parser.py::test_reload",
+  "tests/test_parser.py::test_trio"
+]
