@@ -180,3 +180,24 @@
   .rank-summary-card strong{font-size:18px}
   .rank-table-wrap{max-height:calc(100dvh - 315px)}
 }
+
+.rank-empty-row td{
+  padding:28px 16px!important;
+  text-align:center;
+  background:linear-gradient(180deg,rgba(25,18,52,.55),rgba(9,17,30,.92));
+}
+.rank-empty-row strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:12px;
+  line-height:1.25;
+  color:#fff;
+}
+.rank-empty-row span{
+  display:block;
+  max-width:330px;
+  margin:0 auto;
+  color:#8f9bb1;
+  font-size:9px;
+  line-height:1.5;
+}
