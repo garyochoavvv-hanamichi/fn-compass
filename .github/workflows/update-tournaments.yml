@@ -10,6 +10,9 @@ on:
       - 'scripts/update_tournaments.py'
       - '.github/workflows/update-tournaments.yml'
       - 'requirements.txt'
+concurrency:
+  group: fn-compass-updater
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
