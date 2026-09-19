@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import asyncio, json, re, hashlib
 from urllib.request import Request, urlopen
+from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -8,6 +9,7 @@ from difflib import SequenceMatcher
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "tournaments.json"
+RANKINGS = ROOT / "data" / "rankings.json"
 LIMA = ZoneInfo("America/Lima")
 
 MONTHS = "January February March April May June July August September October November December".split()
@@ -304,6 +306,224 @@ def attach_tracker(events, tracker, previous):
             e["trackerUrl"] = prev[(en, e["region"])]
     return events
 
+
+def old_rankings():
+    try:
+        return json.loads(RANKINGS.read_text("utf-8"))
+    except Exception:
+        return {"events": {}}
+
+def tracker_window(event):
+    try:
+        q = parse_qs(urlparse(event.get("sourceUrl", "")).query)
+        vals = q.get("round") or q.get("window")
+        return vals[0] if vals else None
+    except Exception:
+        return None
+
+def tracker_page_url(event, page_num):
+    base = event.get("trackerUrl")
+    if not base:
+        return None
+    p = urlparse(base)
+    q = parse_qs(p.query)
+    q["page"] = [str(page_num)]
+    window = tracker_window(event)
+    if window:
+        q["window"] = [window]
+    flat = []
+    for k, vals in q.items():
+        for v in vals:
+            flat.append((k, v))
+    return urlunparse((p.scheme, p.netloc, p.path, p.params, urlencode(flat), p.fragment))
+
+def md_cell(text):
+    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text or "")
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"\{\{.*?\}\}", "", text)
+    return clean(text).strip(" |")
+
+def parse_int(value):
+    m = re.search(r"-?\d[\d,]*", value or "")
+    if not m:
+        return None
+    try:
+        return int(m.group(0).replace(",", ""))
+    except Exception:
+        return None
+
+def parse_tracker_markdown(text):
+    lines = [x.rstrip() for x in (text or "").splitlines()]
+    rows = []
+    header = None
+    header_idx = -1
+
+    # Find a rendered leaderboard markdown table. Tracker sometimes includes
+    # Angular template placeholders earlier on the page, so prefer headers that
+    # contain Points plus Rank and a real player/team column.
+    for i, line in enumerate(lines):
+        if "|" not in line:
+            continue
+        cells = [md_cell(c) for c in line.strip().strip("|").split("|")]
+        low = [c.lower() for c in cells]
+        if "rank" in low and any("point" in c for c in low) and any(
+            ("player" in c or "team" in c) for c in low
+        ):
+            header = cells
+            header_idx = i
+            # Keep searching; the last leaderboard header is usually the actual
+            # event leaderboard rather than an explanatory template.
+    if not header:
+        return [], {}
+
+    low = [c.lower() for c in header]
+    rank_i = next((i for i,c in enumerate(low) if c == "rank"), 0)
+    points_i = next((i for i,c in enumerate(low) if "point" in c), None)
+    matches_i = next((i for i,c in enumerate(low) if "match" in c), None)
+    player_i = next((i for i,c in enumerate(low) if "player" in c or "team" in c), 1)
+
+    # Skip the markdown separator row.
+    for line in lines[header_idx + 1:]:
+        if "|" not in line:
+            if rows:
+                break
+            continue
+        raw = [md_cell(c) for c in line.strip().strip("|").split("|")]
+        if len(raw) < 3:
+            continue
+        if all(re.fullmatch(r":?-{2,}:?", c or "") for c in raw):
+            continue
+        if rank_i >= len(raw) or points_i is None or points_i >= len(raw):
+            continue
+        rank = parse_int(raw[rank_i])
+        points = parse_int(raw[points_i])
+        if rank is None or points is None:
+            # End once real rows have started and a non-row is reached.
+            if rows:
+                break
+            continue
+        team = raw[player_i] if player_i < len(raw) else "Unknown"
+        matches = parse_int(raw[matches_i]) if matches_i is not None and matches_i < len(raw) else None
+        if not team or "unknown" == team.lower():
+            team = "Jugador / equipo"
+        rows.append({
+            "rank": rank,
+            "team": team,
+            "points": points,
+            "matches": matches,
+        })
+
+    meta = {}
+    m = re.search(r"([\d,]+)\s+Participating\s+(?:Players|Teams)", text or "", re.I)
+    if m:
+        meta["participants"] = int(m.group(1).replace(",", ""))
+    m = re.search(r"Last Updated\s+([^\n.]+)", text or "", re.I)
+    if m:
+        meta["trackerUpdated"] = clean(m.group(1))
+    return rows, meta
+
+def ranking_relevant(event, now):
+    try:
+        start = datetime.fromisoformat(event.get("start", "").replace("Z", "+00:00")).astimezone(timezone.utc)
+        end = datetime.fromisoformat(event.get("end", "").replace("Z", "+00:00")).astimezone(timezone.utc)
+    except Exception:
+        return False
+    # Fetch shortly before start, while live, and for a few hours afterward.
+    return start - timedelta(minutes=45) <= now <= end + timedelta(hours=4)
+
+async def fetch_event_ranking(event, old_entry=None):
+    if not event.get("trackerUrl"):
+        return None
+    # Pages are 0-based and typically hold 100 rows. Three pages gives us
+    # enough data for the Top 300 cutoff used most often in FN Compass.
+    merged = {}
+    meta = {}
+    errors = []
+    for page_num in range(3):
+        url = tracker_page_url(event, page_num)
+        if not url:
+            break
+        try:
+            text = await asyncio.to_thread(fetch_text_proxy, url)
+            page_rows, page_meta = parse_tracker_markdown(text)
+            if page_meta:
+                meta.update(page_meta)
+            if not page_rows:
+                errors.append(f"page {page_num}: no rows")
+                # Some events expose only one leaderboard page while empty/live.
+                if page_num == 0:
+                    break
+                continue
+            for row in page_rows:
+                merged[row["rank"]] = row
+        except Exception as ex:
+            errors.append(f"page {page_num}: {type(ex).__name__}: {ex}")
+
+    rows = [merged[k] for k in sorted(merged)]
+    if not rows and old_entry and old_entry.get("rows"):
+        # Never wipe a useful table because Tracker/Jina had a temporary issue.
+        kept = dict(old_entry)
+        kept["status"] = "stale"
+        kept["lastError"] = " | ".join(errors[-3:])
+        return kept
+
+    return {
+        "eventId": event.get("id"),
+        "name": event.get("name"),
+        "region": event.get("region"),
+        "trackerUrl": event.get("trackerUrl"),
+        "window": tracker_window(event),
+        "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "status": "ok" if rows else "empty",
+        "participants": meta.get("participants"),
+        "trackerUpdated": meta.get("trackerUpdated"),
+        "rows": rows,
+        "lastError": " | ".join(errors[-3:]) if errors else None,
+    }
+
+async def update_rankings(events):
+    previous = old_rankings()
+    prev_events = previous.get("events", {})
+    now = datetime.now(timezone.utc)
+    out = dict(prev_events)
+
+    relevant = [e for e in events if e.get("trackerUrl") and ranking_relevant(e, now)]
+    # Limit concurrency so the text proxy and Tracker are not hammered.
+    sem = asyncio.Semaphore(3)
+
+    async def one(e):
+        async with sem:
+            old = prev_events.get(e.get("id"))
+            result = await fetch_event_ranking(e, old)
+            return e.get("id"), result
+
+    results = await asyncio.gather(*(one(e) for e in relevant), return_exceptions=True)
+    for item in results:
+        if isinstance(item, Exception):
+            print("Ranking task error:", item)
+            continue
+        event_id, result = item
+        if event_id and result:
+            out[event_id] = result
+
+    # Keep only entries that still exist in the current calendar.
+    valid_ids = {e.get("id") for e in events}
+    out = {k:v for k,v in out.items() if k in valid_ids}
+
+    payload = {
+        "updatedAt": datetime.now(timezone.utc).isoformat(),
+        "source": "Fortnite Tracker public event leaderboards",
+        "events": out,
+    }
+    RANKINGS.parent.mkdir(parents=True, exist_ok=True)
+    RANKINGS.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", "utf-8")
+
+    row_count = sum(len(v.get("rows", [])) for v in out.values())
+    print(f"Rankings: relevant={len(relevant)}, events_saved={len(out)}, rows={row_count}")
+    for e in relevant:
+        v = out.get(e.get("id"), {})
+        print(f"  {e.get('region')} | {e.get('name')} | {v.get('status')} | rows={len(v.get('rows', []))} | {v.get('lastError') or ''}")
+
 def previous_region_events(previous, region):
     threshold = datetime.now(timezone.utc) - timedelta(hours=12)
     kept = []
@@ -358,6 +578,7 @@ async def main():
     DATA.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", "utf-8")
     print("Region status:", status)
     print(f"Wrote {len(events)} events total; NAC={sum(e.get('region')=='NAC' for e in events)}, BR={sum(e.get('region')=='BR' for e in events)}, Tracker linked={sum(bool(e.get('trackerUrl')) for e in events)}")
+    await update_rankings(events)
     return 0
 
 if __name__ == "__main__":
