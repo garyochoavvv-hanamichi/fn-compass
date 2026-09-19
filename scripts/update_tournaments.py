@@ -436,6 +436,17 @@ def parse_tracker_markdown(text):
     m = re.search(r"Last Updated\s+([^\n.]+)", text or "", re.I)
     if m:
         meta["trackerUpdated"] = clean(m.group(1))
+
+    # Tracker exposes live/current reward thresholds even when it has not yet
+    # published the full leaderboard rows.
+    cuts = []
+    for cm in re.finditer(r"Top\s*#?([\d,]+)\s+([\d,]+)\s*Pts?\.", text or "", re.I):
+        rank = int(cm.group(1).replace(",", ""))
+        points = int(cm.group(2).replace(",", ""))
+        if not any(x["rank"] == rank for x in cuts):
+            cuts.append({"rank": rank, "points": points})
+    if cuts:
+        meta["cutoffs"] = sorted(cuts, key=lambda x: x["rank"])
     return rows, meta
 
 def ranking_relevant(event, now):
@@ -456,6 +467,14 @@ async def parse_tracker_dom(page):
     m = re.search(r"Last Updated\s+([^\n.]+)", body_text or "", re.I)
     if m:
         meta["trackerUpdated"] = clean(m.group(1))
+    cuts = []
+    for cm in re.finditer(r"Top\s*#?([\d,]+)\s+([\d,]+)\s*Pts?\.", body_text or "", re.I):
+        rank = int(cm.group(1).replace(",", ""))
+        points = int(cm.group(2).replace(",", ""))
+        if not any(x["rank"] == rank for x in cuts):
+            cuts.append({"rank": rank, "points": points})
+    if cuts:
+        meta["cutoffs"] = sorted(cuts, key=lambda x: x["rank"])
 
     tables = page.locator("table")
     for ti in range(await tables.count()):
@@ -582,6 +601,7 @@ async def fetch_event_ranking_browser(page, event, old_entry=None):
         "status": "ok" if rows else "empty",
         "participants": meta.get("participants"),
         "trackerUpdated": meta.get("trackerUpdated"),
+        "cutoffs": meta.get("cutoffs", []),
         "rows": rows,
         "lastError": " | ".join(errors[-4:]) if errors else None,
     }
