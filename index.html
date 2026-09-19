@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#070b14" />
   <title>FN Compass</title>
-  <link rel="stylesheet" href="styles.css?v=20260919-3" />
+  <link rel="stylesheet" href="styles.css?v=20260919-4" />
 </head>
 <body>
   <div class="app-shell">
@@ -52,8 +52,44 @@
       </section>
 
       <section class="tab" data-tab="ranking">
-        <div class="embed-head"><div><strong>Clasificación del torneo activo</strong><span id="rankSubtitle">Selecciona un torneo</span></div><span class="badge">RANK</span></div>
-        <div class="embed-wrap"><iframe id="rankFrame" title="Clasificación Fortnite Tracker" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe><div id="rankState" class="embed-state"></div></div>
+        <div class="rank-head">
+          <div>
+            <span class="eyebrow">CLASIFICACIÓN EN FN COMPASS</span>
+            <h1>Leaderboard</h1>
+            <p id="rankSubtitle">Selecciona un torneo</p>
+          </div>
+          <span id="rankBadge" class="badge">AUTO</span>
+        </div>
+
+        <div class="rank-summary-grid">
+          <div class="rank-summary-card">
+            <span>TU SEGUIMIENTO</span>
+            <strong id="rankPlayer">—</strong>
+            <small id="rankPlayerMeta">Configura tu nick en Inicio.</small>
+          </div>
+          <div class="rank-summary-card">
+            <span>CORTE OBJETIVO</span>
+            <strong id="rankCutoff">—</strong>
+            <small id="rankCutoffMeta">Configura el Top objetivo en Inicio.</small>
+          </div>
+        </div>
+
+        <div class="rank-toolbar">
+          <input id="rankSearch" type="search" placeholder="Buscar jugador o equipo" autocomplete="off" />
+          <button id="rankRefresh" class="icon-btn rank-refresh" aria-label="Actualizar clasificación" title="Actualizar">↻</button>
+        </div>
+
+        <div id="rankState" class="rank-native-state">Selecciona un torneo para cargar su clasificación.</div>
+
+        <div id="rankTableWrap" class="rank-table-wrap hidden">
+          <table class="rank-table">
+            <thead>
+              <tr><th>#</th><th>Jugador / equipo</th><th>Pts</th><th>Part.</th></tr>
+            </thead>
+            <tbody id="rankTableBody"></tbody>
+          </table>
+        </div>
+        <div id="rankFoot" class="rank-foot"></div>
       </section>
 
       <section class="tab" data-tab="tournament">
@@ -79,6 +115,6 @@
       <button class="nav-btn" data-go="tournament"><b>🏆</b><span>Torneo</span></button>
     </nav>
   </div>
-  <script src="app.js?v=20260919-3" defer></script>
+  <script src="app.js?v=20260919-4" defer></script>
 </body>
 </html>
