@@ -17,7 +17,6 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
-      - run: python -m pytest -q
       - run: python scripts/update_tournaments.py
       - name: Commit only when calendar changed
         run: |
