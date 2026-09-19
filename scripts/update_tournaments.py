@@ -204,6 +204,20 @@ def fetch_text_proxy(url):
     with urlopen(req, timeout=35) as r:
         return r.read().decode("utf-8", "replace")
 
+def fetch_text_proxy_fresh(url):
+    """Force Jina Reader to bypass cache and wait for Tracker's JS table."""
+    proxy = "https://r.jina.ai/" + url
+    req = Request(proxy, headers={
+        "User-Agent": "Mozilla/5.0",
+        "X-No-Cache": "true",
+        "X-Cache-Tolerance": "0",
+        "X-Engine": "browser",
+        "X-Respond-With": "markdown",
+        "X-Wait-For-Selector": "table",
+    })
+    with urlopen(req, timeout=55) as r:
+        return r.read().decode("utf-8", "replace")
+
 async def fetch_region(region):
     from playwright.async_api import async_playwright
     errors = []
@@ -502,19 +516,33 @@ async def fetch_event_ranking_browser(page, event, old_entry=None):
         if not url:
             break
         page_rows = []
+
+        # Jina Reader can render the JS leaderboard while bypassing its own
+        # one-hour cache. This is the preferred path for live cups.
         try:
-            await page.goto(url, wait_until="domcontentloaded", timeout=70000)
-            await page.wait_for_timeout(3500)
-            title = (await page.title()).lower()
-            if "just a moment" in title:
-                raise RuntimeError("Cloudflare challenge")
-            page_rows, page_meta = await parse_tracker_dom(page)
+            text = await asyncio.to_thread(fetch_text_proxy_fresh, url)
+            page_rows, page_meta = parse_tracker_markdown(text)
             if page_meta:
                 meta.update(page_meta)
         except Exception as ex:
-            errors.append(f"browser page {page_num}: {type(ex).__name__}: {ex}")
+            errors.append(f"fresh proxy page {page_num}: {type(ex).__name__}: {ex}")
 
-        # Fallback to text proxy if the browser rendered no usable table.
+        # Direct browser is the second path. Tracker may challenge CI IPs, so
+        # it is intentionally not the only source.
+        if not page_rows:
+            try:
+                await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+                await page.wait_for_timeout(2800)
+                title = (await page.title()).lower()
+                if "just a moment" in title:
+                    raise RuntimeError("Cloudflare challenge")
+                page_rows, page_meta = await parse_tracker_dom(page)
+                if page_meta:
+                    meta.update(page_meta)
+            except Exception as ex:
+                errors.append(f"browser page {page_num}: {type(ex).__name__}: {ex}")
+
+        # Last-resort cached reader result.
         if not page_rows:
             try:
                 text = await asyncio.to_thread(fetch_text_proxy, url)
