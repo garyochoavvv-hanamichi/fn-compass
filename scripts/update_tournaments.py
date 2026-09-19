@@ -213,9 +213,8 @@ def fetch_text_proxy_fresh(url):
         "X-Cache-Tolerance": "0",
         "X-Engine": "browser",
         "X-Respond-With": "markdown",
-        "X-Wait-For-Selector": "table",
     })
-    with urlopen(req, timeout=55) as r:
+    with urlopen(req, timeout=35) as r:
         return r.read().decode("utf-8", "replace")
 
 async def fetch_region(region):
