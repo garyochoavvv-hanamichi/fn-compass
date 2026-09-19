@@ -36,6 +36,23 @@ def clean(s):
 def keyname(s):
     return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
 
+def markdown_link(line):
+    """Return (visible title, href) for a markdown link produced by the text proxy."""
+    m = re.match(r"^\[(.*)\]\((https?://[^)]+)\)\s*$", clean(line))
+    return (clean(m.group(1)), m.group(2)) if m else (clean(line), None)
+
+def explicit_region(title, href=""):
+    # Proxy titles can contain [NAC]/[NAW]. BR is often only present in the round URL.
+    m = re.match(r"^\[(NAC|BR|NAW|NAE)\]\s*", title or "", re.I)
+    if m:
+        return m.group(1).upper()
+    u = (href or "").upper()
+    m = re.search(r"(?:_|-)(NAC|BR|NAW|NAE)(?:\b|_|&|$)", u)
+    return m.group(1).upper() if m else None
+
+def strip_region(title):
+    return clean(re.sub(r"^\[(?:NAC|BR|NAW|NAE)\]\s*", "", title or "", flags=re.I))
+
 def fmt(text):
     t = (text or "").lower()
     if re.search(r"\btrio(s)?\b", t): return "TRIO"
@@ -50,28 +67,33 @@ def platform(name):
     if "console" in n or "playstation" in n or "xbox" in n: return "CONSOLE"
     return "MULTI"
 
-def make_event(name, region, date_text, source_url):
+def make_event(name, region, date_text, source_url, event_url=None):
     m = DATE_RE.search(date_text)
     if not m:
         return None
     month, day, year, start_s, end_s = m.groups()
-    start = datetime.strptime(
+
+    # The proxy renders Fortnite schedule times in UTC. Convert them to Peru time.
+    start_utc = datetime.strptime(
         f"{month} {day} {year} {start_s.upper()}",
         "%B %d %Y %I:%M %p"
-    ).replace(tzinfo=LIMA)
-    end = datetime.strptime(
+    ).replace(tzinfo=timezone.utc)
+    end_utc = datetime.strptime(
         f"{month} {day} {year} {end_s.upper()}",
         "%B %d %Y %I:%M %p"
-    ).replace(tzinfo=LIMA)
-    if end < start:
-        end += timedelta(days=1)
+    ).replace(tzinfo=timezone.utc)
+    if end_utc < start_utc:
+        end_utc += timedelta(days=1)
+    start = start_utc.astimezone(LIMA)
+    end = end_utc.astimezone(LIMA)
 
-    name = clean(re.sub(r"^\[(?:NAC|BR|NAW|NAE)\]\s*", "", name, flags=re.I))
+    name = strip_region(name)
     if not name:
         return None
 
-    zero = bool(re.search(r"zero\s*build|\bzb\b", name, re.I))
-    mode = "RELOAD" if "reload" in name.lower() else "BR"
+    signal = f"{name} {event_url or ''}"
+    zero = bool(re.search(r"zero\s*build|(?:_|\b)zb(?:_|\b)|soloszb", signal, re.I))
+    mode = "RELOAD" if "reload" in signal.lower() else "BR"
     ident = hashlib.sha1(f"{region}|{name}|{start.isoformat()}".encode()).hexdigest()[:14]
     return {
         "id": ident,
@@ -83,7 +105,7 @@ def make_event(name, region, date_text, source_url):
         "platform": platform(name),
         "start": start.isoformat(),
         "end": end.isoformat(),
-        "sourceUrl": source_url,
+        "sourceUrl": event_url or source_url,
         "mapUrl": "https://fortnite.gg/?map=reload" if mode == "RELOAD" else "https://fortnite.gg/",
     }
 
@@ -97,45 +119,75 @@ def parse_body(body_text, region, source_url):
         if not m:
             continue
 
-        prefix = clean(line[:m.start()])
-        name = prefix
-        if not name:
-            for j in range(i - 1, max(-1, i - 5), -1):
+        # Find the event title immediately before the date. Jina represents it
+        # as [title](Fortnite event URL), sometimes with [NAC]/[NAW] in title.
+        name_line = clean(line[:m.start()])
+        title = ""
+        event_url = None
+        if name_line:
+            title, event_url = markdown_link(name_line)
+        else:
+            for j in range(i - 1, max(-1, i - 6), -1):
                 candidate = lines[j]
+                if DATE_RE.search(candidate):
+                    break
+                cand_title, cand_url = markdown_link(candidate)
+                if cand_url and "/competitive/events/" in cand_url:
+                    title, event_url = cand_title, cand_url
+                    break
                 if candidate in ("NAC", "BR", "NAE", "NAW", "EU", "OCE", "ASIA", "ME"):
                     continue
                 if candidate.lower() in ("upcoming events", "schedule", "region", "date", "year", "month"):
                     continue
-                if DATE_RE.search(candidate):
-                    continue
-                name = candidate
-                break
+                if not title:
+                    title = cand_title
 
-        if not name:
+        if not title:
             continue
 
-        nearby_before = lines[max(0, i - 5):i + 1]
-        region_markers = [x for x in nearby_before if x in ("NAC", "BR", "NAE", "NAW", "EU", "OCE", "ASIA", "ME")]
-        if region_markers and region_markers[-1] != region:
-            title_region = re.match(r"^\[(NAC|BR|NAE|NAW)\]", name, re.I)
-            if not title_region or title_region.group(1).upper() != region:
+        found_region = explicit_region(title, event_url or "")
+        if found_region:
+            # NAC and NAW are separate in Fortnite. Never relabel NAW as NAC.
+            if found_region != region:
                 continue
 
-        e = make_event(name, region, line[m.start():], source_url)
+        # Build only this event's local block. Stop before the next event link/date
+        # so format/mode labels never leak from the following tournament.
+        block = [strip_region(markdown_link(title)[0]), line[m.start():]]
+        for k in range(i + 1, min(len(lines), i + 10)):
+            nxt = lines[k]
+            if DATE_RE.search(nxt):
+                break
+            nt, nu = markdown_link(nxt)
+            if nu and "/competitive/events/" in nu:
+                break
+            block.append(nt)
+        context = " ".join(block)
+
+        e = make_event(title, region, line[m.start():], source_url, event_url)
         if not e:
             continue
 
-        context = " ".join(lines[i:i + 7])
-        e["format"] = fmt(context) or fmt(name)
+        e["format"] = fmt(context) or fmt(e["name"])
+        signal = f"{e['name']} {event_url or ''}".lower()
+
+        # Stable fallbacks for event families whose visible card omits team size.
+        if not e["format"]:
+            if "cyperprankscup_mobile" in signal or "mobilevictorycup" in signal:
+                e["format"] = "SOLO"
+            elif "cyperprankscup" in signal:
+                e["format"] = "TRIO"
+            elif "rankedcupsoloreload" in signal or "consolevcc_solos" in signal:
+                e["format"] = "SOLO"
+
         if not e["format"]:
             continue
 
-        cl = context.lower()
-        if "reload" in cl:
-            e["mode"] = "RELOAD"
-            e["mapUrl"] = "https://fortnite.gg/?map=reload"
-        if "zero build" in cl:
-            e["zeroBuild"] = True
+        # Mode and Zero Build come only from this event's title/URL, never from
+        # neighbouring cards.
+        e["mode"] = "RELOAD" if "reload" in signal else "BR"
+        e["zeroBuild"] = bool(re.search(r"zero\s*build|(?:_|\b)zb(?:_|\b)|soloszb", signal, re.I))
+        e["mapUrl"] = "https://fortnite.gg/?map=reload" if e["mode"] == "RELOAD" else "https://fortnite.gg/"
 
         out.append(e)
 
