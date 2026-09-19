@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import asyncio, json, re, hashlib
+from urllib.request import Request, urlopen
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -143,9 +144,29 @@ def parse_body(body_text, region, source_url):
         ded[(keyname(e["name"]), e["region"], e["start"])] = e
     return list(ded.values())
 
+def fetch_text_proxy(url):
+    proxy = "https://r.jina.ai/" + url
+    req = Request(proxy, headers={"User-Agent": "Mozilla/5.0"})
+    with urlopen(req, timeout=35) as r:
+        return r.read().decode("utf-8", "replace")
+
 async def fetch_region(region):
     from playwright.async_api import async_playwright
     errors = []
+
+    # First try a text proxy. This is much less likely to be blocked by
+    # Fortnite's anti-bot page than a CI browser IP.
+    for event_slug in SEED_PATHS:
+        url = f"https://www.fortnite.com/competitive/events/{event_slug}/schedule?lang=en-US&region={region}"
+        try:
+            text = await asyncio.to_thread(fetch_text_proxy, url)
+            events = parse_body(text, region, url)
+            if events:
+                return events
+            errors.append(f"proxy {event_slug}: 0 parsed")
+        except Exception as ex:
+            errors.append(f"proxy {event_slug}: {type(ex).__name__}: {ex}")
+
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         ctx = await browser.new_context(
