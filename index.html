@@ -19,20 +19,31 @@
 
       <section class="tab active" data-tab="home">
         <div class="card">
-          <div class="title-row"><div><span class="eyebrow">SEGUIMIENTO MANUAL</span><h1>Tu torneo, tu plan</h1></div><span class="badge">PLAN</span></div>
+          <div class="title-row"><div><span class="eyebrow">CONTROL DE CLASIFICACIÓN</span><h1>Tu torneo, tu plan</h1></div><span class="badge">PLAN</span></div>
+          <p class="notice session-note">Registra los puntos de cada partida. El progreso queda guardado por torneo, así no se mezcla con otro evento.</p>
           <div class="grid-2 form-grid">
             <label><span>NICK EPIC</span><input id="nick" placeholder="Tu nick" autocomplete="off" /></label>
-            <label><span>MÁX. PARTIDAS</span><input id="maxGames" type="number" min="1" inputmode="numeric" value="10" /></label>
+            <label><span>MÁX. PARTIDAS</span><input id="maxGames" type="number" min="1" max="30" inputmode="numeric" value="10" /></label>
           </div>
-          <label class="field"><span>CORTE / OBJETIVO</span><input id="cut" type="number" min="0" inputmode="numeric" placeholder="Ej. 300" /></label>
-          <div class="add-row"><input id="gamePoints" type="number" min="0" inputmode="numeric" placeholder="Puntos de esta partida" /><button id="addGame" class="btn primary">+ Añadir</button></div>
+          <div class="grid-2 form-grid compact-grid">
+            <label><span>TOP OBJETIVO</span><input id="topGoal" type="number" min="1" inputmode="numeric" placeholder="Ej. 300" /></label>
+            <label><span>PUNTOS DEL CORTE</span><input id="cutPoints" type="number" min="0" inputmode="numeric" placeholder="Ej. 250" /></label>
+          </div>
+          <p class="form-help">Ejemplo: si quieres clasificar al Top 300 y el puesto 300 tiene 250 pts, coloca 300 y 250.</p>
+          <div class="add-row"><input id="gamePoints" type="number" min="0" step="1" inputmode="numeric" placeholder="Puntos de esta partida" /><button id="addGame" class="btn primary">+ Añadir</button></div>
+          <div id="gameError" class="form-error" role="status" aria-live="polite"></div>
           <div id="history" class="history"></div>
           <div class="text-actions"><button id="undoGame">Deshacer última</button><button id="newSession">Nueva sesión</button></div>
         </div>
 
         <div class="card score-card"><span class="eyebrow">TUS PUNTOS</span><div id="totalPoints" class="score">0</div><div id="progressText" class="muted-line">0/10 partidas</div><div class="progress"><i id="progressBar"></i></div></div>
-        <div class="metric-grid"><div class="metric"><span>FALTAN</span><strong id="gap">—</strong></div><div class="metric"><span>OBJETIVO / PARTIDA</span><strong id="perGame">—</strong></div></div>
-        <div class="card plan-card"><span class="eyebrow">PLAN · PRÓXIMA PARTIDA</span><h2 id="planTitle">Configura el corte</h2><p id="planText">FN Compass calculará el ritmo que necesitas para seguir en carrera.</p></div>
+        <div class="metric-grid">
+          <div class="metric"><span>FALTAN AL CORTE</span><strong id="gap">—</strong></div>
+          <div class="metric"><span>NECESITAS / PARTIDA</span><strong id="perGame">—</strong></div>
+          <div class="metric"><span>PROMEDIO ACTUAL</span><strong id="avgPoints">—</strong></div>
+          <div class="metric"><span>PROYECCIÓN FINAL</span><strong id="projection">—</strong></div>
+        </div>
+        <div class="card plan-card"><span class="eyebrow">PLAN · PRÓXIMA PARTIDA</span><h2 id="planTitle">Configura el corte</h2><p id="planText">Ingresa tu Top objetivo y los puntos actuales del corte para calcular el ritmo que necesitas.</p></div>
       </section>
 
       <section class="tab" data-tab="map">
