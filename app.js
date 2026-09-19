@@ -17,6 +17,22 @@ function fmtFormat(v){return ({SOLO:'SOLO',DUO:'DÚO',TRIO:'TRÍO',SQUAD:'SQUAD'
 function fmtMode(e){if(e.mode==='RELOAD')return e.zeroBuild?'RELOAD ZB':'RELOAD';if(e.zeroBuild)return'ZERO BUILD';return'BATTLE ROYALE'}
 function mapUrl(e){if(!e)return'about:blank';return e.mapUrl||(e.mode==='RELOAD'?'https://fortnite.gg/?map=reload':'https://fortnite.gg/')}
 
+function eventVisual(e){
+  const n=(e?.name||'').toLowerCase();
+  const trophy='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M15 8h18v7c0 8-3.8 13.3-9 15.4V36h8v4H16v-4h8v-5.6C18.8 28.3 15 23 15 15V8Zm-4 4h4v4c0 4.4 1.5 7.7 4.4 10-5.1-.7-8.4-4.5-8.4-10v-4Zm22 0h4v4c0 5.5-3.3 9.3-8.4 10 2.9-2.3 4.4-5.6 4.4-10v-4Z"/></svg>';
+  const controller='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M15 16h18c5.7 0 10 4.8 10 11 0 5.1-2.6 9-6.2 9-2.7 0-4.4-1.7-6.3-4H17.5c-1.9 2.3-3.6 4-6.3 4C7.6 36 5 32.1 5 27c0-6.2 4.3-11 10-11Zm1 7v4h-4v4h4v4h4v-4h4v-4h-4v-4h-4Zm17 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5 5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg>';
+  const phone='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 5h16a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4Zm2 5v25h12V10H18Zm6 27a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg>';
+  const reload='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M36 12V5l9 9-9 9v-7c-3.2-3.5-7-5-11.5-5C16.5 11 10 17.5 10 25.5S16.5 40 24.5 40c6.3 0 11.6-4 13.6-9.7l4.7 1.7C40 39.6 32.9 45 24.5 45 13.7 45 5 36.3 5 25.5S13.7 6 24.5 6C29.1 6 33 7.4 36 12Z"/></svg>';
+  const shield='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 40 10v11c0 10.8-6.7 18.8-16 23-9.3-4.2-16-12.2-16-23V10l16-6Zm0 7-9 3.3V21c0 6.8 3.6 12.1 9 15.3 5.4-3.2 9-8.5 9-15.3v-6.7L24 11Z"/></svg>';
+  if(n.includes('cyberpunk')||n.includes('override series')) return {cls:'art-cyber',tag:'SPECIAL',icon:trophy};
+  if(n.includes('fncs')) return {cls:'art-fncs',tag:'FNCS',icon:shield};
+  if(n.includes('victory cup')) return {cls:'art-victory',tag:'VICTORY',icon:trophy};
+  if(n.includes('reload')) return {cls:'art-reload',tag:'RELOAD',icon:reload};
+  if(e?.platform==='CONSOLE') return {cls:'art-console',tag:'CONSOLE',icon:controller};
+  if(e?.platform==='MOBILE') return {cls:'art-mobile',tag:'MOBILE',icon:phone};
+  return {cls:'art-cup',tag:'CUP',icon:trophy};
+}
+
 function blankSession(){
   return {topGoal:'',cutPoints:'',maxGames:'10',games:[]};
 }
@@ -102,7 +118,8 @@ function renderTournaments(){
  items.sort((a,b)=>(Date.parse(a.start||'2999')-Date.parse(b.start||'2999'))||a.name.localeCompare(b.name)).forEach(e=>{
    const d=document.createElement('div');d.className='tournament-item'+(active?.id===e.id?' selected':'');
    const platform=e.platform==='MOBILE'?'MÓVIL':e.platform==='CONSOLE'?'CONSOLA':'PC / MULTI';
-   d.innerHTML=`<div><span class="eyebrow">${esc(e.region)} · ${esc(fmtFormat(e.format))} · ${esc(platform)}</span><h3>${esc(e.name)}</h3><p><strong>${esc(formatEventTime(e))} · hora Perú</strong><br>${esc(fmtMode(e))}${e.trackerUrl?' · clasificación vinculada':''}</p></div><button class="select-btn">${active?.id===e.id?'SELECCIONADO':'SELECCIONAR'}</button>`;
+   const visual=eventVisual(e);
+   d.innerHTML=`<div class="tournament-art ${visual.cls}"><span class="art-tag">${esc(visual.tag)}</span><div class="art-icon">${visual.icon}</div><small>${esc(e.region)}</small></div><div class="tournament-copy"><div class="tournament-badges"><span>${esc(e.region)}</span><span>${esc(fmtFormat(e.format))}</span><span>${esc(fmtMode(e))}</span></div><h3>${esc(e.name)}</h3><p><strong>${esc(formatEventTime(e))} · hora Perú</strong><br>${esc(platform)}${e.trackerUrl?' · clasificación vinculada':''}</p></div><button class="select-btn">${active?.id===e.id?'SELECCIONADO':'SELECCIONAR'}</button>`;
    d.querySelector('button').onclick=()=>selectTournament(e);host.appendChild(d);
  });
 }
