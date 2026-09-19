@@ -327,7 +327,10 @@ def tracker_page_url(event, page_num):
         return None
     p = urlparse(base)
     q = parse_qs(p.query)
-    q["page"] = [str(page_num)]
+    if page_num > 0:
+        q["page"] = [str(page_num)]
+    else:
+        q.pop("page", None)
     window = tracker_window(event)
     if window:
         q["window"] = [window]
@@ -431,40 +434,115 @@ def ranking_relevant(event, now):
     # Fetch shortly before start, while live, and for a few hours afterward.
     return start - timedelta(minutes=45) <= now <= end + timedelta(hours=4)
 
-async def fetch_event_ranking(event, old_entry=None):
+async def parse_tracker_dom(page):
+    meta = {}
+    body_text = await page.locator("body").inner_text(timeout=15000)
+    m = re.search(r"([\d,]+)\s+Participating\s+(?:Players|Teams)", body_text or "", re.I)
+    if m:
+        meta["participants"] = int(m.group(1).replace(",", ""))
+    m = re.search(r"Last Updated\s+([^\n.]+)", body_text or "", re.I)
+    if m:
+        meta["trackerUpdated"] = clean(m.group(1))
+
+    tables = page.locator("table")
+    for ti in range(await tables.count()):
+        table = tables.nth(ti)
+        headers = [clean(x) for x in await table.locator("thead th").all_inner_texts()]
+        if not headers:
+            # Some responsive tables do not expose a thead; inspect first row.
+            first = table.locator("tr").first
+            headers = [clean(x) for x in await first.locator("th").all_inner_texts()]
+        low = [h.lower() for h in headers]
+        if not headers or "rank" not in low or not any("point" in h for h in low):
+            continue
+        if not any(("player" in h or "team" in h) for h in low):
+            continue
+
+        rank_i = next((i for i,h in enumerate(low) if h == "rank"), 0)
+        points_i = next((i for i,h in enumerate(low) if "point" in h), None)
+        matches_i = next((i for i,h in enumerate(low) if "match" in h), None)
+        player_i = next((i for i,h in enumerate(low) if "player" in h or "team" in h), 1)
+        if points_i is None:
+            continue
+
+        rows = []
+        trs = table.locator("tbody tr")
+        if await trs.count() == 0:
+            trs = table.locator("tr")
+        for ri in range(await trs.count()):
+            cells = [clean(x) for x in await trs.nth(ri).locator("td").all_inner_texts()]
+            if not cells:
+                continue
+            if rank_i >= len(cells) or points_i >= len(cells):
+                continue
+            rank = parse_int(cells[rank_i])
+            points = parse_int(cells[points_i])
+            if rank is None or points is None:
+                continue
+            team = cells[player_i] if player_i < len(cells) else "Jugador / equipo"
+            team = re.sub(r"\bImage:\s*", "", team, flags=re.I)
+            team = clean(team) or "Jugador / equipo"
+            matches = parse_int(cells[matches_i]) if matches_i is not None and matches_i < len(cells) else None
+            rows.append({"rank": rank, "team": team, "points": points, "matches": matches})
+
+        if rows:
+            return rows, meta
+    return [], meta
+
+async def fetch_event_ranking_browser(page, event, old_entry=None):
     if not event.get("trackerUrl"):
         return None
-    # Pages are 0-based and typically hold 100 rows. Three pages gives us
-    # enough data for the Top 300 cutoff used most often in FN Compass.
+
     merged = {}
     meta = {}
     errors = []
+
     for page_num in range(3):
         url = tracker_page_url(event, page_num)
         if not url:
             break
+        page_rows = []
         try:
-            text = await asyncio.to_thread(fetch_text_proxy, url)
-            page_rows, page_meta = parse_tracker_markdown(text)
+            await page.goto(url, wait_until="domcontentloaded", timeout=70000)
+            await page.wait_for_timeout(3500)
+            title = (await page.title()).lower()
+            if "just a moment" in title:
+                raise RuntimeError("Cloudflare challenge")
+            page_rows, page_meta = await parse_tracker_dom(page)
             if page_meta:
                 meta.update(page_meta)
-            if not page_rows:
-                errors.append(f"page {page_num}: no rows")
-                # Some events expose only one leaderboard page while empty/live.
-                if page_num == 0:
-                    break
-                continue
-            for row in page_rows:
-                merged[row["rank"]] = row
         except Exception as ex:
-            errors.append(f"page {page_num}: {type(ex).__name__}: {ex}")
+            errors.append(f"browser page {page_num}: {type(ex).__name__}: {ex}")
+
+        # Fallback to text proxy if the browser rendered no usable table.
+        if not page_rows:
+            try:
+                text = await asyncio.to_thread(fetch_text_proxy, url)
+                page_rows, page_meta = parse_tracker_markdown(text)
+                if page_meta:
+                    meta.update(page_meta)
+            except Exception as ex:
+                errors.append(f"proxy page {page_num}: {type(ex).__name__}: {ex}")
+
+        if not page_rows:
+            errors.append(f"page {page_num}: no rows")
+            if page_num == 0:
+                break
+            continue
+
+        for row in page_rows:
+            merged[row["rank"]] = row
+
+        # Tracker generally serves 100 rows/page. If page 0 contains fewer,
+        # there is no reason to request pages 1 and 2.
+        if page_num == 0 and len(page_rows) < 90:
+            break
 
     rows = [merged[k] for k in sorted(merged)]
     if not rows and old_entry and old_entry.get("rows"):
-        # Never wipe a useful table because Tracker/Jina had a temporary issue.
         kept = dict(old_entry)
         kept["status"] = "stale"
-        kept["lastError"] = " | ".join(errors[-3:])
+        kept["lastError"] = " | ".join(errors[-4:])
         return kept
 
     return {
@@ -478,7 +556,7 @@ async def fetch_event_ranking(event, old_entry=None):
         "participants": meta.get("participants"),
         "trackerUpdated": meta.get("trackerUpdated"),
         "rows": rows,
-        "lastError": " | ".join(errors[-3:]) if errors else None,
+        "lastError": " | ".join(errors[-4:]) if errors else None,
     }
 
 async def update_rankings(events):
@@ -486,27 +564,29 @@ async def update_rankings(events):
     prev_events = previous.get("events", {})
     now = datetime.now(timezone.utc)
     out = dict(prev_events)
-
     relevant = [e for e in events if e.get("trackerUrl") and ranking_relevant(e, now)]
-    # Limit concurrency so the text proxy and Tracker are not hammered.
-    sem = asyncio.Semaphore(3)
 
-    async def one(e):
-        async with sem:
-            old = prev_events.get(e.get("id"))
-            result = await fetch_event_ranking(e, old)
-            return e.get("id"), result
+    from playwright.async_api import async_playwright
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        ctx = await browser.new_context(
+            locale="en-US",
+            timezone_id="America/Lima",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140 Safari/537.36",
+        )
+        page = await ctx.new_page()
 
-    results = await asyncio.gather(*(one(e) for e in relevant), return_exceptions=True)
-    for item in results:
-        if isinstance(item, Exception):
-            print("Ranking task error:", item)
-            continue
-        event_id, result = item
-        if event_id and result:
-            out[event_id] = result
+        for e in relevant:
+            try:
+                old = prev_events.get(e.get("id"))
+                result = await fetch_event_ranking_browser(page, e, old)
+                if result:
+                    out[e.get("id")] = result
+            except Exception as ex:
+                print("Ranking event error:", e.get("name"), ex)
 
-    # Keep only entries that still exist in the current calendar.
+        await browser.close()
+
     valid_ids = {e.get("id") for e in events}
     out = {k:v for k,v in out.items() if k in valid_ids}
 
@@ -523,6 +603,7 @@ async def update_rankings(events):
     for e in relevant:
         v = out.get(e.get("id"), {})
         print(f"  {e.get('region')} | {e.get('name')} | {v.get('status')} | rows={len(v.get('rows', []))} | {v.get('lastError') or ''}")
+
 
 def previous_region_events(previous, region):
     threshold = datetime.now(timezone.utc) - timedelta(hours=12)
