@@ -59,7 +59,8 @@ async function loadCalendar(force=false){
    status.classList.toggle('warn',!data.events.length);
    $('lastUpdate').textContent=`Última actualización: ${formatTimestamp(data.updatedAt)} · ${data.events.length} eventos`;
    if(active){
-     const fresh=data.events.find(x=>x.id===active.id);
+     const fresh=data.events.find(x=>x.id===active.id) ||
+       data.events.find(x=>x.region===active.region && x.name===active.name);
      if(fresh){active=fresh;save(STORAGE.active,active)}
    }
  }catch(err){
