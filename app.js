@@ -121,7 +121,7 @@ function renderTournaments(){
    const d=document.createElement('div');d.className='tournament-item'+(active?.id===e.id?' selected':'');
    const platform=e.platform==='MOBILE'?'MÓVIL':e.platform==='CONSOLE'?'CONSOLA':'PC / MULTI';
    const visual=eventVisual(e);
-   d.innerHTML=`<div class="tournament-art ${visual.cls}"><span class="art-tag">${esc(visual.tag)}</span><div class="art-icon">${visual.icon}</div><small>${esc(e.region)}</small></div><div class="tournament-copy"><div class="tournament-badges"><span>${esc(e.region)}</span><span>${esc(fmtFormat(e.format))}</span><span>${esc(fmtMode(e))}</span></div><h3>${esc(e.name)}</h3><p><strong>${esc(formatEventTime(e))} · hora Perú</strong><br>${esc(platform)}${e.trackerUrl?' · clasificación vinculada':''}</p></div><button class="select-btn">${active?.id===e.id?'SELECCIONADO':'SELECCIONAR'}</button>`;
+   d.innerHTML=`<div class="tournament-art ${visual.cls}"><span class="art-tag">${esc(visual.tag)}</span><div class="art-icon">${visual.icon}</div><small>${esc(e.region)}</small></div><div class="tournament-copy"><div class="tournament-badges"><span>${esc(e.region)}</span><span>${esc(fmtFormat(e.format))}</span><span>${esc(fmtMode(e))}</span></div><h3>${esc(e.name)}</h3><p><strong>${esc(formatEventTime(e))} · hora Perú</strong><br>${esc(platform)}${leaderboards?.events?.[e.id]?.rows?.length?' · tabla disponible':(e.trackerUrl?' · fuente enlazada':'')}</p></div><button class="select-btn">${active?.id===e.id?'SELECCIONADO':'SELECCIONAR'}</button>`;
    d.querySelector('button').onclick=()=>selectTournament(e);host.appendChild(d);
  });
 }
@@ -147,6 +147,7 @@ async function loadRankings(force=false){
    const data=await r.json();
    if(!data||typeof data.events!=='object')throw new Error('Formato inválido');
    leaderboards=data;
+   renderTournaments();
  }catch(err){
    leaderboards={updatedAt:null,source:'',events:{}};
  }
@@ -168,11 +169,21 @@ function targetCutRow(rows,top){
  return eligible.length?eligible[eligible.length-1]:null;
 }
 
+function targetKnownCutoff(entry,top){
+ if(!top||!entry)return null;
+ const n=Math.max(1,Math.floor(Number(top)||0));
+ if(!n)return null;
+ const direct=(entry.cutoffs||[]).find(c=>Number(c.rank)===n);
+ if(direct)return direct;
+ const row=targetCutRow(entry.rows||[],n);
+ return row?{rank:Number(row.rank),points:Number(row.points)}:null;
+}
+
 function syncCutFromRanking(entry){
- if(!entry?.rows?.length||!session)return;
+ if(!entry||!session)return;
  const top=numberOrNull(session.topGoal);
  if(!top)return;
- const cut=targetCutRow(entry.rows,top);
+ const cut=targetKnownCutoff(entry,top);
  if(!cut)return;
  if(session.cutSource!=='manual'||String(session.cutPoints||'').trim()===''){
    session.cutPoints=String(cut.points);
@@ -214,13 +225,25 @@ function renderRanking(){
 
  const allRows=Array.isArray(entry.rows)?entry.rows:[];
  if(!allRows.length){
-   state.textContent=entry.status==='stale'
-     ? 'La última clasificación disponible no tiene filas visibles todavía.'
-     : 'El leaderboard está enlazado, pero aún no hay posiciones publicadas para esta ronda.';
+   const top=numberOrNull(session?.topGoal);
+   const known=targetKnownCutoff(entry,top);
+   const firstCut=(entry.cutoffs||[])[0]||null;
+   const shown=known||firstCut;
+   state.innerHTML=shown
+     ? `Tracker todavía no publica las filas completas de esta sesión.<br><strong>Corte visible: Top ${esc(shown.rank)} · ${esc(shown.points)} pts</strong>`
+     : (entry.status==='stale'
+       ? 'La última clasificación disponible no tiene filas visibles todavía.'
+       : 'El leaderboard está enlazado, pero aún no hay posiciones publicadas para esta ronda.');
    state.classList.remove('hidden');
    playerBox.textContent='—'; playerMeta.textContent=profile.nick||'Configura tu nick en Inicio.';
-   cutBox.textContent='—'; cutMeta.textContent='Sin corte disponible todavía.';
-   badge.textContent='SIN DATOS';
+   if(shown){
+     cutBox.textContent=`${shown.points} pts`;
+     cutMeta.textContent=`Top ${shown.rank} · dato publicado por Tracker`;
+     if(top&&Number(top)===Number(shown.rank))syncCutFromRanking(entry);
+   }else{
+     cutBox.textContent='—'; cutMeta.textContent='Sin corte disponible todavía.';
+   }
+   badge.textContent=shown?'CORTE':'SIN DATOS';
    foot.textContent=entry.updatedAt?`Último intento: ${formatTimestamp(entry.updatedAt)}`:'';
    return;
  }
@@ -238,7 +261,7 @@ function renderRanking(){
  }
 
  const top=numberOrNull(session?.topGoal);
- const cut=targetCutRow(allRows,top);
+ const cut=targetKnownCutoff(entry,top);
  if(cut&&top){
    cutBox.textContent=`${cut.points} pts`;
    cutMeta.textContent=`Top ${Math.floor(top)} · puesto #${cut.rank}`;
