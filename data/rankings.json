@@ -1,5 +1,685 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-09-19T22:42:09.017342+00:00",
   "source": "Fortnite Tracker public event leaderboards",
-  "events": {}
+  "events": {
+    "9543bc1a071849": {
+      "eventId": "9543bc1a071849",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR",
+      "window": "S42_ConsoleVCC_SolosZB_Event4Round1_BR",
+      "updatedAt": "2026-09-19T22:41:37.663481+00:00",
+      "status": "ok",
+      "participants": 10728,
+      "trackerUpdated": "05:41:19 PM",
+      "rows": [
+        {
+          "rank": 1,
+          "team": "heartzkaitt 7VEN CLUB",
+          "points": 287,
+          "matches": 5
+        },
+        {
+          "rank": 2,
+          "team": "M7 deadzkhz",
+          "points": 266,
+          "matches": 6
+        },
+        {
+          "rank": 3,
+          "team": "Brent EGO Esports",
+          "points": 261,
+          "matches": 5
+        },
+        {
+          "rank": 4,
+          "team": "TTK BX BOCHECHA",
+          "points": 243,
+          "matches": 6
+        },
+        {
+          "rank": 5,
+          "team": "Kauazinwyy Blasters Esports",
+          "points": 242,
+          "matches": 5
+        },
+        {
+          "rank": 6,
+          "team": "sirozbozǃ",
+          "points": 239,
+          "matches": 6
+        },
+        {
+          "rank": 7,
+          "team": "Dwavy Buttowski",
+          "points": 236,
+          "matches": 6
+        },
+        {
+          "rank": 8,
+          "team": "venly claren 78",
+          "points": 234,
+          "matches": 7
+        },
+        {
+          "rank": 9,
+          "team": "AL-Boukaoud BB",
+          "points": 231,
+          "matches": 7
+        },
+        {
+          "rank": 10,
+          "team": "goo sznn ㄺ",
+          "points": 231,
+          "matches": 5
+        },
+        {
+          "rank": 11,
+          "team": "MLR-Roazy",
+          "points": 229,
+          "matches": 5
+        },
+        {
+          "rank": 12,
+          "team": "m7 ggtdr n1",
+          "points": 228,
+          "matches": 5
+        },
+        {
+          "rank": 13,
+          "team": "V2X Kxrma",
+          "points": 227,
+          "matches": 4
+        },
+        {
+          "rank": 14,
+          "team": "Bobby Pointon 23",
+          "points": 226,
+          "matches": 5
+        },
+        {
+          "rank": 15,
+          "team": "LN fixzy",
+          "points": 225,
+          "matches": 5
+        },
+        {
+          "rank": 16,
+          "team": "set do angelossj",
+          "points": 225,
+          "matches": 7
+        },
+        {
+          "rank": 17,
+          "team": "props to prospa",
+          "points": 225,
+          "matches": 5
+        },
+        {
+          "rank": 18,
+          "team": "WF Always Tampa",
+          "points": 224,
+          "matches": 6
+        },
+        {
+          "rank": 19,
+          "team": "mallekung2012",
+          "points": 219,
+          "matches": 6
+        },
+        {
+          "rank": 20,
+          "team": "Dunchi1st",
+          "points": 217,
+          "matches": 6
+        },
+        {
+          "rank": 21,
+          "team": "Mvtnfiez Bloodline E-Sports",
+          "points": 215,
+          "matches": 7
+        },
+        {
+          "rank": 22,
+          "team": "Goat_on_120hz",
+          "points": 214,
+          "matches": 6
+        },
+        {
+          "rank": 23,
+          "team": "Bauti Bloodline E-Sports",
+          "points": 213,
+          "matches": 6
+        },
+        {
+          "rank": 24,
+          "team": "M7 YUKAMIᵍᵒᵃᵗ",
+          "points": 213,
+          "matches": 6
+        },
+        {
+          "rank": 25,
+          "team": "BenjxGCS",
+          "points": 213,
+          "matches": 6
+        },
+        {
+          "rank": 26,
+          "team": "MLR gamer10king",
+          "points": 213,
+          "matches": 4
+        },
+        {
+          "rank": 27,
+          "team": "Batman Zapotoz ж",
+          "points": 213,
+          "matches": 6
+        },
+        {
+          "rank": 28,
+          "team": "Kyy sfv555",
+          "points": 213,
+          "matches": 6
+        },
+        {
+          "rank": 29,
+          "team": "SYNQ solouxy",
+          "points": 212,
+          "matches": 7
+        },
+        {
+          "rank": 30,
+          "team": "V2X CJǃ ᵉᵐᵐᵃ",
+          "points": 211,
+          "matches": 6
+        },
+        {
+          "rank": 31,
+          "team": "Tickle",
+          "points": 210,
+          "matches": 5
+        },
+        {
+          "rank": 32,
+          "team": "Bambaqwwo",
+          "points": 210,
+          "matches": 6
+        },
+        {
+          "rank": 33,
+          "team": "Clue Sxrimz",
+          "points": 209,
+          "matches": 7
+        },
+        {
+          "rank": 34,
+          "team": "zLeNelssFv",
+          "points": 209,
+          "matches": 5
+        },
+        {
+          "rank": 35,
+          "team": "m7 noyru 平和",
+          "points": 209,
+          "matches": 5
+        },
+        {
+          "rank": 36,
+          "team": "Floffydaaaaam",
+          "points": 209,
+          "matches": 6
+        },
+        {
+          "rank": 37,
+          "team": "juan perfums",
+          "points": 208,
+          "matches": 5
+        },
+        {
+          "rank": 38,
+          "team": "chazifyfnr",
+          "points": 207,
+          "matches": 6
+        },
+        {
+          "rank": 39,
+          "team": "kalpolyvegasagba",
+          "points": 206,
+          "matches": 4
+        },
+        {
+          "rank": 40,
+          "team": "RXB v3",
+          "points": 206,
+          "matches": 8
+        },
+        {
+          "rank": 41,
+          "team": "Thenicxfv",
+          "points": 205,
+          "matches": 6
+        },
+        {
+          "rank": 42,
+          "team": "R10 Vylix owner",
+          "points": 205,
+          "matches": 5
+        },
+        {
+          "rank": 43,
+          "team": "DeblasisTT",
+          "points": 205,
+          "matches": 6
+        },
+        {
+          "rank": 44,
+          "team": "DX LEEbot",
+          "points": 204,
+          "matches": 6
+        },
+        {
+          "rank": 45,
+          "team": "Dinho-Murillo",
+          "points": 204,
+          "matches": 5
+        },
+        {
+          "rank": 46,
+          "team": "OBAMA_On_You",
+          "points": 204,
+          "matches": 5
+        },
+        {
+          "rank": 47,
+          "team": "ferran444",
+          "points": 204,
+          "matches": 7
+        },
+        {
+          "rank": 48,
+          "team": "australian kit",
+          "points": 203,
+          "matches": 6
+        },
+        {
+          "rank": 49,
+          "team": "Ta12frio",
+          "points": 203,
+          "matches": 7
+        },
+        {
+          "rank": 50,
+          "team": "kobyǃ",
+          "points": 203,
+          "matches": 5
+        },
+        {
+          "rank": 51,
+          "team": "JEFE JKǃ",
+          "points": 203,
+          "matches": 6
+        },
+        {
+          "rank": 52,
+          "team": "twitch voxzlz",
+          "points": 203,
+          "matches": 6
+        },
+        {
+          "rank": 53,
+          "team": "ᶻᵉʳᵗʸᵃ アスタ",
+          "points": 203,
+          "matches": 7
+        },
+        {
+          "rank": 54,
+          "team": "Xsotyy 10ǃ",
+          "points": 203,
+          "matches": 5
+        },
+        {
+          "rank": 55,
+          "team": "KHALIFA YN",
+          "points": 202,
+          "matches": 5
+        },
+        {
+          "rank": 56,
+          "team": "TTV_FishstickZB",
+          "points": 202,
+          "matches": 6
+        },
+        {
+          "rank": 57,
+          "team": "DX hauskamasa",
+          "points": 202,
+          "matches": 7
+        },
+        {
+          "rank": 58,
+          "team": "andrey_topchik_1",
+          "points": 201,
+          "matches": 4
+        },
+        {
+          "rank": 59,
+          "team": "Ψ LEHINHO SSJ ツ",
+          "points": 201,
+          "matches": 8
+        },
+        {
+          "rank": 60,
+          "team": "kova in m4",
+          "points": 200,
+          "matches": 3
+        },
+        {
+          "rank": 61,
+          "team": "wkey mxnuel十",
+          "points": 200,
+          "matches": 6
+        },
+        {
+          "rank": 62,
+          "team": "MLR iFabuu",
+          "points": 200,
+          "matches": 6
+        },
+        {
+          "rank": 63,
+          "team": "bico sujo 157",
+          "points": 199,
+          "matches": 6
+        },
+        {
+          "rank": 64,
+          "team": "Winter gbflowǃ",
+          "points": 199,
+          "matches": 4
+        },
+        {
+          "rank": 65,
+          "team": "kungtjs",
+          "points": 199,
+          "matches": 5
+        },
+        {
+          "rank": 66,
+          "team": "ᴰᴿᴷ BRDoguitoᵗᵗᵏ",
+          "points": 199,
+          "matches": 6
+        },
+        {
+          "rank": 67,
+          "team": "zzz splǃ",
+          "points": 199,
+          "matches": 5
+        },
+        {
+          "rank": 68,
+          "team": "SwyGOTY",
+          "points": 199,
+          "matches": 5
+        },
+        {
+          "rank": 69,
+          "team": "Twitch JustVinny",
+          "points": 198,
+          "matches": 6
+        },
+        {
+          "rank": 70,
+          "team": "Kachu leo EGO Esports",
+          "points": 198,
+          "matches": 7
+        },
+        {
+          "rank": 71,
+          "team": "GG.demix",
+          "points": 198,
+          "matches": 7
+        },
+        {
+          "rank": 72,
+          "team": "ꓭןǝss Mateoǃ",
+          "points": 198,
+          "matches": 5
+        },
+        {
+          "rank": 73,
+          "team": "rrCritical",
+          "points": 197,
+          "matches": 5
+        },
+        {
+          "rank": 74,
+          "team": "gxorelhaxx",
+          "points": 197,
+          "matches": 5
+        },
+        {
+          "rank": 75,
+          "team": "taKupuria",
+          "points": 197,
+          "matches": 6
+        },
+        {
+          "rank": 76,
+          "team": "ukule21",
+          "points": 197,
+          "matches": 6
+        },
+        {
+          "rank": 77,
+          "team": "rycho3009",
+          "points": 197,
+          "matches": 6
+        },
+        {
+          "rank": 78,
+          "team": "CERTI Lenhuuu",
+          "points": 197,
+          "matches": 7
+        },
+        {
+          "rank": 79,
+          "team": "BLD BastyWRLD",
+          "points": 197,
+          "matches": 7
+        },
+        {
+          "rank": 80,
+          "team": "Dutraftn",
+          "points": 196,
+          "matches": 7
+        },
+        {
+          "rank": 81,
+          "team": "twitter kizhoouk",
+          "points": 196,
+          "matches": 7
+        },
+        {
+          "rank": 82,
+          "team": "SHO 14yr GOATǃ",
+          "points": 196,
+          "matches": 6
+        },
+        {
+          "rank": 83,
+          "team": "Mask_ChrisColde",
+          "points": 195,
+          "matches": 6
+        },
+        {
+          "rank": 84,
+          "team": "vulgo olecram",
+          "points": 195,
+          "matches": 7
+        },
+        {
+          "rank": 85,
+          "team": "ᴿᴰᴹᴬ ᴮᴱᴺᴿ1.AI",
+          "points": 195,
+          "matches": 5
+        },
+        {
+          "rank": 86,
+          "team": "TIMSAN2008",
+          "points": 195,
+          "matches": 5
+        },
+        {
+          "rank": 87,
+          "team": "Alex_QCC",
+          "points": 195,
+          "matches": 5
+        },
+        {
+          "rank": 88,
+          "team": "Lou 224",
+          "points": 195,
+          "matches": 7
+        },
+        {
+          "rank": 89,
+          "team": "tt.78263",
+          "points": 195,
+          "matches": 6
+        },
+        {
+          "rank": 90,
+          "team": "yX lopezz Lopezz",
+          "points": 195,
+          "matches": 4
+        },
+        {
+          "rank": 91,
+          "team": "danil bort",
+          "points": 195,
+          "matches": 5
+        },
+        {
+          "rank": 92,
+          "team": "Twitch Tokyofnz",
+          "points": 195,
+          "matches": 8
+        },
+        {
+          "rank": 93,
+          "team": "PRC mastter",
+          "points": 195,
+          "matches": 5
+        },
+        {
+          "rank": 94,
+          "team": "Dion_10_",
+          "points": 194,
+          "matches": 6
+        },
+        {
+          "rank": 95,
+          "team": "BLD n1",
+          "points": 194,
+          "matches": 4
+        },
+        {
+          "rank": 96,
+          "team": "Jaymingaymin",
+          "points": 194,
+          "matches": 7
+        },
+        {
+          "rank": 97,
+          "team": "pqd bryanperfums",
+          "points": 194,
+          "matches": 5
+        },
+        {
+          "rank": 98,
+          "team": "Gxra Bloodline E-Sports",
+          "points": 194,
+          "matches": 8
+        },
+        {
+          "rank": 99,
+          "team": "Vogels_PS_",
+          "points": 194,
+          "matches": 6
+        },
+        {
+          "rank": 100,
+          "team": "SozeKeyser667",
+          "points": 194,
+          "matches": 7
+        }
+      ],
+      "lastError": "browser page 1: RuntimeError: Cloudflare challenge | page 1: no rows | browser page 2: RuntimeError: Cloudflare challenge | page 2: no rows"
+    },
+    "b2abbfeee7eaeb": {
+      "eventId": "b2abbfeee7eaeb",
+      "name": "Override Series: Cyberpunk: Edgerunners Cup Battle Royale",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_BR",
+      "window": "S42_CyperpranksCup_BR",
+      "updatedAt": "2026-09-19T22:41:43.707362+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "rows": [],
+      "lastError": "browser page 0: RuntimeError: Cloudflare challenge | page 0: no rows"
+    },
+    "0651c7470d7be2": {
+      "eventId": "0651c7470d7be2",
+      "name": "Override Series: Cyberpunk: Edgerunners Cup Zero Build",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_ZB_BR",
+      "window": "S42_CyperpranksCup_ZB_BR",
+      "updatedAt": "2026-09-19T22:41:49.614784+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "rows": [],
+      "lastError": "browser page 0: RuntimeError: Cloudflare challenge | page 0: no rows"
+    },
+    "d49639494853c0": {
+      "eventId": "d49639494853c0",
+      "name": "Solo Reload Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_BR",
+      "window": "S42_RankedCupSoloReload_Event4_BR",
+      "updatedAt": "2026-09-19T22:41:55.671694+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "rows": [],
+      "lastError": "browser page 0: RuntimeError: Cloudflare challenge | page 0: no rows"
+    },
+    "bad843201a0010": {
+      "eventId": "bad843201a0010",
+      "name": "Solo Reload Ranked Cup (Zero Build)",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR",
+      "window": "S42_RankedCupSoloReload_ZB_Event4_BR",
+      "updatedAt": "2026-09-19T22:42:02.450908+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "rows": [],
+      "lastError": "browser page 0: RuntimeError: Cloudflare challenge | page 0: no rows"
+    },
+    "41d414620e4057": {
+      "eventId": "41d414620e4057",
+      "name": "Mobile Reload (Mini Venture) Victory Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR",
+      "window": "S42_MobileVictoryCup_Event1_Round2_BR",
+      "updatedAt": "2026-09-19T22:42:08.970914+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "rows": [],
+      "lastError": "browser page 0: RuntimeError: Cloudflare challenge | page 0: no rows"
+    }
+  }
 }
