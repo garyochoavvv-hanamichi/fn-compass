@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T22:42:09.017342+00:00",
+  "updatedAt": "2026-09-19T22:46:23.357336+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "9543bc1a071849": {
@@ -8,10 +8,10 @@
       "region": "BR",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR",
       "window": "S42_ConsoleVCC_SolosZB_Event4Round1_BR",
-      "updatedAt": "2026-09-19T22:41:37.663481+00:00",
+      "updatedAt": "2026-09-19T22:44:37.026956+00:00",
       "status": "ok",
       "participants": 10728,
-      "trackerUpdated": "05:41:19 PM",
+      "trackerUpdated": "05:43:50 PM",
       "rows": [
         {
           "rank": 1,
@@ -71,7 +71,7 @@
           "rank": 10,
           "team": "goo sznn ㄺ",
           "points": 231,
-          "matches": 5
+          "matches": 6
         },
         {
           "rank": 11,
@@ -83,13 +83,13 @@
           "rank": 12,
           "team": "m7 ggtdr n1",
           "points": 228,
-          "matches": 5
+          "matches": 6
         },
         {
           "rank": 13,
           "team": "V2X Kxrma",
           "points": 227,
-          "matches": 4
+          "matches": 5
         },
         {
           "rank": 14,
@@ -125,7 +125,7 @@
           "rank": 19,
           "team": "mallekung2012",
           "points": 219,
-          "matches": 6
+          "matches": 7
         },
         {
           "rank": 20,
@@ -233,7 +233,7 @@
           "rank": 37,
           "team": "juan perfums",
           "points": 208,
-          "matches": 5
+          "matches": 6
         },
         {
           "rank": 38,
@@ -245,7 +245,7 @@
           "rank": 39,
           "team": "kalpolyvegasagba",
           "points": 206,
-          "matches": 4
+          "matches": 5
         },
         {
           "rank": 40,
@@ -269,13 +269,13 @@
           "rank": 43,
           "team": "DeblasisTT",
           "points": 205,
-          "matches": 6
+          "matches": 7
         },
         {
           "rank": 44,
           "team": "DX LEEbot",
           "points": 204,
-          "matches": 6
+          "matches": 7
         },
         {
           "rank": 45,
@@ -323,7 +323,7 @@
           "rank": 52,
           "team": "twitch voxzlz",
           "points": 203,
-          "matches": 6
+          "matches": 7
         },
         {
           "rank": 53,
@@ -335,7 +335,7 @@
           "rank": 54,
           "team": "Xsotyy 10ǃ",
           "points": 203,
-          "matches": 5
+          "matches": 6
         },
         {
           "rank": 55,
@@ -359,7 +359,7 @@
           "rank": 58,
           "team": "andrey_topchik_1",
           "points": 201,
-          "matches": 4
+          "matches": 5
         },
         {
           "rank": 59,
@@ -371,7 +371,7 @@
           "rank": 60,
           "team": "kova in m4",
           "points": 200,
-          "matches": 3
+          "matches": 4
         },
         {
           "rank": 61,
@@ -407,7 +407,7 @@
           "rank": 66,
           "team": "ᴰᴿᴷ BRDoguitoᵗᵗᵏ",
           "points": 199,
-          "matches": 6
+          "matches": 7
         },
         {
           "rank": 67,
@@ -497,7 +497,7 @@
           "rank": 81,
           "team": "twitter kizhoouk",
           "points": 196,
-          "matches": 7
+          "matches": 8
         },
         {
           "rank": 82,
@@ -521,19 +521,19 @@
           "rank": 85,
           "team": "ᴿᴰᴹᴬ ᴮᴱᴺᴿ1.AI",
           "points": 195,
-          "matches": 5
+          "matches": 6
         },
         {
           "rank": 86,
           "team": "TIMSAN2008",
           "points": 195,
-          "matches": 5
+          "matches": 6
         },
         {
           "rank": 87,
           "team": "Alex_QCC",
           "points": 195,
-          "matches": 5
+          "matches": 6
         },
         {
           "rank": 88,
@@ -545,7 +545,7 @@
           "rank": 89,
           "team": "tt.78263",
           "points": 195,
-          "matches": 6
+          "matches": 7
         },
         {
           "rank": 90,
@@ -581,13 +581,13 @@
           "rank": 95,
           "team": "BLD n1",
           "points": 194,
-          "matches": 4
+          "matches": 5
         },
         {
           "rank": 96,
           "team": "Jaymingaymin",
           "points": 194,
-          "matches": 7
+          "matches": 8
         },
         {
           "rank": 97,
@@ -622,7 +622,7 @@
       "region": "BR",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_BR",
       "window": "S42_CyperpranksCup_BR",
-      "updatedAt": "2026-09-19T22:41:43.707362+00:00",
+      "updatedAt": "2026-09-19T22:44:57.305306+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -635,7 +635,7 @@
       "region": "BR",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_ZB_BR",
       "window": "S42_CyperpranksCup_ZB_BR",
-      "updatedAt": "2026-09-19T22:41:49.614784+00:00",
+      "updatedAt": "2026-09-19T22:45:21.336396+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -648,7 +648,7 @@
       "region": "BR",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_BR",
       "window": "S42_RankedCupSoloReload_Event4_BR",
-      "updatedAt": "2026-09-19T22:41:55.671694+00:00",
+      "updatedAt": "2026-09-19T22:45:42.445513+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -661,7 +661,7 @@
       "region": "BR",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR",
       "window": "S42_RankedCupSoloReload_ZB_Event4_BR",
-      "updatedAt": "2026-09-19T22:42:02.450908+00:00",
+      "updatedAt": "2026-09-19T22:46:02.772091+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -674,7 +674,7 @@
       "region": "BR",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR",
       "window": "S42_MobileVictoryCup_Event1_Round2_BR",
-      "updatedAt": "2026-09-19T22:42:08.970914+00:00",
+      "updatedAt": "2026-09-19T22:46:23.304006+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
