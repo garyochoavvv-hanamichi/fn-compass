@@ -1,50 +1,11 @@
 {
-  "updatedAt": "2026-09-19T21:17:12.041911+00:00",
+  "updatedAt": "2026-09-19T21:42:06.385037+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:10",
     "BR": "fresh:10"
   },
   "events": [
-    {
-      "id": "2c9d2477ca5e0c",
-      "name": "[[NAC] FNCS Division 1 Practice](https://www.fortnite.com/competitive/events/S42_FNCSDivisionalCup_Division1?round=S42_FNCSDivisionalCup_Division1_Week4Final_NAC)",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-09-19T19:00:00-05:00",
-      "end": "2026-09-19T21:40:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=NAC",
-      "mapUrl": "https://fortnite.gg/"
-    },
-    {
-      "id": "08448358315fe9",
-      "name": "[Override Series: Cyberpunk: Edgerunners Mobile Cup](https://www.fortnite.com/competitive/events/S42_CyperpranksCup_Mobile?round=S42_CyperpranksCup_Mobile_BR)",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-19T20:00:00-05:00",
-      "end": "2026-09-19T21:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=BR",
-      "mapUrl": "https://fortnite.gg/?map=reload"
-    },
-    {
-      "id": "77a414fea72e7a",
-      "name": "[Mobile Reload (Mini Venture) Victory Cup](https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event1_Round1_BR)",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MOBILE",
-      "start": "2026-09-19T20:00:00-05:00",
-      "end": "2026-09-19T21:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=BR",
-      "mapUrl": "https://fortnite.gg/?map=reload"
-    },
     {
       "id": "53c0062814d4f1",
       "name": "[[NAW] FNCS Division 1 Practice](https://www.fortnite.com/competitive/events/S42_FNCSDivisionalCup_Division1?round=S42_FNCSDivisionalCup_Division1_Week4Final_NAW)",
@@ -232,13 +193,26 @@
       "name": "[[NAW] Override Series: Cyberpunk: Edgerunners Mobile Cup](https://www.fortnite.com/competitive/events/S42_CyperpranksCup_Mobile?round=S42_CyperpranksCup_Mobile_NAW)",
       "region": "NAC",
       "format": "SOLO",
-      "mode": "BR",
+      "mode": "RELOAD",
       "zeroBuild": false,
       "platform": "MOBILE",
       "start": "2026-09-20T00:00:00-05:00",
       "end": "2026-09-20T01:15:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=NAC",
-      "mapUrl": "https://fortnite.gg/"
+      "mapUrl": "https://fortnite.gg/?map=reload"
+    },
+    {
+      "id": "9ee4597c88d0a8",
+      "name": "[[NAW] Mobile Reload (Mini Venture) Victory Cup](https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event1_Round1_NAW)",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-09-20T00:00:00-05:00",
+      "end": "2026-09-20T01:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload"
     },
     {
       "id": "b2fefa84e6158f",
@@ -259,10 +233,36 @@
       "region": "BR",
       "format": "SOLO",
       "mode": "BR",
-      "zeroBuild": false,
+      "zeroBuild": true,
       "platform": "MOBILE",
       "start": "2026-09-20T16:00:00-05:00",
       "end": "2026-09-20T17:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=BR",
+      "mapUrl": "https://fortnite.gg/"
+    },
+    {
+      "id": "f09d7a3af6fb9e",
+      "name": "[Champion Focus FNCS Cup Battle Royale](https://www.fortnite.com/competitive/events/S42_ChampionFocusFNCSCup?round=S42_ChampionFocusFNCSCup_BR)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-20T17:00:00-05:00",
+      "end": "2026-09-20T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=BR",
+      "mapUrl": "https://fortnite.gg/"
+    },
+    {
+      "id": "19e3da564f1bef",
+      "name": "[Champion Focus FNCS Cup Zero Build](https://www.fortnite.com/competitive/events/S42_ChampionFocusFNCSCup?round=S42_ChampionFocusFNCSCup_ZB_BR)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-20T17:00:00-05:00",
+      "end": "2026-09-20T20:00:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S39_RankedCupDuos/schedule?lang=en-US&region=BR",
       "mapUrl": "https://fortnite.gg/"
     }
