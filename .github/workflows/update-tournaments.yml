@@ -3,12 +3,19 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '7,37 * * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/update_tournaments.py'
+      - '.github/workflows/update-tournaments.yml'
+      - 'requirements.txt'
 permissions:
   contents: write
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
