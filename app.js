@@ -1,6 +1,7 @@
 const STORAGE={active:'fnc-active-v3',profile:'fnc-profile-v4',sessions:'fnc-sessions-v4',legacySession:'fnc-session-v3'};
 const FALLBACK={updatedAt:'2026-09-19T00:00:00-05:00',source:'fallback',events:[]};
 let calendar=FALLBACK;
+let leaderboards={updatedAt:null,source:'',events:{}};
 let active=load(STORAGE.active,null);
 
 const legacy=load(STORAGE.legacySession,null);
@@ -83,7 +84,7 @@ async function loadCalendar(force=false){
    status.textContent='ÚLTIMO CALENDARIO';
    $('lastUpdate').textContent='No se pudo refrescar ahora. Se conserva el último calendario publicado.';
  }
- renderBanner(); renderTournaments(); syncEmbeds();
+ renderBanner(); renderTournaments(); syncEmbeds(); renderRanking();
 }
 
 function formatTimestamp(v){if(!v)return'—';try{return new Intl.DateTimeFormat('es-PE',{timeZone:'America/Lima',dateStyle:'short',timeStyle:'short'}).format(new Date(v))}catch{return v}}
@@ -104,6 +105,7 @@ function selectTournament(e){
  renderBanner();
  renderTournaments();
  syncEmbeds();
+ renderRanking();
  go('home');
 }
 function renderTournaments(){
@@ -124,18 +126,149 @@ function renderTournaments(){
  });
 }
 function syncEmbeds(){
- const map=$('mapFrame'),rank=$('rankFrame'),rankState=$('rankState'),mapState=$('mapState');
+ const map=$('mapFrame'),mapState=$('mapState');
  $('mapSubtitle').textContent=active?`${active.name} · ${active.region}`:'Selecciona un torneo';
  $('rankSubtitle').textContent=active?`${active.name} · ${active.region}`:'Selecciona un torneo';
  $('mapBadge').textContent=active?fmtMode(active):'—';
  if(active){map.src=mapUrl(active);mapState.classList.add('hidden')}
  else{map.src='about:blank';mapState.textContent='Selecciona un torneo para cargar su mapa.';mapState.classList.remove('hidden')}
- if(active?.trackerUrl){rank.src=active.trackerUrl;rankState.classList.add('hidden')}
- else{
-   rank.src='about:blank';
-   rankState.innerHTML=active?'La fuente automática todavía no encontró una clasificación verificable para este evento. FN Compass no mostrará una tabla de otro torneo ni inventará datos.':'Selecciona un torneo para cargar su clasificación.';
-   rankState.classList.remove('hidden');
+}
+
+
+function normalizeName(v){
+ return String(v||'').normalize('NFKD').toLowerCase().replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
+}
+
+async function loadRankings(force=false){
+ try{
+   const suffix=force?`?t=${Date.now()}`:'';
+   const r=await fetch(`data/rankings.json${suffix}`,{cache:force?'no-store':'default'});
+   if(!r.ok)throw new Error(`HTTP ${r.status}`);
+   const data=await r.json();
+   if(!data||typeof data.events!=='object')throw new Error('Formato inválido');
+   leaderboards=data;
+ }catch(err){
+   leaderboards={updatedAt:null,source:'',events:{}};
  }
+ renderRanking();
+}
+
+function currentRanking(){
+ if(!active)return null;
+ return leaderboards?.events?.[active.id]||null;
+}
+
+function targetCutRow(rows,top){
+ if(!top||!rows?.length)return null;
+ const n=Math.max(1,Math.floor(Number(top)||0));
+ if(!n)return null;
+ const exact=rows.find(r=>Number(r.rank)===n);
+ if(exact)return exact;
+ const eligible=rows.filter(r=>Number(r.rank)<=n);
+ return eligible.length?eligible[eligible.length-1]:null;
+}
+
+function syncCutFromRanking(entry){
+ if(!entry?.rows?.length||!session)return;
+ const top=numberOrNull(session.topGoal);
+ if(!top)return;
+ const cut=targetCutRow(entry.rows,top);
+ if(!cut)return;
+ if(session.cutSource!=='manual'||String(session.cutPoints||'').trim()===''){
+   session.cutPoints=String(cut.points);
+   session.cutSource='ranking';
+   if($('cutPoints'))$('cutPoints').value=session.cutPoints;
+   renderSession(false);
+ }
+}
+
+function renderRanking(){
+ const state=$('rankState'),wrap=$('rankTableWrap'),body=$('rankTableBody'),foot=$('rankFoot');
+ const playerBox=$('rankPlayer'),playerMeta=$('rankPlayerMeta'),cutBox=$('rankCutoff'),cutMeta=$('rankCutoffMeta'),badge=$('rankBadge');
+ if(!state||!wrap||!body)return;
+
+ body.innerHTML='';
+ wrap.classList.add('hidden');
+ foot.textContent='';
+ badge.textContent='AUTO';
+
+ if(!active){
+   state.textContent='Selecciona un torneo para cargar su clasificación.';
+   state.classList.remove('hidden');
+   playerBox.textContent='—'; playerMeta.textContent='Configura tu nick en Inicio.';
+   cutBox.textContent='—'; cutMeta.textContent='Configura el Top objetivo en Inicio.';
+   return;
+ }
+
+ const entry=currentRanking();
+ if(!entry){
+   state.innerHTML=active.trackerUrl
+     ? 'La clasificación todavía se está sincronizando. FN Compass la actualizará automáticamente desde el evento seleccionado.'
+     : 'Este torneo todavía no tiene una clasificación enlazada de forma verificable.';
+   state.classList.remove('hidden');
+   playerBox.textContent='—'; playerMeta.textContent=profile.nick||'Configura tu nick en Inicio.';
+   cutBox.textContent='—'; cutMeta.textContent='Esperando datos del leaderboard.';
+   badge.textContent='ESPERANDO';
+   return;
+ }
+
+ const allRows=Array.isArray(entry.rows)?entry.rows:[];
+ if(!allRows.length){
+   state.textContent=entry.status==='stale'
+     ? 'La última clasificación disponible no tiene filas visibles todavía.'
+     : 'El leaderboard está enlazado, pero aún no hay posiciones publicadas para esta ronda.';
+   state.classList.remove('hidden');
+   playerBox.textContent='—'; playerMeta.textContent=profile.nick||'Configura tu nick en Inicio.';
+   cutBox.textContent='—'; cutMeta.textContent='Sin corte disponible todavía.';
+   badge.textContent='SIN DATOS';
+   foot.textContent=entry.updatedAt?`Último intento: ${formatTimestamp(entry.updatedAt)}`:'';
+   return;
+ }
+
+ syncCutFromRanking(entry);
+
+ const nickNorm=normalizeName(profile.nick);
+ const me=nickNorm?allRows.find(r=>normalizeName(r.team).includes(nickNorm)||nickNorm.includes(normalizeName(r.team))):null;
+ if(me){
+   playerBox.textContent=`#${me.rank} · ${me.points} pts`;
+   playerMeta.textContent=`${me.team}${me.matches!=null?` · ${me.matches} partidas`:''}`;
+ }else{
+   playerBox.textContent='No encontrado';
+   playerMeta.textContent=profile.nick?profile.nick:'Configura tu nick en Inicio.';
+ }
+
+ const top=numberOrNull(session?.topGoal);
+ const cut=targetCutRow(allRows,top);
+ if(cut&&top){
+   cutBox.textContent=`${cut.points} pts`;
+   cutMeta.textContent=`Top ${Math.floor(top)} · puesto #${cut.rank}`;
+ }else{
+   cutBox.textContent='—';
+   cutMeta.textContent=top?`Top ${Math.floor(top)} fuera de los datos cargados.`:'Configura el Top objetivo en Inicio.';
+ }
+
+ const q=normalizeName($('rankSearch')?.value||'');
+ const visible=q?allRows.filter(r=>normalizeName(r.team).includes(q)):allRows;
+ if(!visible.length){
+   state.textContent='No encontré ese jugador o equipo en las posiciones cargadas.';
+   state.classList.remove('hidden');
+   return;
+ }
+
+ state.classList.add('hidden');
+ wrap.classList.remove('hidden');
+ const cutRank=cut?Number(cut.rank):null;
+ body.innerHTML=visible.map(r=>{
+   const isMe=me&&Number(r.rank)===Number(me.rank)&&r.team===me.team;
+   const isCut=cutRank!==null&&Number(r.rank)===cutRank;
+   const cls=[isMe?'is-me':'',isCut?'is-cut':'',Number(r.rank)<=3?'is-podium':''].filter(Boolean).join(' ');
+   return `<tr class="${cls}"><td class="rank-pos">#${esc(r.rank)}</td><td class="rank-team">${esc(r.team)}${isMe?'<span class="you-chip">TÚ</span>':''}</td><td class="rank-points">${esc(r.points)}</td><td class="rank-games">${r.matches==null?'—':esc(r.matches)}</td></tr>`;
+ }).join('');
+
+ const stale=entry.status==='stale'?' · último dato disponible':'';
+ const participants=entry.participants?` · ${entry.participants.toLocaleString('es-PE')} participantes`:'';
+ foot.textContent=`Actualizado: ${formatTimestamp(entry.updatedAt||leaderboards.updatedAt)} · ${allRows.length} posiciones cargadas${participants}${stale}`;
+ badge.textContent=entry.status==='stale'?'ÚLTIMO':'LIVE';
 }
 
 function numberOrNull(v){
@@ -203,19 +336,26 @@ function go(tab){
 
 document.querySelectorAll('.nav-btn').forEach(b=>b.onclick=()=>go(b.dataset.go));
 ['filterRegion','filterMode','filterFormat','filterPlatform'].forEach(id=>$(id).onchange=renderTournaments);
-$('refreshBtn').onclick=()=>loadCalendar(true);
+$('refreshBtn').onclick=()=>{loadCalendar(true);loadRankings(true)};
+$('rankRefresh').onclick=()=>loadRankings(true);
+$('rankSearch').oninput=renderRanking;
 
 $('nick').oninput=e=>{
  profile.nick=e.target.value;
  save(STORAGE.profile,profile);
+ renderRanking();
 };
 $('topGoal').oninput=e=>{
  session.topGoal=e.target.value;
+ if(session.cutSource==='ranking')session.cutPoints='';
  renderSession(false);
+ renderRanking();
 };
 $('cutPoints').oninput=e=>{
  session.cutPoints=e.target.value;
+ session.cutSource='manual';
  renderSession(false);
+ renderRanking();
 };
 $('maxGames').oninput=e=>{
  session.maxGames=e.target.value;
@@ -253,4 +393,6 @@ session=getSession();
 renderBanner();
 hydrateSession();
 syncEmbeds();
+renderRanking();
 loadCalendar();
+loadRankings();
