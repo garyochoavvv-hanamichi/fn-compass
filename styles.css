@@ -118,3 +118,65 @@
   .tournament-copy h3{font-size:12px}
   .tournament-badges span:nth-child(3){display:none}
 }
+
+
+/* Native leaderboard */
+.rank-head{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+  padding:14px;border:1px solid var(--line);border-radius:15px;
+  background:linear-gradient(145deg,rgba(28,22,57,.86),rgba(9,15,27,.98));
+}
+.rank-head h1{margin:4px 0 2px;font-size:22px}
+.rank-head p{margin:0;color:var(--muted);font-size:9px;line-height:1.4}
+.rank-summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rank-summary-card{
+  min-width:0;padding:12px;border:1px solid var(--line);border-radius:14px;
+  background:linear-gradient(180deg,#101a2b,#0a111e);
+}
+.rank-summary-card span{display:block;color:var(--muted);font-size:7.5px;font-weight:900;letter-spacing:.75px}
+.rank-summary-card strong{display:block;margin-top:6px;font-size:20px;line-height:1.1;font-variant-numeric:tabular-nums}
+.rank-summary-card small{display:block;margin-top:5px;color:#8f9bb1;font-size:8px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.rank-toolbar input{height:40px}
+.rank-refresh{height:40px;width:40px}
+.rank-native-state{
+  padding:22px 16px;border:1px dashed #2a3a59;border-radius:14px;
+  background:#09111e;color:var(--muted);text-align:center;font-size:10px;line-height:1.55
+}
+.rank-table-wrap{
+  overflow:auto;max-height:calc(100dvh - 330px);min-height:360px;
+  border:1px solid var(--line);border-radius:14px;background:#09111e
+}
+.rank-table{width:100%;border-collapse:separate;border-spacing:0;font-size:9px}
+.rank-table thead th{
+  position:sticky;top:0;z-index:2;padding:9px 8px;background:#111b2c;color:#8f9bb1;
+  font-size:7.5px;letter-spacing:.55px;text-align:left;border-bottom:1px solid #263653
+}
+.rank-table thead th:nth-child(1),
+.rank-table thead th:nth-child(3),
+.rank-table thead th:nth-child(4){text-align:center}
+.rank-table tbody td{
+  padding:9px 8px;border-bottom:1px solid rgba(34,48,74,.72);vertical-align:middle
+}
+.rank-table tbody tr:last-child td{border-bottom:0}
+.rank-pos,.rank-points,.rank-games{width:52px;text-align:center;font-variant-numeric:tabular-nums}
+.rank-pos{color:#9aa6bd;font-weight:850}
+.rank-points{font-size:11px;font-weight:950;color:#f7f9ff}
+.rank-games{color:#aab5ca}
+.rank-team{min-width:150px;font-weight:750;line-height:1.25}
+.rank-table tr.is-podium{background:linear-gradient(90deg,rgba(255,212,107,.09),transparent)}
+.rank-table tr.is-cut{background:linear-gradient(90deg,rgba(154,107,255,.16),rgba(154,107,255,.04))}
+.rank-table tr.is-cut td{border-top:1px solid rgba(154,107,255,.42);border-bottom:1px solid rgba(154,107,255,.42)}
+.rank-table tr.is-me{background:linear-gradient(90deg,rgba(71,223,155,.20),rgba(71,223,155,.05));box-shadow:inset 3px 0 0 var(--green)}
+.you-chip{
+  display:inline-flex;margin-left:6px;padding:2px 5px;border-radius:999px;
+  background:rgba(71,223,155,.14);border:1px solid rgba(71,223,155,.28);
+  color:var(--green);font-size:6px;font-weight:950;vertical-align:middle
+}
+.rank-foot{color:#7f8ba3;font-size:8px;line-height:1.4;padding:0 2px 4px}
+@media(max-width:360px){
+  .rank-summary-grid{grid-template-columns:1fr 1fr}
+  .rank-summary-card{padding:10px}
+  .rank-summary-card strong{font-size:18px}
+  .rank-table-wrap{max-height:calc(100dvh - 315px)}
+}
