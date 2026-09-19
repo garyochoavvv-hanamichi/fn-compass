@@ -102,10 +102,12 @@ function selectTournament(e){
  active=e;
  save(STORAGE.active,e);
  hydrateSession();
+ if($('rankSearch'))$('rankSearch').value='';
  renderBanner();
  renderTournaments();
  syncEmbeds();
  renderRanking();
+ loadRankings(true);
  go('home');
 }
 function renderTournaments(){
@@ -128,7 +130,7 @@ function renderTournaments(){
 function syncEmbeds(){
  const map=$('mapFrame'),mapState=$('mapState');
  $('mapSubtitle').textContent=active?`${active.name} · ${active.region}`:'Selecciona un torneo';
- $('rankSubtitle').textContent=active?`${active.name} · ${active.region}`:'Selecciona un torneo';
+ $('rankSubtitle').textContent=active?`${active.name} · ${active.region} · ${fmtFormat(active.format)} · ${fmtMode(active)} · ${formatEventTime(active)}`:'Selecciona un torneo';
  $('mapBadge').textContent=active?fmtMode(active):'—';
  if(active){map.src=mapUrl(active);mapState.classList.add('hidden')}
  else{map.src='about:blank';mapState.textContent='Selecciona un torneo para cargar su mapa.';mapState.classList.remove('hidden')}
@@ -154,9 +156,36 @@ async function loadRankings(force=false){
  renderRanking();
 }
 
+function selectedWindow(e=active){
+ if(!e)return null;
+ try{
+   const u=new URL(e.sourceUrl||'',location.href);
+   return u.searchParams.get('round')||u.searchParams.get('window')||null;
+ }catch{return null}
+}
+
 function currentRanking(){
  if(!active)return null;
- return leaderboards?.events?.[active.id]||null;
+ const events=leaderboards?.events||{};
+ if(events[active.id])return events[active.id];
+
+ // Calendar IDs can change after a refresh. Fallback only to the exact same
+ // Tracker event AND exact session/window; never borrow another tournament.
+ const wantedWindow=selectedWindow(active);
+ const exact=Object.values(events).find(x=>
+   x &&
+   x.region===active.region &&
+   x.trackerUrl===active.trackerUrl &&
+   (!wantedWindow||!x.window||x.window===wantedWindow)
+ );
+ if(exact)return exact;
+
+ return Object.values(events).find(x=>
+   x &&
+   x.region===active.region &&
+   x.name===active.name &&
+   (!wantedWindow||!x.window||x.window===wantedWindow)
+ )||null;
 }
 
 function targetCutRow(rows,top){
@@ -213,13 +242,13 @@ function renderRanking(){
 
  const entry=currentRanking();
  if(!entry){
-   state.innerHTML=active.trackerUrl
-     ? 'La clasificación todavía se está sincronizando. FN Compass la actualizará automáticamente desde el evento seleccionado.'
-     : 'Este torneo todavía no tiene una clasificación enlazada de forma verificable.';
-   state.classList.remove('hidden');
+   state.classList.add('hidden');
+   wrap.classList.remove('hidden');
+   body.innerHTML=`<tr class="rank-empty-row"><td colspan="4"><strong>${esc(active.name)}</strong><span>${active.trackerUrl?'Sin posiciones publicadas todavía para esta sesión. FN Compass seguirá actualizando exactamente este torneo.':'Aún no hay una fuente de clasificación verificada para este torneo.'}</span></td></tr>`;
    playerBox.textContent='—'; playerMeta.textContent=profile.nick||'Configura tu nick en Inicio.';
-   cutBox.textContent='—'; cutMeta.textContent='Esperando datos del leaderboard.';
+   cutBox.textContent='—'; cutMeta.textContent='Esperando datos del torneo seleccionado.';
    badge.textContent='ESPERANDO';
+   foot.textContent=`${active.region} · ${fmtFormat(active.format)} · ${fmtMode(active)} · ${formatEventTime(active)}`;
    return;
  }
 
@@ -229,22 +258,21 @@ function renderRanking(){
    const known=targetKnownCutoff(entry,top);
    const firstCut=(entry.cutoffs||[])[0]||null;
    const shown=known||firstCut;
-   state.innerHTML=shown
-     ? `Tracker todavía no publica las filas completas de esta sesión.<br><strong>Corte visible: Top ${esc(shown.rank)} · ${esc(shown.points)} pts</strong>`
-     : (entry.status==='stale'
-       ? 'La última clasificación disponible no tiene filas visibles todavía.'
-       : 'El leaderboard está enlazado, pero aún no hay posiciones publicadas para esta ronda.');
-   state.classList.remove('hidden');
+
+   state.classList.add('hidden');
+   wrap.classList.remove('hidden');
+   body.innerHTML=`<tr class="rank-empty-row"><td colspan="4"><strong>${esc(active.name)}</strong><span>${shown?`La tabla de esta sesión aún no publica filas. Corte visible: Top ${esc(shown.rank)} · ${esc(shown.points)} pts.`:'La tabla de esta sesión aún no publica posiciones. FN Compass no mostrará datos de otro torneo.'}</span></td></tr>`;
+
    playerBox.textContent='—'; playerMeta.textContent=profile.nick||'Configura tu nick en Inicio.';
    if(shown){
      cutBox.textContent=`${shown.points} pts`;
-     cutMeta.textContent=`Top ${shown.rank} · dato publicado por Tracker`;
+     cutMeta.textContent=`Top ${shown.rank} · torneo seleccionado`;
      if(top&&Number(top)===Number(shown.rank))syncCutFromRanking(entry);
    }else{
      cutBox.textContent='—'; cutMeta.textContent='Sin corte disponible todavía.';
    }
    badge.textContent=shown?'CORTE':'SIN DATOS';
-   foot.textContent=entry.updatedAt?`Último intento: ${formatTimestamp(entry.updatedAt)}`:'';
+   foot.textContent=`Torneo seleccionado: ${active.region} · ${fmtFormat(active.format)} · ${fmtMode(active)}${entry.updatedAt?` · actualizado ${formatTimestamp(entry.updatedAt)}`:''}`;
    return;
  }
 
