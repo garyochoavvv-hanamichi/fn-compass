@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T16:40:32.774263+00:00",
+  "updatedAt": "2026-09-20T16:52:12.068530+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4bde0cb7964923": {
@@ -1466,7 +1466,7 @@
       "window": "S42_ChampionFocusFNCSMobileCup_BR",
       "eventStart": "2026-09-20T11:00:00-05:00",
       "eventEnd": "2026-09-20T12:15:00-05:00",
-      "updatedAt": "2026-09-20T16:40:30.439401+00:00",
+      "updatedAt": "2026-09-20T16:52:09.612441+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -1482,7 +1482,7 @@
       "window": "S42_ChampionFocusFNCSCup_BR",
       "eventStart": "2026-09-20T12:00:00-05:00",
       "eventEnd": "2026-09-20T15:00:00-05:00",
-      "updatedAt": "2026-09-20T16:40:31.110016+00:00",
+      "updatedAt": "2026-09-20T16:52:10.864608+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -1498,7 +1498,7 @@
       "window": "S42_ChampionFocusFNCSCup_ZB_BR",
       "eventStart": "2026-09-20T12:00:00-05:00",
       "eventEnd": "2026-09-20T15:00:00-05:00",
-      "updatedAt": "2026-09-20T16:40:32.774172+00:00",
+      "updatedAt": "2026-09-20T16:52:12.068424+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
