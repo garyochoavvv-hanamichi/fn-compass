@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-20T21:41:29.974112+00:00",
+  "updatedAt": "2026-09-20T21:52:01.113457+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:1",
+    "NAC": "fresh:6+recent:1",
     "BR": "fresh:9+recent:3"
   },
   "events": [
@@ -201,6 +201,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event4_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_NAC"
+    },
+    {
+      "id": "b8bea990a30818",
+      "name": "Duos Reload Ranked Cup (Zero Build)",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-21T18:00:00-05:00",
+      "end": "2026-09-21T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos_ZB?round=S42_RankedCupReloadDuos_ZB_Event4_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_ZB_NAC"
     },
     {
       "id": "7085e9004dd764",
