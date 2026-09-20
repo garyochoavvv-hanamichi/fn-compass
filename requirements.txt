@@ -1,1 +1,1 @@
-playwright==1.55.0
+# Standard library only for the scheduled updater.
