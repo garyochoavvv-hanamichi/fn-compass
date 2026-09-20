@@ -1,6 +1,7 @@
 name: Update Fortnite tournaments
 on:
   workflow_dispatch:
+  # Five-minute refresh; the scraper throttles external requests internally.
   schedule:
     - cron: '*/5 * * * *'
   push:
