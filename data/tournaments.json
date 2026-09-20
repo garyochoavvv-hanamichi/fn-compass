@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-20T00:42:40.334Z",
+  "updatedAt": "2026-09-20T00:46:20.832729+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:0",
-    "BR": "fresh:10+recent:0"
+    "NAC": "fresh:6+recent:2",
+    "BR": "fresh:10+recent:6"
   },
   "events": [
     {
@@ -87,7 +87,8 @@
       "start": "2026-09-19T17:00:00-05:00",
       "end": "2026-09-19T18:15:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_CyperpranksCup_Mobile?round=S42_CyperpranksCup_Mobile_NAC",
-      "mapUrl": "https://fortnite.gg/"
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_Mobile_NAC"
     },
     {
       "id": "2853717c6bd4d4",
@@ -100,7 +101,8 @@
       "start": "2026-09-19T17:00:00-05:00",
       "end": "2026-09-19T18:15:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event1_Round1_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload"
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
     },
     {
       "id": "41d414620e4057",
