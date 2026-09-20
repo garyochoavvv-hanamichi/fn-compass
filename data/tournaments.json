@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-09-20T14:50:20.687922+00:00",
+  "updatedAt": "2026-09-20T15:01:04.375831+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:1",
+    "NAC": "fresh:5+recent:0",
     "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "20b949d465f3a0",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-09-19T21:00:00-05:00",
-      "end": "2026-09-19T22:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event4Round2_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
-    },
     {
       "id": "6665a372d7716c",
       "name": "Champion Focus FNCS Mobile Cup",
