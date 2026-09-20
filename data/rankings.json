@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T00:39:51.895858+00:00",
+  "updatedAt": "2026-09-20T00:42:03.399953+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4bde0cb7964923": {
@@ -615,7 +615,7 @@
           "matches": 1
         }
       ],
-      "lastError": "page 0: fresh: HTTPError: HTTP Error 429: Too Many Requests | cached: HTTPError: HTTP Error 429: Too Many Requests | page 1: fresh: HTTPError: HTTP Error 429: Too Many Requests | cached: HTTPError: HTTP Error 429: Too Many Requests | page 2: fresh: HTTPError: HTTP Error 429: Too Many Requests | cached: HTTPError: HTTP Error 429: Too Many Requests"
+      "lastError": "source returned no rows"
     },
     "90dfca5f3b09e6": {
       "eventId": "90dfca5f3b09e6",
@@ -625,13 +625,13 @@
       "window": "S42_ConsoleVCC_SolosZB_Event4Round1_NAC",
       "eventStart": "2026-09-19T18:00:00-05:00",
       "eventEnd": "2026-09-19T20:00:00-05:00",
-      "updatedAt": "2026-09-20T00:39:41.361579+00:00",
+      "updatedAt": "2026-09-20T00:41:53.977710+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "page 0: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests | page 1: fresh: no rows | cached: no rows | page 2: fresh: no rows | cached: no rows"
+      "lastError": null
     },
     "5bf71a4242de69": {
       "eventId": "5bf71a4242de69",
@@ -641,13 +641,13 @@
       "window": "S42_CyperpranksCup_ZB_NAC",
       "eventStart": "2026-09-19T18:00:00-05:00",
       "eventEnd": "2026-09-19T21:00:00-05:00",
-      "updatedAt": "2026-09-20T00:39:38.856289+00:00",
+      "updatedAt": "2026-09-20T00:41:54.207941+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "page 0: fresh: no rows | cached: no rows | page 1: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests | page 2: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests"
+      "lastError": null
     },
     "234e4f78fea871": {
       "eventId": "234e4f78fea871",
@@ -657,13 +657,13 @@
       "window": "S42_CyperpranksCup_NAC",
       "eventStart": "2026-09-19T18:00:00-05:00",
       "eventEnd": "2026-09-19T21:00:00-05:00",
-      "updatedAt": "2026-09-20T00:39:40.098635+00:00",
+      "updatedAt": "2026-09-20T00:41:59.020907+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "page 0: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests | page 1: fresh: no rows | cached: no rows | page 2: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests"
+      "lastError": null
     },
     "871adfe6cdf6ac": {
       "eventId": "871adfe6cdf6ac",
@@ -673,13 +673,13 @@
       "window": "S42_RankedCupSoloReload_Event4_NAC",
       "eventStart": "2026-09-19T18:00:00-05:00",
       "eventEnd": "2026-09-19T21:00:00-05:00",
-      "updatedAt": "2026-09-20T00:39:51.895792+00:00",
+      "updatedAt": "2026-09-20T00:41:56.950826+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "page 0: fresh: no rows | cached: no rows | page 1: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests | page 2: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests"
+      "lastError": null
     },
     "343772a75a7a7a": {
       "eventId": "343772a75a7a7a",
@@ -689,13 +689,13 @@
       "window": "S42_RankedCupSoloReload_ZB_Event4_NAC",
       "eventStart": "2026-09-19T18:00:00-05:00",
       "eventEnd": "2026-09-19T21:00:00-05:00",
-      "updatedAt": "2026-09-20T00:39:42.420795+00:00",
+      "updatedAt": "2026-09-20T00:41:59.046133+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "page 0: fresh: no rows | cached: no rows | page 1: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests | page 2: fresh: no rows | cached: HTTPError: HTTP Error 429: Too Many Requests"
+      "lastError": null
     },
     "d855c014904f94": {
       "eventId": "d855c014904f94",
@@ -705,13 +705,13 @@
       "window": "S42_MobileVictoryCup_Event1_Round2_NAC",
       "eventStart": "2026-09-19T19:00:00-05:00",
       "eventEnd": "2026-09-19T20:10:00-05:00",
-      "updatedAt": "2026-09-20T00:39:39.311062+00:00",
+      "updatedAt": "2026-09-20T00:42:03.399889+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "page 0: fresh: HTTPError: HTTP Error 429: Too Many Requests | cached: HTTPError: HTTP Error 429: Too Many Requests | page 1: fresh: HTTPError: HTTP Error 429: Too Many Requests | cached: HTTPError: HTTP Error 429: Too Many Requests | page 2: fresh: HTTPError: HTTP Error 429: Too Many Requests | cached: HTTPError: HTTP Error 429: Too Many Requests"
+      "lastError": null
     }
   }
 }
