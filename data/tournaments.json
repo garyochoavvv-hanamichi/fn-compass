@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-20T11:07:05.933816+00:00",
+  "updatedAt": "2026-09-20T11:21:53.624436+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:9",
-    "BR": "fresh:10+recent:6"
+    "NAC": "fresh:5+recent:7",
+    "BR": "fresh:10+recent:5"
   },
   "events": [
     {
@@ -61,48 +61,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event4_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR"
-    },
-    {
-      "id": "a60baca10c7302",
-      "name": "Override Series: Cyberpunk: Edgerunners Mobile Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-19T17:00:00-05:00",
-      "end": "2026-09-19T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_CyperpranksCup_Mobile?round=S42_CyperpranksCup_Mobile_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_Mobile_NAC"
-    },
-    {
-      "id": "2853717c6bd4d4",
-      "name": "Mobile Reload (Mini Venture) Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-19T17:00:00-05:00",
-      "end": "2026-09-19T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event1_Round1_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
-    },
-    {
-      "id": "41d414620e4057",
-      "name": "Mobile Reload (Mini Venture) Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-19T17:00:00-05:00",
-      "end": "2026-09-19T18:10:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event1_Round2_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
     },
     {
       "id": "5bf71a4242de69",
