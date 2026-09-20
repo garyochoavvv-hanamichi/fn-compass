@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-20T00:20:27.128972+00:00",
+  "updatedAt": "2026-09-20T00:39:33.255320+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6",
-    "BR": "fresh:10"
+    "NAC": "fresh:6+recent:0",
+    "BR": "fresh:10+recent:0"
   },
   "events": [
     {
@@ -17,7 +17,8 @@
       "start": "2026-09-19T18:00:00-05:00",
       "end": "2026-09-19T20:00:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event4Round1_NAC",
-      "mapUrl": "https://fortnite.gg/"
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
     },
     {
       "id": "5bf71a4242de69",
@@ -30,7 +31,8 @@
       "start": "2026-09-19T18:00:00-05:00",
       "end": "2026-09-19T21:00:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_CyperpranksCup_ZB?round=S42_CyperpranksCup_ZB_NAC",
-      "mapUrl": "https://fortnite.gg/"
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_ZB_NAC"
     },
     {
       "id": "234e4f78fea871",
@@ -43,7 +45,8 @@
       "start": "2026-09-19T18:00:00-05:00",
       "end": "2026-09-19T21:00:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_CyperpranksCup?round=S42_CyperpranksCup_NAC",
-      "mapUrl": "https://fortnite.gg/"
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_CyperpranksCup_NAC"
     },
     {
       "id": "871adfe6cdf6ac",
@@ -56,7 +59,8 @@
       "start": "2026-09-19T18:00:00-05:00",
       "end": "2026-09-19T21:00:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event4_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload"
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_NAC"
     },
     {
       "id": "343772a75a7a7a",
@@ -69,7 +73,8 @@
       "start": "2026-09-19T18:00:00-05:00",
       "end": "2026-09-19T21:00:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event4_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload"
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
     },
     {
       "id": "d855c014904f94",
@@ -82,7 +87,8 @@
       "start": "2026-09-19T19:00:00-05:00",
       "end": "2026-09-19T20:10:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event1_Round2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload"
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
     },
     {
       "id": "4bde0cb7964923",
