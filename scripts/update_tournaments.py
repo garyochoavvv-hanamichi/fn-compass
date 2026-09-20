@@ -218,11 +218,7 @@ def fetch_text_proxy_fresh(url):
         return r.read().decode("utf-8", "replace")
 
 async def fetch_region(region):
-    from playwright.async_api import async_playwright
     errors = []
-
-    # First try a text proxy. This is much less likely to be blocked by
-    # Fortnite's anti-bot page than a CI browser IP.
     for event_slug in SEED_PATHS:
         url = f"https://www.fortnite.com/competitive/events/{event_slug}/schedule?lang=en-US&region={region}"
         try:
@@ -233,36 +229,8 @@ async def fetch_region(region):
             errors.append(f"proxy {event_slug}: 0 parsed")
         except Exception as ex:
             errors.append(f"proxy {event_slug}: {type(ex).__name__}: {ex}")
-
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        ctx = await browser.new_context(
-            timezone_id="America/Lima",
-            locale="en-US",
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/129 Safari/537.36",
-        )
-        page = await ctx.new_page()
-
-        for event_slug in SEED_PATHS:
-            url = f"https://www.fortnite.com/competitive/events/{event_slug}/schedule?lang=en-US&region={region}"
-            try:
-                await page.goto(url, wait_until="domcontentloaded", timeout=90000)
-                await page.wait_for_timeout(5000)
-                title = (await page.title()).lower()
-                body = await page.locator("body").inner_text(timeout=15000)
-                body_l = body.lower()
-                if "just a moment" in title or "checking your browser" in body_l:
-                    raise RuntimeError("Cloudflare challenge")
-                events = parse_body(body, region, url)
-                if events:
-                    await browser.close()
-                    return events
-                errors.append(f"{event_slug}: 0 parsed")
-            except Exception as ex:
-                errors.append(f"{event_slug}: {type(ex).__name__}: {ex}")
-
-        await browser.close()
     raise RuntimeError(" | ".join(errors))
+
 
 async def fetch_tracker_links(region):
     try:
