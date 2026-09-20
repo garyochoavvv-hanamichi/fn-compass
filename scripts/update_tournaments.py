@@ -301,22 +301,67 @@ async def fetch_tracker_links(region):
     except Exception:
         return []
 
+def event_round(event):
+    try:
+        q = parse_qs(urlparse(event.get("sourceUrl", "")).query)
+        vals = q.get("round") or q.get("window")
+        return vals[0] if vals else None
+    except Exception:
+        return None
+
+def canonical_tracker_url(event):
+    """Build the exact Tracker event page from Fortnite's official event slug."""
+    try:
+        path = urlparse(event.get("sourceUrl", "")).path.rstrip("/")
+        slug = path.split("/competitive/events/", 1)[1].split("/", 1)[0]
+    except Exception:
+        return None
+
+    name = (event.get("name") or "").lower()
+    window = event_round(event) or ""
+    tracker_slug = slug
+
+    # Tracker uses a few stable aliases that differ from Epic's schedule slug.
+    if slug == "S42_MobileVictoryCup" and "mini venture" in name:
+        tracker_slug = "S42_MobileVictoryCup_ReloadminiV"
+    elif slug == "S42_SoloVictoryCupBR":
+        tracker_slug = "S42_SoloVictoryCup"
+    elif slug == "S42_ChampionFocusFNCSCup" and "_ZB_" in f"_{window}_":
+        tracker_slug = "S42_ChampionFocusFNCSCup_ZB"
+
+    region = event.get("region")
+    if not tracker_slug or not region:
+        return None
+    return f"https://fortnitetracker.com/events/epicgames_{tracker_slug}_{region}"
+
 def attach_tracker(events, tracker, previous):
     prev = {
         (keyname(e.get("name", "")), e.get("region")): e.get("trackerUrl")
         for e in previous if e.get("trackerUrl")
     }
     for e in events:
-        best = (0.0, None)
         en = keyname(e["name"])
+
+        # 1) Exact URL derived from Epic's event slug. This covers both NAC and
+        # BR even when Tracker's events index is blocked by Cloudflare.
+        exact = canonical_tracker_url(e)
+        if exact:
+            e["trackerUrl"] = exact
+            continue
+
+        # 2) Previously verified URL.
+        if prev.get((en, e["region"])):
+            e["trackerUrl"] = prev[(en, e["region"])]
+            continue
+
+        # 3) Fuzzy discovery only as a final fallback.
+        best = (0.0, None)
         for txt, url in tracker.get(e["region"], []):
             score = SequenceMatcher(None, en, keyname(txt)).ratio()
             if score > best[0]:
                 best = (score, url)
         if best[0] >= 0.72:
             e["trackerUrl"] = best[1]
-        elif prev.get((en, e["region"])):
-            e["trackerUrl"] = prev[(en, e["region"])]
     return events
 
 
@@ -327,12 +372,7 @@ def old_rankings():
         return {"events": {}}
 
 def tracker_window(event):
-    try:
-        q = parse_qs(urlparse(event.get("sourceUrl", "")).query)
-        vals = q.get("round") or q.get("window")
-        return vals[0] if vals else None
-    except Exception:
-        return None
+    return event_round(event)
 
 def tracker_page_url(event, page_num):
     base = event.get("trackerUrl")
@@ -597,6 +637,8 @@ async def fetch_event_ranking_browser(page, event, old_entry=None):
         "region": event.get("region"),
         "trackerUrl": event.get("trackerUrl"),
         "window": tracker_window(event),
+        "eventStart": event.get("start"),
+        "eventEnd": event.get("end"),
         "updatedAt": datetime.now(timezone.utc).isoformat(),
         "status": "ok" if rows else "empty",
         "participants": meta.get("participants"),
@@ -634,8 +676,28 @@ async def update_rankings(events):
 
         await browser.close()
 
+    # Do not erase a leaderboard as soon as Fortnite removes the event from
+    # its upcoming schedule. A user can keep that tournament selected after it
+    # ends, so retain recent snapshots for 72 hours.
     valid_ids = {e.get("id") for e in events}
-    out = {k:v for k,v in out.items() if k in valid_ids}
+    history_cutoff = now - timedelta(hours=72)
+    kept = {}
+    for k, v in out.items():
+        if k in valid_ids:
+            kept[k] = v
+            continue
+        stamp = v.get("updatedAt") or v.get("eventEnd")
+        try:
+            dt = datetime.fromisoformat((stamp or "").replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            if dt.astimezone(timezone.utc) >= history_cutoff:
+                kept[k] = v
+        except Exception:
+            # Keep useful rows rather than deleting them because of malformed metadata.
+            if v.get("rows"):
+                kept[k] = v
+    out = kept
 
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
@@ -677,8 +739,11 @@ async def main():
     for region in ("NAC", "BR"):
         try:
             fresh = await fetch_region(region)
-            status[region] = f"fresh:{len(fresh)}"
-            events.extend(fresh)
+            recent = previous_region_events(previous, region)
+            known = {e.get("id") for e in fresh}
+            merged = fresh + [e for e in recent if e.get("id") not in known]
+            status[region] = f"fresh:{len(fresh)}+recent:{len(merged)-len(fresh)}"
+            events.extend(merged)
         except Exception as ex:
             fallback = previous_region_events(previous, region)
             status[region] = f"fallback:{len(fallback)} ({ex})"
