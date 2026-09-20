@@ -67,8 +67,8 @@ function hydrateSession(){
 async function loadCalendar(force=false){
  const status=$('calendarStatus'); status.textContent='ACTUALIZANDO';
  try{
-   const suffix=force?`?t=${Date.now()}`:'';
-   const r=await fetch(`data/tournaments.json${suffix}`,{cache:force?'no-store':'default'});
+   const suffix=`?t=${Date.now()}`;
+   const r=await fetch(`data/tournaments.json${suffix}`,{cache:'no-store'});
    if(!r.ok)throw new Error(`HTTP ${r.status}`);
    const data=await r.json();
    if(!Array.isArray(data.events))throw new Error('Formato inválido');
@@ -76,8 +76,13 @@ async function loadCalendar(force=false){
    status.classList.toggle('warn',!data.events.length);
    $('lastUpdate').textContent=`Última actualización: ${formatTimestamp(data.updatedAt)} · ${data.events.length} eventos`;
    if(active){
+     const wantedWindow=selectedWindow(active);
      const fresh=data.events.find(x=>x.id===active.id) ||
-       data.events.find(x=>x.region===active.region && x.name===active.name);
+       data.events.find(x=>
+         x.region===active.region &&
+         selectedWindow(x)===wantedWindow &&
+         wantedWindow
+       );
      if(fresh){active=fresh;save(STORAGE.active,active)}
    }
  }catch(err){
@@ -143,8 +148,8 @@ function normalizeName(v){
 
 async function loadRankings(force=false){
  try{
-   const suffix=force?`?t=${Date.now()}`:'';
-   const r=await fetch(`data/rankings.json${suffix}`,{cache:force?'no-store':'default'});
+   const suffix=`?t=${Date.now()}`;
+   const r=await fetch(`data/rankings.json${suffix}`,{cache:'no-store'});
    if(!r.ok)throw new Error(`HTTP ${r.status}`);
    const data=await r.json();
    if(!data||typeof data.events!=='object')throw new Error('Formato inválido');
@@ -176,7 +181,7 @@ function currentRanking(){
    x &&
    x.region===active.region &&
    x.trackerUrl===active.trackerUrl &&
-   (!wantedWindow||!x.window||x.window===wantedWindow)
+   (wantedWindow ? x.window===wantedWindow : true)
  );
  if(exact)return exact;
 
@@ -184,7 +189,7 @@ function currentRanking(){
    x &&
    x.region===active.region &&
    x.name===active.name &&
-   (!wantedWindow||!x.window||x.window===wantedWindow)
+   (wantedWindow ? x.window===wantedWindow : true)
  )||null;
 }
 
@@ -383,6 +388,7 @@ function renderSession(syncInputs=true){
 function go(tab){
  document.querySelectorAll('.nav-btn').forEach(x=>x.classList.toggle('active',x.dataset.go===tab));
  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));
+ if(tab==='ranking')loadRankings(true);
 }
 
 document.querySelectorAll('.nav-btn').forEach(b=>b.onclick=()=>go(b.dataset.go));
@@ -445,5 +451,14 @@ renderBanner();
 hydrateSession();
 syncEmbeds();
 renderRanking();
-loadCalendar();
-loadRankings();
+loadCalendar(true);
+loadRankings(true);
+
+// The backend publishes every ~5 minutes. While the app is open, check the
+// published snapshot every minute so the user never needs to refresh manually.
+setInterval(()=>{
+ if(document.visibilityState==='visible')loadRankings(true);
+},60_000);
+document.addEventListener('visibilitychange',()=>{
+ if(document.visibilityState==='visible')loadRankings(true);
+});
