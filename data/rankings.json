@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T16:10:14.555625+00:00",
+  "updatedAt": "2026-09-20T16:26:23.156819+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4bde0cb7964923": {
@@ -1466,7 +1466,39 @@
       "window": "S42_ChampionFocusFNCSMobileCup_BR",
       "eventStart": "2026-09-20T11:00:00-05:00",
       "eventEnd": "2026-09-20T12:15:00-05:00",
-      "updatedAt": "2026-09-20T16:10:14.555552+00:00",
+      "updatedAt": "2026-09-20T16:26:20.920465+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "8256709592e023": {
+      "eventId": "8256709592e023",
+      "name": "Champion Focus FNCS Cup Battle Royale",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionFocusFNCSCup_BR",
+      "window": "S42_ChampionFocusFNCSCup_BR",
+      "eventStart": "2026-09-20T12:00:00-05:00",
+      "eventEnd": "2026-09-20T15:00:00-05:00",
+      "updatedAt": "2026-09-20T16:26:21.522938+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "b9fe5669320994": {
+      "eventId": "b9fe5669320994",
+      "name": "Champion Focus FNCS Cup Zero Build",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionFocusFNCSCup_ZB_BR",
+      "window": "S42_ChampionFocusFNCSCup_ZB_BR",
+      "eventStart": "2026-09-20T12:00:00-05:00",
+      "eventEnd": "2026-09-20T15:00:00-05:00",
+      "updatedAt": "2026-09-20T16:26:23.156738+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
