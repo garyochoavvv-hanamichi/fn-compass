@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T15:01:04.376640+00:00",
+  "updatedAt": "2026-09-20T15:18:16.613719+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4bde0cb7964923": {
@@ -1451,6 +1451,22 @@
       "eventStart": "2026-09-19T21:00:00-05:00",
       "eventEnd": "2026-09-19T22:00:00-05:00",
       "updatedAt": "2026-09-20T06:59:07.170385+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "6665a372d7716c": {
+      "eventId": "6665a372d7716c",
+      "name": "Champion Focus FNCS Mobile Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionFocusFNCSMobileCup_BR",
+      "window": "S42_ChampionFocusFNCSMobileCup_BR",
+      "eventStart": "2026-09-20T11:00:00-05:00",
+      "eventEnd": "2026-09-20T12:15:00-05:00",
+      "updatedAt": "2026-09-20T15:18:16.613645+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
