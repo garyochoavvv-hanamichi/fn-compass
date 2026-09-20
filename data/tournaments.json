@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-09-20T10:53:11.498692+00:00",
+  "updatedAt": "2026-09-20T11:07:05.933816+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:5+recent:9",
-    "BR": "fresh:10+recent:7"
+    "BR": "fresh:10+recent:6"
   },
   "events": [
-    {
-      "id": "9543bc1a071849",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-09-19T16:00:00-05:00",
-      "end": "2026-09-19T18:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event4Round1_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
-    },
     {
       "id": "b2abbfeee7eaeb",
       "name": "Override Series: Cyberpunk: Edgerunners Cup Battle Royale",
