@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-20T13:02:19.252661+00:00",
+  "updatedAt": "2026-09-20T13:19:20.135415+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:6",
+    "NAC": "fresh:5+recent:5",
     "BR": "fresh:10+recent:0"
   },
   "events": [
@@ -61,20 +61,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event4_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
-    },
-    {
-      "id": "d855c014904f94",
-      "name": "Mobile Reload (Mini Venture) Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-19T19:00:00-05:00",
-      "end": "2026-09-19T20:10:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event1_Round2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
     },
     {
       "id": "20b949d465f3a0",
