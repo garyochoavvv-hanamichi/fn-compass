@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-20T03:57:49.365332+00:00",
+  "updatedAt": "2026-09-20T04:16:58.441166+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:3+recent:8",
+    "NAC": "fresh:5+recent:9",
     "BR": "fresh:10+recent:7"
   },
   "events": [
@@ -301,6 +301,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionFocusFNCSCup_NAC"
     },
     {
+      "id": "581e8c83383710",
+      "name": "Champion Focus FNCS Cup Zero Build",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-20T14:00:00-05:00",
+      "end": "2026-09-20T17:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionFocusFNCSCup?round=S42_ChampionFocusFNCSCup_ZB_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionFocusFNCSCup_ZB_NAC"
+    },
+    {
       "id": "5a3ff9e6ce11d0",
       "name": "Duos Ranked Cup (Zero Build)",
       "region": "BR",
@@ -327,6 +341,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event4_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
+    },
+    {
+      "id": "2adccc16f7799d",
+      "name": "Duos Ranked Cup (Zero Build)",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-20T18:00:00-05:00",
+      "end": "2026-09-20T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event4_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_NAC"
+    },
+    {
+      "id": "d620935515f56d",
+      "name": "Duos Ranked Cup (Battle Royale)",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-20T18:00:00-05:00",
+      "end": "2026-09-20T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event4_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_NAC"
     },
     {
       "id": "70ef02c1a75cf6",
