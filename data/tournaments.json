@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-20T17:05:05.516944+00:00",
+  "updatedAt": "2026-09-20T17:19:39.617823+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:5+recent:0",
-    "BR": "fresh:10+recent:0"
+    "BR": "fresh:9+recent:1"
   },
   "events": [
     {
@@ -208,11 +208,11 @@
       "region": "BR",
       "format": "SOLO",
       "mode": "BR",
-      "zeroBuild": false,
+      "zeroBuild": true,
       "platform": "MULTI",
       "start": "2026-09-25T16:00:00-05:00",
       "end": "2026-09-25T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep25?round=S42_OverrideSeries_sep25_Event1_BR",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep25?round=S42_OverrideSeries_ZB_sep25_Event1_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_OverrideSeries_sep25_BR"
     }
