@@ -2,7 +2,7 @@ name: Update Fortnite tournaments
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '*/5 * * * *'
   push:
     branches:
       - main
