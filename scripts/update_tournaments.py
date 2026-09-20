@@ -561,65 +561,31 @@ async def parse_tracker_dom(page):
             return rows, meta
     return [], meta
 
-async def fetch_ranking_page(event, page_num):
-    url = tracker_page_url(event, page_num)
-    if not url:
-        return [], {}, "no url"
-
-    errors = []
-    for fn, label in ((fetch_text_proxy_fresh, "fresh"), (fetch_text_proxy, "cached")):
-        try:
-            text = await asyncio.to_thread(fn, url)
-            rows, meta = parse_tracker_markdown(text)
-            if rows or meta.get("cutoffs") or meta.get("participants"):
-                return rows, meta, None
-            errors.append(f"{label}: no rows")
-        except Exception as ex:
-            errors.append(f"{label}: {type(ex).__name__}: {ex}")
-    return [], {}, " | ".join(errors)
-
 async def fetch_event_ranking_fast(event, old_entry=None):
     if not event.get("trackerUrl"):
         return None
 
-    # Fetch the first 3 leaderboard pages concurrently. Slow/blocked pages do
-    # not hold up other tournaments, which keeps the 5-minute updater viable.
-    results = await asyncio.gather(
-        *(fetch_ranking_page(event, page_num) for page_num in range(3)),
-        return_exceptions=True,
-    )
-
-    merged = {}
+    url = tracker_page_url(event, 0)
+    rows = []
     meta = {}
     errors = []
-    for page_num, result in enumerate(results):
-        if isinstance(result, Exception):
-            errors.append(f"page {page_num}: {type(result).__name__}: {result}")
-            continue
-        rows, page_meta, error = result
-        if page_meta:
-            # Merge cutoffs rather than replacing them page by page.
-            if page_meta.get("cutoffs"):
-                existing = {int(x["rank"]): x for x in meta.get("cutoffs", [])}
-                for x in page_meta["cutoffs"]:
-                    existing[int(x["rank"])] = x
-                meta["cutoffs"] = [existing[k] for k in sorted(existing)]
-            for k, v in page_meta.items():
-                if k != "cutoffs" and v is not None:
-                    meta[k] = v
-        if error:
-            errors.append(f"page {page_num}: {error}")
-        for row in rows:
-            merged[int(row["rank"])] = row
 
-    rows = [merged[k] for k in sorted(merged)]
+    # One rendered request per event. Repeated multi-page requests caused 429s
+    # when several NAC/BR cups were live at once.
+    try:
+        text = await asyncio.to_thread(fetch_text_proxy_fresh, url)
+        rows, meta = parse_tracker_markdown(text)
+    except Exception as ex:
+        errors.append(f"fresh: {type(ex).__name__}: {ex}")
 
-    # A temporary source failure must never erase a table that was already
-    # captured for this exact event/window.
+    # Never erase a previously captured table because the source temporarily
+    # rate-limited us or returned an incomplete render.
     if not rows and old_entry and old_entry.get("rows"):
         kept = dict(old_entry)
         kept["status"] = "stale"
-        kept["lastError"] = " | ".join(errors[-6:])
+        kept["lastError"] = " | ".join(errors[-3:]) or "source returned no rows"
+        if meta.get("cutoffs"):
+            kept["cutoffs"] = meta["cutoffs"]
         return kept
 
     return {
@@ -636,7 +602,7 @@ async def fetch_event_ranking_fast(event, old_entry=None):
         "trackerUpdated": meta.get("trackerUpdated"),
         "cutoffs": meta.get("cutoffs", []),
         "rows": rows,
-        "lastError": " | ".join(errors[-6:]) if errors else None,
+        "lastError": " | ".join(errors[-3:]) if errors else None,
     }
 
 async def update_rankings(events):
@@ -646,17 +612,22 @@ async def update_rankings(events):
     out = dict(prev_events)
     relevant = [e for e in events if e.get("trackerUrl") and ranking_relevant(e, now)]
 
-    # Multiple live events are common. Process them concurrently so the updater
-    # reliably completes before the next 5-minute schedule.
-    sem = asyncio.Semaphore(5)
+    # Keep requests modest to avoid Tracker/Jina rate limits while still
+    # completing comfortably inside the five-minute workflow cadence.
+    sem = asyncio.Semaphore(2)
 
-    async def one(e):
+    async def one(index, e):
         async with sem:
+            # Small stagger avoids bursts from the shared Actions IP.
+            await asyncio.sleep((index % 2) * 0.8)
             old = prev_events.get(e.get("id"))
             result = await fetch_event_ranking_fast(e, old)
             return e.get("id"), result
 
-    results = await asyncio.gather(*(one(e) for e in relevant), return_exceptions=True)
+    results = await asyncio.gather(
+        *(one(i, e) for i, e in enumerate(relevant)),
+        return_exceptions=True,
+    )
     for result in results:
         if isinstance(result, Exception):
             print("Ranking task error:", result)
@@ -665,9 +636,8 @@ async def update_rankings(events):
         if event_id and entry:
             out[event_id] = entry
 
-    # Do not erase a leaderboard as soon as Fortnite removes the event from
-    # its upcoming schedule. A user can keep that tournament selected after it
-    # ends, so retain recent snapshots for 72 hours.
+    # Keep recent finished rounds so a selected tournament never loses its
+    # table just because Epic removed it from the upcoming schedule.
     valid_ids = {e.get("id") for e in events}
     history_cutoff = now - timedelta(hours=72)
     kept = {}
