@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-20T01:40:02.069120+00:00",
+  "updatedAt": "2026-09-20T01:52:03.808543+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:2",
+    "NAC": "fresh:5+recent:4",
     "BR": "fresh:10+recent:7"
   },
   "events": [
@@ -119,20 +119,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
     },
     {
-      "id": "90dfca5f3b09e6",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-09-19T18:00:00-05:00",
-      "end": "2026-09-19T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event4Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
-    },
-    {
       "id": "5bf71a4242de69",
       "name": "Override Series: Cyberpunk: Edgerunners Cup Zero Build",
       "region": "NAC",
@@ -189,6 +175,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
     },
     {
+      "id": "90dfca5f3b09e6",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-09-19T18:00:00-05:00",
+      "end": "2026-09-19T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event4Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
+    },
+    {
       "id": "d855c014904f94",
       "name": "Mobile Reload (Mini Venture) Victory Cup",
       "region": "NAC",
@@ -215,6 +215,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event4Round2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "20b949d465f3a0",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-09-19T21:00:00-05:00",
+      "end": "2026-09-19T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event4Round2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
     },
     {
       "id": "6665a372d7716c",
