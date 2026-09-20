@@ -201,7 +201,7 @@ def parse_body(body_text, region, source_url):
 def fetch_text_proxy(url):
     proxy = "https://r.jina.ai/" + url
     req = Request(proxy, headers={"User-Agent": "Mozilla/5.0"})
-    with urlopen(req, timeout=35) as r:
+    with urlopen(req, timeout=22) as r:
         return r.read().decode("utf-8", "replace")
 
 def fetch_text_proxy_fresh(url):
@@ -561,74 +561,65 @@ async def parse_tracker_dom(page):
             return rows, meta
     return [], meta
 
-async def fetch_event_ranking_browser(page, event, old_entry=None):
+async def fetch_ranking_page(event, page_num):
+    url = tracker_page_url(event, page_num)
+    if not url:
+        return [], {}, "no url"
+
+    errors = []
+    for fn, label in ((fetch_text_proxy_fresh, "fresh"), (fetch_text_proxy, "cached")):
+        try:
+            text = await asyncio.to_thread(fn, url)
+            rows, meta = parse_tracker_markdown(text)
+            if rows or meta.get("cutoffs") or meta.get("participants"):
+                return rows, meta, None
+            errors.append(f"{label}: no rows")
+        except Exception as ex:
+            errors.append(f"{label}: {type(ex).__name__}: {ex}")
+    return [], {}, " | ".join(errors)
+
+async def fetch_event_ranking_fast(event, old_entry=None):
     if not event.get("trackerUrl"):
         return None
+
+    # Fetch the first 3 leaderboard pages concurrently. Slow/blocked pages do
+    # not hold up other tournaments, which keeps the 5-minute updater viable.
+    results = await asyncio.gather(
+        *(fetch_ranking_page(event, page_num) for page_num in range(3)),
+        return_exceptions=True,
+    )
 
     merged = {}
     meta = {}
     errors = []
-
-    for page_num in range(3):
-        url = tracker_page_url(event, page_num)
-        if not url:
-            break
-        page_rows = []
-
-        # Jina Reader can render the JS leaderboard while bypassing its own
-        # one-hour cache. This is the preferred path for live cups.
-        try:
-            text = await asyncio.to_thread(fetch_text_proxy_fresh, url)
-            page_rows, page_meta = parse_tracker_markdown(text)
-            if page_meta:
-                meta.update(page_meta)
-        except Exception as ex:
-            errors.append(f"fresh proxy page {page_num}: {type(ex).__name__}: {ex}")
-
-        # Direct browser is the second path. Tracker may challenge CI IPs, so
-        # it is intentionally not the only source.
-        if not page_rows:
-            try:
-                await page.goto(url, wait_until="domcontentloaded", timeout=45000)
-                await page.wait_for_timeout(2800)
-                title = (await page.title()).lower()
-                if "just a moment" in title:
-                    raise RuntimeError("Cloudflare challenge")
-                page_rows, page_meta = await parse_tracker_dom(page)
-                if page_meta:
-                    meta.update(page_meta)
-            except Exception as ex:
-                errors.append(f"browser page {page_num}: {type(ex).__name__}: {ex}")
-
-        # Last-resort cached reader result.
-        if not page_rows:
-            try:
-                text = await asyncio.to_thread(fetch_text_proxy, url)
-                page_rows, page_meta = parse_tracker_markdown(text)
-                if page_meta:
-                    meta.update(page_meta)
-            except Exception as ex:
-                errors.append(f"proxy page {page_num}: {type(ex).__name__}: {ex}")
-
-        if not page_rows:
-            errors.append(f"page {page_num}: no rows")
-            if page_num == 0:
-                break
+    for page_num, result in enumerate(results):
+        if isinstance(result, Exception):
+            errors.append(f"page {page_num}: {type(result).__name__}: {result}")
             continue
-
-        for row in page_rows:
-            merged[row["rank"]] = row
-
-        # Tracker generally serves 100 rows/page. If page 0 contains fewer,
-        # there is no reason to request pages 1 and 2.
-        if page_num == 0 and len(page_rows) < 90:
-            break
+        rows, page_meta, error = result
+        if page_meta:
+            # Merge cutoffs rather than replacing them page by page.
+            if page_meta.get("cutoffs"):
+                existing = {int(x["rank"]): x for x in meta.get("cutoffs", [])}
+                for x in page_meta["cutoffs"]:
+                    existing[int(x["rank"])] = x
+                meta["cutoffs"] = [existing[k] for k in sorted(existing)]
+            for k, v in page_meta.items():
+                if k != "cutoffs" and v is not None:
+                    meta[k] = v
+        if error:
+            errors.append(f"page {page_num}: {error}")
+        for row in rows:
+            merged[int(row["rank"])] = row
 
     rows = [merged[k] for k in sorted(merged)]
+
+    # A temporary source failure must never erase a table that was already
+    # captured for this exact event/window.
     if not rows and old_entry and old_entry.get("rows"):
         kept = dict(old_entry)
         kept["status"] = "stale"
-        kept["lastError"] = " | ".join(errors[-4:])
+        kept["lastError"] = " | ".join(errors[-6:])
         return kept
 
     return {
@@ -645,7 +636,7 @@ async def fetch_event_ranking_browser(page, event, old_entry=None):
         "trackerUpdated": meta.get("trackerUpdated"),
         "cutoffs": meta.get("cutoffs", []),
         "rows": rows,
-        "lastError": " | ".join(errors[-4:]) if errors else None,
+        "lastError": " | ".join(errors[-6:]) if errors else None,
     }
 
 async def update_rankings(events):
@@ -655,26 +646,24 @@ async def update_rankings(events):
     out = dict(prev_events)
     relevant = [e for e in events if e.get("trackerUrl") and ranking_relevant(e, now)]
 
-    from playwright.async_api import async_playwright
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        ctx = await browser.new_context(
-            locale="en-US",
-            timezone_id="America/Lima",
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140 Safari/537.36",
-        )
-        page = await ctx.new_page()
+    # Multiple live events are common. Process them concurrently so the updater
+    # reliably completes before the next 5-minute schedule.
+    sem = asyncio.Semaphore(5)
 
-        for e in relevant:
-            try:
-                old = prev_events.get(e.get("id"))
-                result = await fetch_event_ranking_browser(page, e, old)
-                if result:
-                    out[e.get("id")] = result
-            except Exception as ex:
-                print("Ranking event error:", e.get("name"), ex)
+    async def one(e):
+        async with sem:
+            old = prev_events.get(e.get("id"))
+            result = await fetch_event_ranking_fast(e, old)
+            return e.get("id"), result
 
-        await browser.close()
+    results = await asyncio.gather(*(one(e) for e in relevant), return_exceptions=True)
+    for result in results:
+        if isinstance(result, Exception):
+            print("Ranking task error:", result)
+            continue
+        event_id, entry = result
+        if event_id and entry:
+            out[event_id] = entry
 
     # Do not erase a leaderboard as soon as Fortnite removes the event from
     # its upcoming schedule. A user can keep that tournament selected after it
@@ -694,7 +683,6 @@ async def update_rankings(events):
             if dt.astimezone(timezone.utc) >= history_cutoff:
                 kept[k] = v
         except Exception:
-            # Keep useful rows rather than deleting them because of malformed metadata.
             if v.get("rows"):
                 kept[k] = v
     out = kept
@@ -753,8 +741,9 @@ async def main():
         print("No region produced data; preserving last good calendar.")
         return 0
 
-    tracker = {r: await fetch_tracker_links(r) for r in ("NAC", "BR")}
-    events = attach_tracker(events, tracker, previous)
+    # Exact Tracker URLs are generated from Epic event IDs. This avoids a
+    # fragile Cloudflare-protected discovery step and works for both NAC + BR.
+    events = attach_tracker(events, {"NAC": [], "BR": []}, previous)
 
     ded = {}
     for e in events:
