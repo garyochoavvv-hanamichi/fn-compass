@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T20:51:49.238566+00:00",
+  "updatedAt": "2026-09-21T21:04:25.443622+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4bde0cb7964923": {
@@ -1626,7 +1626,7 @@
       "window": "S42_RankedCupReloadDuos_ZB_Event4_BR",
       "eventStart": "2026-09-21T16:00:00-05:00",
       "eventEnd": "2026-09-21T19:00:00-05:00",
-      "updatedAt": "2026-09-21T20:51:45.677152+00:00",
+      "updatedAt": "2026-09-21T21:04:18.702041+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -1642,7 +1642,7 @@
       "window": "S42_RankedCupReloadDuos_Event4_BR",
       "eventStart": "2026-09-21T16:00:00-05:00",
       "eventEnd": "2026-09-21T19:00:00-05:00",
-      "updatedAt": "2026-09-21T20:51:46.952866+00:00",
+      "updatedAt": "2026-09-21T21:04:19.770199+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -1658,7 +1658,7 @@
       "window": "S42_SoloVictoryCup_Event3Round1_BR",
       "eventStart": "2026-09-21T16:00:00-05:00",
       "eventEnd": "2026-09-21T18:00:00-05:00",
-      "updatedAt": "2026-09-21T20:51:49.238456+00:00",
+      "updatedAt": "2026-09-21T21:04:25.443518+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
