@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-21T02:17:46.687562+00:00",
+  "updatedAt": "2026-09-21T02:34:00.273595+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:3",
+    "NAC": "fresh:4+recent:5",
     "BR": "fresh:9+recent:5"
   },
   "events": [
@@ -243,6 +243,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_SoloVictoryCupBR?round=S42_SoloVictoryCup_Event3Round2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SoloVictoryCup_BR"
+    },
+    {
+      "id": "ad21785502adcd",
+      "name": "Solo Victory Cup Battle Royale",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-21T21:00:00-05:00",
+      "end": "2026-09-21T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_SoloVictoryCupBR?round=S42_SoloVictoryCup_Event3Round2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SoloVictoryCup_NAC"
     },
     {
       "id": "5f55cfe873c207",
