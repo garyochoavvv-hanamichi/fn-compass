@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T03:35:34.513118+00:00",
+  "updatedAt": "2026-09-21T03:50:23.448704+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4bde0cb7964923": {
@@ -1562,7 +1562,7 @@
       "window": "S42_RankedCupDuos_ZB_Event4_BR",
       "eventStart": "2026-09-20T16:00:00-05:00",
       "eventEnd": "2026-09-20T19:00:00-05:00",
-      "updatedAt": "2026-09-21T03:35:30.046707+00:00",
+      "updatedAt": "2026-09-21T03:50:19.123921+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -1578,7 +1578,7 @@
       "window": "S42_RankedCupDuos_Event4_BR",
       "eventStart": "2026-09-20T16:00:00-05:00",
       "eventEnd": "2026-09-20T19:00:00-05:00",
-      "updatedAt": "2026-09-21T03:35:31.258772+00:00",
+      "updatedAt": "2026-09-21T03:50:19.496245+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -1594,7 +1594,7 @@
       "window": "S42_RankedCupDuos_ZB_Event4_NAC",
       "eventStart": "2026-09-20T18:00:00-05:00",
       "eventEnd": "2026-09-20T21:00:00-05:00",
-      "updatedAt": "2026-09-21T03:35:31.914460+00:00",
+      "updatedAt": "2026-09-21T03:50:21.295308+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -1610,7 +1610,7 @@
       "window": "S42_RankedCupDuos_Event4_NAC",
       "eventStart": "2026-09-20T18:00:00-05:00",
       "eventEnd": "2026-09-20T21:00:00-05:00",
-      "updatedAt": "2026-09-21T03:35:34.513025+00:00",
+      "updatedAt": "2026-09-21T03:50:23.448613+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
