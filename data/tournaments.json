@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-21T07:07:50.500091+00:00",
+  "updatedAt": "2026-09-21T07:26:56.356472+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:5",
+    "NAC": "fresh:6+recent:4",
     "BR": "fresh:9+recent:4"
   },
   "events": [
@@ -33,20 +33,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionFocusFNCSCup?round=S42_ChampionFocusFNCSCup_ZB_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionFocusFNCSCup_ZB_BR"
-    },
-    {
-      "id": "1dc900d873e5d9",
-      "name": "Champion Focus FNCS Mobile Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-20T13:00:00-05:00",
-      "end": "2026-09-20T14:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionFocusFNCSMobileCup?round=S42_ChampionFocusFNCSMobileCup_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionFocusFNCSMobileCup_NAC"
     },
     {
       "id": "9d7b6e078ba972",
