@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-21T23:23:58.826139+00:00",
+  "updatedAt": "2026-09-21T23:38:06.657547+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:0",
-    "BR": "fresh:9+recent:0"
+    "BR": "fresh:9+recent:1"
   },
   "events": [
     {
@@ -215,6 +215,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event2_Round2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
+    },
+    {
+      "id": "f81806eea8456e",
+      "name": "FNCS Solos Qualifiers",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-28T16:00:00-05:00",
+      "end": "2026-09-28T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual1Round1Day1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_BR"
     }
   ]
 }
