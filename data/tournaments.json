@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-22T02:07:03.950790+00:00",
+  "updatedAt": "2026-09-22T02:24:00.127480+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:1",
+    "NAC": "fresh:5+recent:3",
     "BR": "fresh:9+recent:4"
   },
   "events": [
@@ -187,6 +187,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/FNCS%20GC%20LAN?round=MannekenPis_Day1",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_FNCS%20GC%20LAN_BR"
+    },
+    {
+      "id": "cb84c4a80c2d27",
+      "name": "Override Series",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-25T18:00:00-05:00",
+      "end": "2026-09-25T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_OverrideSeries_sep25?round=S42_OverrideSeries_ZB_sep25_Event1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_OverrideSeries_sep25_NAC"
     },
     {
       "id": "87dd5d2f4e4fc6",
