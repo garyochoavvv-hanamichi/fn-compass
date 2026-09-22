@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-22T01:42:12.528682+00:00",
+  "updatedAt": "2026-09-22T01:53:04.410955+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:1",
-    "BR": "fresh:9+recent:3"
+    "BR": "fresh:9+recent:4"
   },
   "events": [
     {
@@ -271,6 +271,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event5_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_BR"
+    },
+    {
+      "id": "d79ef2c30b7308",
+      "name": "FNCS Solos Qualifiers",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-29T16:00:00-05:00",
+      "end": "2026-09-29T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual1Round1Day2_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_BR"
     }
   ]
 }
