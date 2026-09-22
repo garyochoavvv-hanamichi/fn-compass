@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-22T15:01:20.947934+00:00",
+  "updatedAt": "2026-09-22T15:19:53.483350+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:6 (proxy S39_RankedCupDuos: HTTPError: HTTP Error 401: Unauthorized | proxy S42_RankedCupSolo: HTTPError: HTTP Error 401: Unauthorized | proxy S36_RankedCupTrios: HTTPError: HTTP Error 401: Unauthorized | proxy S39_ReloadEliteSeriesFinal: HTTPError: HTTP Error 401: Unauthorized)",
-    "BR": "fallback:9 (proxy S39_RankedCupDuos: HTTPError: HTTP Error 401: Unauthorized | proxy S42_RankedCupSolo: HTTPError: HTTP Error 401: Unauthorized | proxy S36_RankedCupTrios: HTTPError: HTTP Error 401: Unauthorized | proxy S39_ReloadEliteSeriesFinal: HTTPError: HTTP Error 401: Unauthorized)"
+    "NAC": "fresh:6+recent:0",
+    "BR": "fresh:9+recent:0"
   },
   "events": [
     {
