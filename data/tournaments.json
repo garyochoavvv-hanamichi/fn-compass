@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-22T00:25:05.328974+00:00",
+  "updatedAt": "2026-09-22T00:44:03.059405+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:0",
-    "BR": "fresh:9+recent:1"
+    "BR": "fresh:9+recent:3"
   },
   "events": [
     {
@@ -229,6 +229,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual1Round1Day1_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_BR"
+    },
+    {
+      "id": "22d875e68485d5",
+      "name": "Solo Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-28T16:00:00-05:00",
+      "end": "2026-09-28T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event5_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_BR"
+    },
+    {
+      "id": "e06ff4f70a0c80",
+      "name": "Solo Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-28T16:00:00-05:00",
+      "end": "2026-09-28T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event5_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_BR"
     }
   ]
 }
