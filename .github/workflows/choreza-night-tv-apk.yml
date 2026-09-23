@@ -152,17 +152,34 @@ jobs:
           print("Native audio package:", package_name)
           PY
 
-      - name: Build debug APK
-        working-directory: ChorezaNightTV/android
+      - name: Build standalone release APK
+        working-directory: ChorezaNightTV
         run: |
+          mkdir -p android/app/src/main/assets
+          npx react-native bundle \
+            --platform android \
+            --dev false \
+            --entry-file index.js \
+            --bundle-output android/app/src/main/assets/index.android.bundle \
+            --assets-dest android/app/src/main/res
+          cd android
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon --stacktrace
+          ./gradlew assembleRelease --no-daemon --stacktrace
 
-      - name: Prepare APK
+      - name: Prepare installable APK
         run: |
           mkdir -p output
-          cp ChorezaNightTV/android/app/build/outputs/apk/debug/app-debug.apk output/CHOREZA_NIGHT_TV_v1-debug.apk
-          sha256sum output/CHOREZA_NIGHT_TV_v1-debug.apk > output/SHA256.txt
+          APK="$(find ChorezaNightTV/android/app/build/outputs/apk/release -type f -name '*.apk' | head -n 1)"
+          if [ -z "$APK" ]; then
+            echo "Release APK not found"
+            exit 1
+          fi
+          cp "$APK" output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk
+          sha256sum output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk > output/SHA256.txt
+          unzip -l output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk | grep -E 'index.android.bundle|assets/index.android.bundle' || {
+            echo "Embedded JS bundle missing"
+            exit 1
+          }
           ls -lh output
 
       - name: Upload APK artifact
