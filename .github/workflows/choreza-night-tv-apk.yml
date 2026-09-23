@@ -48,6 +48,13 @@ jobs:
             sed -i 's/^newArchEnabled=true/newArchEnabled=false/' android/gradle.properties || true
           fi
 
+      - name: Add CHOREZA launcher icon
+        run: |
+          mkdir -p ChorezaNightTV/android/app/src/main/res/drawable-nodpi
+          curl -L --fail \
+            "https://choreza-night.floot.app/_cdn/static/ce5e1425-9da7-42de-8217-76ed268f86ad-choreza-night-tv-icon.png" \
+            -o ChorezaNightTV/android/app/src/main/res/drawable-nodpi/choreza_night_tv_icon.png
+
       - name: Configure MediaProjection and Android TV permissions
         run: |
           python3 - <<'PY'
@@ -57,6 +64,9 @@ jobs:
           root = Path("ChorezaNightTV/android/app/src/main")
           manifest = root / "AndroidManifest.xml"
           text = manifest.read_text()
+          text = re.sub(r'android:icon="@[^"]+"', 'android:icon="@drawable/choreza_night_tv_icon"', text)
+          text = re.sub(r'android:roundIcon="@[^"]+"', 'android:roundIcon="@drawable/choreza_night_tv_icon"', text)
+          text = re.sub(r'android:label="@string/app_name"', 'android:label="CHOREZA NIGHT TV"', text)
 
           permissions = [
               '<uses-permission android:name="android.permission.INTERNET" />',
@@ -196,7 +206,7 @@ jobs:
             --ks-key-alias choreza-night-tv \
             --ks-pass pass:choreza2026 \
             --key-pass pass:choreza2026 \
-            --out output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk \
+            --out output/CHOREZA_NIGHT_TV_v4_FIXED_WEBSTYLE_1080p60.apk \
             /tmp/choreza-aligned.apk
 
           "$APKSIGNER" verify --verbose --print-certs output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk
