@@ -671,7 +671,7 @@ export default function App() {
           const parameters = videoSender.getParameters();
           parameters.encodings =
             parameters.encodings?.length > 0 ? parameters.encodings : [{}];
-          parameters.encodings[0].maxBitrate = 12_000_000;
+          parameters.encodings[0].maxBitrate = 8_000_000;
           parameters.degradationPreference = 'maintain-resolution';
           await videoSender.setParameters(parameters);
         } catch {}
@@ -799,18 +799,10 @@ export default function App() {
             </View>
 
             <Text style={styles.footnote}>
-              choreza-night.floot.app · cambio visual automático cada 1 min
+              choreza-night.floot.app · cambio visual cada 1 min · Android API {String(Platform.Version)}
             </Text>
           </View>
 
-          <View style={styles.homePoster}>
-            <View style={styles.posterGlass}>
-              <Text style={styles.posterTag}>{theme.tag} · VOL. 01</Text>
-              <Text style={styles.posterBig}>{theme.name.toUpperCase()}</Text>
-              <Text style={[styles.posterLine, {backgroundColor: theme.accent}]} />
-              <Text style={styles.posterMeta}>1080p · 60 FPS · WEBRTC P2P</Text>
-            </View>
-          </View>
         </View>
       </SafeAreaView>
     );
@@ -963,55 +955,13 @@ const styles = StyleSheet.create({
   },
   homeShell: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 54,
-    paddingHorizontal: 34,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingHorizontal: 52,
   },
   homeLeft: {
-    flex: 1.28,
-    maxWidth: 980,
-  },
-  homePoster: {
-    flex: 0.72,
-    alignItems: 'flex-end',
-  },
-  posterGlass: {
-    width: 430,
-    height: 560,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,.16)',
-    backgroundColor: 'rgba(7,10,17,.64)',
-    borderRadius: 24,
-    padding: 28,
-    justifyContent: 'flex-end',
-  },
-  posterTag: {
-    position: 'absolute',
-    top: 28,
-    left: 28,
-    color: '#a9b0bd',
-    fontSize: 12,
-    fontWeight: '700',
-    letterSpacing: 3,
-  },
-  posterBig: {
-    color: '#f5f2ed',
-    fontSize: 54,
-    fontWeight: '900',
-    lineHeight: 54,
-  },
-  posterLine: {
-    width: '112%',
-    height: 10,
-    marginVertical: 18,
-    marginLeft: -18,
-    transform: [{rotate: '-4deg'}],
-  },
-  posterMeta: {
-    color: '#9aa3b1',
-    fontSize: 13,
-    letterSpacing: 2,
+    width: '100%',
+    maxWidth: 1220,
   },
   eyebrowRow: {
     flexDirection: 'row',
