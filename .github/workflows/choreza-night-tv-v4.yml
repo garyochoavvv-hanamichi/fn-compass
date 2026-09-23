@@ -54,6 +54,13 @@ jobs:
           import re
 
           root = Path("ChorezaNightTV/android/app/src/main")
+          gradle_file = Path("ChorezaNightTV/android/app/build.gradle")
+          if gradle_file.exists():
+              gradle_text = gradle_file.read_text()
+              gradle_text = re.sub(r'versionCode\s+\d+', 'versionCode 10', gradle_text)
+              gradle_text = re.sub(r'versionName\s+"[^"]+"', 'versionName "10.0"', gradle_text)
+              gradle_file.write_text(gradle_text)
+
           manifest = root / "AndroidManifest.xml"
           text = manifest.read_text()
 
@@ -190,15 +197,17 @@ jobs:
           BUILD_TOOLS="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)"
           ZIPALIGN="$BUILD_TOOLS/zipalign"
           APKSIGNER="$BUILD_TOOLS/apksigner"
-          PASS="$(openssl rand -hex 16)"
+          KEYSTORE="ChorezaNightTV/android/app/debug.keystore"
 
-          keytool -genkeypair             -keystore /tmp/choreza-v4.keystore             -alias choreza-v4             -keyalg RSA             -keysize 2048             -validity 10000             -storepass "$PASS"             -keypass "$PASS"             -dname "CN=CHOREZA NIGHT TV,O=CHOREZA,C=PE"
+          test -f "$KEYSTORE"
+          keytool -list -v             -keystore "$KEYSTORE"             -alias androiddebugkey             -storepass android | grep -E 'Owner:|SHA256:|Valid from' || true
 
-          "$ZIPALIGN" -p -f 4 "$APK" /tmp/choreza-v4-aligned.apk
-          OUT="output/CHOREZA_NIGHT_TV_v4_FIXED_WEBSTYLE_1080p60.apk"
-          "$APKSIGNER" sign             --ks /tmp/choreza-v4.keystore             --ks-key-alias choreza-v4             --ks-pass "pass:$PASS"             --key-pass "pass:$PASS"             --out "$OUT"             /tmp/choreza-v4-aligned.apk
+          "$ZIPALIGN" -p -f 4 "$APK" /tmp/choreza-stable-aligned.apk
+          OUT="output/CHOREZA_NIGHT_TV_v10_STABLE_SIGN_FULLSCREEN.apk"
+          "$APKSIGNER" sign             --ks "$KEYSTORE"             --ks-key-alias androiddebugkey             --ks-pass "pass:android"             --key-pass "pass:android"             --out "$OUT"             /tmp/choreza-stable-aligned.apk
 
           "$APKSIGNER" verify --verbose --print-certs "$OUT"
+          unzip -t "$OUT" >/dev/null
           unzip -l "$OUT" | grep -E 'index.android.bundle|assets/index.android.bundle'
           sha256sum "$OUT" > output/SHA256.txt
           ls -lh output
