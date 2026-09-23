@@ -1,0 +1,171 @@
+name: Build CHOREZA NIGHT TV v4
+
+on:
+  push:
+    branches:
+      - choreza-night-tv-apk
+    paths:
+      - 'choreza-night-tv/**'
+      - '.github/workflows/choreza-night-tv-v4.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Create Android TV project
+        run: |
+          rm -rf ChorezaNightTV
+          npx --yes @react-native-community/cli@latest init ChorezaNightTV --template @react-native-tvos/template-tv --skip-git-init
+          cp choreza-night-tv/App.tsx ChorezaNightTV/App.tsx
+
+      - name: Install WebRTC and configure capture
+        working-directory: ChorezaNightTV
+        run: |
+          npm install react-native-webrtc@latest --save --legacy-peer-deps
+          SCREEN_CAPTURE="node_modules/react-native-webrtc/android/src/main/java/com/oney/WebRTCModule/ScreenCaptureController.java"
+          if [ -f "$SCREEN_CAPTURE" ]; then
+            sed -i 's/private static final int DEFAULT_FPS = 30;/private static final int DEFAULT_FPS = 60;/' "$SCREEN_CAPTURE"
+          fi
+          sed -i 's/^newArchEnabled=true/newArchEnabled=false/' android/gradle.properties || true
+
+      - name: Add launcher icon
+        run: |
+          mkdir -p ChorezaNightTV/android/app/src/main/res/drawable-nodpi
+          curl -L --fail             "https://choreza-night.floot.app/_cdn/static/ce5e1425-9da7-42de-8217-76ed268f86ad-choreza-night-tv-icon.png"             -o ChorezaNightTV/android/app/src/main/res/drawable-nodpi/choreza_night_tv_icon.png
+
+      - name: Configure native Android TV features
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path("ChorezaNightTV/android/app/src/main")
+          manifest = root / "AndroidManifest.xml"
+          text = manifest.read_text()
+
+          text = re.sub(r'android:icon="@[^"]+"', 'android:icon="@drawable/choreza_night_tv_icon"', text)
+          text = re.sub(r'android:roundIcon="@[^"]+"', 'android:roundIcon="@drawable/choreza_night_tv_icon"', text)
+          text = re.sub(r'android:label="@string/app_name"', 'android:label="CHOREZA NIGHT TV"', text)
+
+          permissions = [
+              '<uses-permission android:name="android.permission.INTERNET" />',
+              '<uses-permission android:name="android.permission.RECORD_AUDIO" />',
+              '<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />',
+              '<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />',
+              '<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />',
+              '<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />',
+              '<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />',
+          ]
+          insert = "\n    " + "\n    ".join([p for p in permissions if p not in text]) + "\n"
+          text = text.replace("<application", insert + "    <application", 1)
+          manifest.write_text(text)
+
+          mains = list(root.rglob("MainApplication.kt"))
+          if not mains:
+              raise SystemExit("MainApplication.kt not found")
+          main = mains[0]
+          source = main.read_text()
+
+          package_match = re.search(r'^package\s+([^\n]+)', source, re.M)
+          if not package_match:
+              raise SystemExit("Android package not found")
+          package_name = package_match.group(1).strip()
+
+          if "WebRTCModuleOptions" not in source:
+              pos = package_match.end()
+              source = source[:pos] + "\n\nimport com.oney.WebRTCModule.WebRTCModuleOptions" + source[pos:]
+
+          if "enableMediaProjectionService = true" not in source:
+              source = source.replace(
+                  "super.onCreate()",
+                  "super.onCreate()\n    WebRTCModuleOptions.getInstance().enableMediaProjectionService = true",
+                  1,
+              )
+
+          if "ChorezaAudioPackage()" not in source:
+              source = source.replace(
+                  "PackageList(this).packages.apply {",
+                  "PackageList(this).packages.apply {\n        add(ChorezaAudioPackage())",
+                  1,
+              )
+          main.write_text(source)
+
+          package_dir = root / "java" / Path(package_name.replace(".", "/"))
+          package_dir.mkdir(parents=True, exist_ok=True)
+          for filename in [
+              "ChorezaAudioModule.kt",
+              "ChorezaAudioPackage.kt",
+              "ChorezaCaptureService.kt",
+          ]:
+              template = Path("choreza-night-tv/native") / filename
+              target = package_dir / filename
+              target.write_text(template.read_text().replace("__PACKAGE__", package_name))
+
+          service_decl = """
+              <service
+                  android:name=".ChorezaCaptureService"
+                  android:exported="false"
+                  android:foregroundServiceType="mediaProjection|microphone" />
+          """
+          text = manifest.read_text()
+          if "ChorezaCaptureService" not in text:
+              text = text.replace("</application>", service_decl + "\n    </application>", 1)
+              manifest.write_text(text)
+          PY
+
+      - name: Build release APK
+        working-directory: ChorezaNightTV
+        run: |
+          mkdir -p android/app/src/main/assets
+          npx react-native bundle             --platform android             --dev false             --entry-file index.js             --bundle-output android/app/src/main/assets/index.android.bundle             --assets-dest android/app/src/main/res
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Sign and verify APK
+        run: |
+          set -e
+          mkdir -p output
+          APK="$(find ChorezaNightTV/android/app/build/outputs/apk/release -type f -name '*.apk' | head -n 1)"
+          test -n "$APK"
+
+          BUILD_TOOLS="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)"
+          ZIPALIGN="$BUILD_TOOLS/zipalign"
+          APKSIGNER="$BUILD_TOOLS/apksigner"
+          PASS="$(openssl rand -hex 16)"
+
+          keytool -genkeypair             -keystore /tmp/choreza-v4.keystore             -alias choreza-v4             -keyalg RSA             -keysize 2048             -validity 10000             -storepass "$PASS"             -keypass "$PASS"             -dname "CN=CHOREZA NIGHT TV,O=CHOREZA,C=PE"
+
+          "$ZIPALIGN" -p -f 4 "$APK" /tmp/choreza-v4-aligned.apk
+          OUT="output/CHOREZA_NIGHT_TV_v4_FIXED_WEBSTYLE_1080p60.apk"
+          "$APKSIGNER" sign             --ks /tmp/choreza-v4.keystore             --ks-key-alias choreza-v4             --ks-pass "pass:$PASS"             --key-pass "pass:$PASS"             --out "$OUT"             /tmp/choreza-v4-aligned.apk
+
+          "$APKSIGNER" verify --verbose --print-certs "$OUT"
+          unzip -l "$OUT" | grep -E 'index.android.bundle|assets/index.android.bundle'
+          sha256sum "$OUT" > output/SHA256.txt
+          ls -lh output
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CHOREZA-NIGHT-TV-v4
+          path: output/*
+          if-no-files-found: error
+          retention-days: 7
