@@ -40,7 +40,7 @@ jobs:
         run: |
           npm install react-native-webrtc@124.0.8 --save --legacy-peer-deps
           sed -i 's/^newArchEnabled=true/newArchEnabled=false/' android/gradle.properties || true
-          printf '\nandroid.enableDexingArtifactTransform.desugaring=false\n' >> android/gradle.properties
+          printf '\nandroid.useFullClasspathForDexingTransform=true\n' >> android/gradle.properties
 
       - name: Add launcher icon
         run: |
