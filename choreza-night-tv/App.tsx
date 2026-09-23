@@ -2,6 +2,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {
   Alert,
   Animated,
+  BackHandler,
   DeviceEventEmitter,
   Easing,
   Image,
@@ -222,6 +223,7 @@ export default function App() {
   const [systemAudioOn, setSystemAudioOn] = useState(false);
   const [systemAudioLevel, setSystemAudioLevel] = useState(0);
   const [streamURL, setStreamURL] = useState<string | null>(null);
+  const [fullscreen, setFullscreen] = useState(false);
   const [activeThemeIndex, setActiveThemeIndex] = useState(0);
 
   const fadeValues = useRef(
@@ -267,6 +269,17 @@ export default function App() {
     }, THEME_ROTATE_MS);
     return () => clearInterval(timer);
   }, [fadeValues]);
+
+  useEffect(() => {
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (fullscreen) {
+        setFullscreen(false);
+        return true;
+      }
+      return false;
+    });
+    return () => sub.remove();
+  }, [fullscreen]);
 
   useEffect(() => {
     const audioSub = DeviceEventEmitter.addListener(
@@ -555,6 +568,7 @@ export default function App() {
     audioDataChannelRef.current = null;
     pendingIceRef.current = [];
     setStreamURL(null);
+    setFullscreen(false);
     setConnected(false);
     setSharing(false);
     setMicOn(false);
@@ -823,6 +837,28 @@ export default function App() {
 
   const isHost = role === 'host';
 
+  if (fullscreen && streamURL) {
+    return (
+      <View style={styles.fullscreenPage}>
+        <RTCView
+          streamURL={streamURL}
+          style={styles.fullscreenRtc}
+          objectFit="contain"
+          mirror={false}
+        />
+        <Pressable
+          hasTVPreferredFocus
+          onPress={() => setFullscreen(false)}
+          style={({focused}: any) => [
+            styles.fullscreenExit,
+            focused && styles.fullscreenExitFocused,
+          ]}>
+          <Text style={styles.fullscreenExitText}>← VOLVER</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.page}>
       <ThemeBackdrop
@@ -849,12 +885,22 @@ export default function App() {
       <View style={styles.workspace}>
         <View style={styles.stage}>
           {streamURL ? (
-            <RTCView
-              streamURL={streamURL}
-              style={styles.rtc}
-              objectFit="contain"
-              mirror={false}
-            />
+            <>
+              <RTCView
+                streamURL={streamURL}
+                style={styles.rtc}
+                objectFit="contain"
+                mirror={false}
+              />
+              <Pressable
+                onPress={() => setFullscreen(true)}
+                style={({focused}: any) => [
+                  styles.fullscreenButton,
+                  focused && {borderColor: theme.accent, transform: [{scale: 1.04}]},
+                ]}>
+                <Text style={styles.fullscreenButtonText}>⛶ PANTALLA COMPLETA</Text>
+              </Pressable>
+            </>
           ) : (
             <View style={styles.empty}>
               <View
@@ -951,6 +997,52 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#05070d',
     padding: 28,
+  },
+  fullscreenPage: {
+    flex: 1,
+    backgroundColor: '#000',
+  },
+  fullscreenRtc: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#000',
+  },
+  fullscreenButton: {
+    position: 'absolute',
+    right: 20,
+    bottom: 20,
+    borderWidth: 1,
+    borderColor: '#394253',
+    borderRadius: 12,
+    backgroundColor: 'rgba(5,8,14,.88)',
+    paddingHorizontal: 18,
+    paddingVertical: 12,
+  },
+  fullscreenButtonText: {
+    color: '#f5f2ed',
+    fontSize: 12,
+    fontWeight: '900',
+    letterSpacing: 1.2,
+  },
+  fullscreenExit: {
+    position: 'absolute',
+    top: 28,
+    left: 28,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,.28)',
+    borderRadius: 12,
+    backgroundColor: 'rgba(5,8,14,.78)',
+    paddingHorizontal: 18,
+    paddingVertical: 12,
+  },
+  fullscreenExitFocused: {
+    borderColor: '#ffffff',
+    transform: [{scale: 1.04}],
+  },
+  fullscreenExitText: {
+    color: '#ffffff',
+    fontSize: 13,
+    fontWeight: '900',
+    letterSpacing: 1.4,
   },
   backdropShade: {
     backgroundColor: 'rgba(4,7,14,.66)',
