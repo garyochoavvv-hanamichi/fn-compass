@@ -120,7 +120,7 @@ jobs:
 
           main.write_text(source)
 
-          package_match = re.search(r'^package\\s+([^\\n]+)', source, re.M)
+          package_match = re.search(r'^package\s+([^\n]+)', source, re.M)
           if not package_match:
               raise SystemExit("Android package not found")
           package_name = package_match.group(1).strip()
