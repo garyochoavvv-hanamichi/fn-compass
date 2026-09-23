@@ -353,6 +353,9 @@ export default function App() {
     pendingIceRef.current = [];
 
     if (activeRole === 'host') {
+      try {
+        pc.addTransceiver?.('audio', {direction: 'recvonly'});
+      } catch {}
       const dc = pc.createDataChannel('choreza-system-audio', {ordered: true});
       audioDataChannelRef.current = dc;
       dc.onopen = () => setStatus('P2P CONECTADO · AUDIO LISTO');
@@ -479,6 +482,7 @@ export default function App() {
           if (pc.signalingState !== 'stable') {
             setStatus('SINCRONIZANDO OFERTA');
           }
+          addExistingTracks(pc);
           await pc.setRemoteDescription(new RTCSessionDescription(msg.sdp));
           await flushPendingIce(pc);
           const answer = await pc.createAnswer();
@@ -626,6 +630,8 @@ export default function App() {
       setMicOn(true);
       if (activeRoleRef.current === 'host') {
         await makeOffer(activeRoomRef.current, pc);
+      } else {
+        await publishTo(activeRoomRef.current, {type: 'guest-ready'} as any);
       }
     } catch (error) {
       showError(error);
