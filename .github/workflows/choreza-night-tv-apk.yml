@@ -38,7 +38,7 @@ jobs:
       - name: Install WebRTC
         working-directory: ChorezaNightTV
         run: |
-          npm install react-native-webrtc@latest --save
+          npm install react-native-webrtc@latest --save --legacy-peer-deps
           if [ -f android/gradle.properties ]; then
             sed -i 's/^newArchEnabled=true/newArchEnabled=false/' android/gradle.properties || true
           fi
