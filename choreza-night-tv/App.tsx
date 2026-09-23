@@ -2,6 +2,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {
   Alert,
   Animated,
+  BackHandler,
   DeviceEventEmitter,
   Easing,
   Image,
@@ -222,6 +223,7 @@ export default function App() {
   const [systemAudioOn, setSystemAudioOn] = useState(false);
   const [systemAudioLevel, setSystemAudioLevel] = useState(0);
   const [streamURL, setStreamURL] = useState<string | null>(null);
+  const [fullscreen, setFullscreen] = useState(false);
   const [activeThemeIndex, setActiveThemeIndex] = useState(0);
 
   const fadeValues = useRef(
@@ -269,6 +271,17 @@ export default function App() {
     }, THEME_ROTATE_MS);
     return () => clearInterval(timer);
   }, [fadeValues]);
+
+  useEffect(() => {
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (fullscreen) {
+        setFullscreen(false);
+        return true;
+      }
+      return false;
+    });
+    return () => sub.remove();
+  }, [fullscreen]);
 
   useEffect(() => {
     const audioSub = DeviceEventEmitter.addListener(
@@ -488,6 +501,13 @@ export default function App() {
 
         if (msg.type === 'guest-ready' && activeRole === 'host') {
           setStatus('INVITADO DETECTADO · PREPARANDO');
+          if (pc.signalingState === 'have-local-offer' && pc.localDescription) {
+            await publishTo(activeRoom, {
+              type: 'offer',
+              sdp: pc.localDescription,
+            } as any);
+            return;
+          }
           await makeOffer(activeRoom, pc);
           return;
         }
@@ -575,6 +595,7 @@ export default function App() {
     offerQueuedRef.current = false;
     videoReceivedRef.current = false;
     setStreamURL(null);
+    setFullscreen(false);
     setConnected(false);
     setSharing(false);
     setMicOn(false);
@@ -844,13 +865,16 @@ export default function App() {
   const isHost = role === 'host';
 
   return (
-    <SafeAreaView style={styles.page}>
-      <ThemeBackdrop
-        activeIndex={activeThemeIndex}
-        fadeValues={fadeValues}
-        roomMode
-      />
+    <SafeAreaView style={[styles.page, fullscreen && styles.pageFullscreen]}>
+      {!fullscreen && (
+        <ThemeBackdrop
+          activeIndex={activeThemeIndex}
+          fadeValues={fadeValues}
+          roomMode
+        />
+      )}
 
+      {!fullscreen && (
       <View style={styles.topbar}>
         <Text style={styles.brand}>
           CHOREZA <Text style={{color: theme.accent}}>NIGHT TV</Text>
@@ -865,9 +889,10 @@ export default function App() {
           {status}
         </Text>
       </View>
+      )}
 
-      <View style={styles.workspace}>
-        <View style={styles.stage}>
+      <View style={[styles.workspace, fullscreen && styles.workspaceFullscreen]}>
+        <View style={[styles.stage, fullscreen && styles.stageFullscreen]}>
           {streamURL ? (
             <RTCView
               streamURL={streamURL}
@@ -900,15 +925,18 @@ export default function App() {
             </View>
           )}
 
-          <View style={styles.hud}>
-            <Text style={styles.hudText}>
-              {connected ? '● P2P CONECTADO' : '○ P2P ESPERANDO'}
-            </Text>
-            <Text style={styles.hudText}>1080p OBJETIVO</Text>
-            <Text style={styles.hudText}>HASTA 60 FPS</Text>
-          </View>
+          {!fullscreen && (
+            <View style={styles.hud}>
+              <Text style={styles.hudText}>
+                {connected ? '● P2P CONECTADO' : '○ P2P ESPERANDO'}
+              </Text>
+              <Text style={styles.hudText}>1080p OBJETIVO</Text>
+              <Text style={styles.hudText}>HASTA 60 FPS</Text>
+            </View>
+          )}
         </View>
 
+        {!fullscreen && (
         <View style={styles.sidebar}>
           <Text style={styles.eyebrow}>{isHost ? 'HOST' : 'INVITADO'}</Text>
           <Text style={styles.panelTitle}>{isHost ? 'CABINA' : 'SALA TV'}</Text>
@@ -929,6 +957,15 @@ export default function App() {
             onPress={toggleMic}
             accent={theme.accent}
           />
+
+          {!!streamURL && (
+            <FocusButton
+              title="PANTALLA COMPLETA"
+              subtitle="Video a toda la TV · Atrás para volver"
+              onPress={() => setFullscreen(true)}
+              accent={theme.accent}
+            />
+          )}
 
           {isHost && (
             <FocusButton
@@ -961,6 +998,7 @@ export default function App() {
             danger
           />
         </View>
+        )}
       </View>
     </SafeAreaView>
   );
@@ -971,6 +1009,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#05070d',
     padding: 28,
+  },
+  pageFullscreen: {
+    padding: 0,
+    backgroundColor: '#000',
+  },
+  workspaceFullscreen: {
+    gap: 0,
+  },
+  stageFullscreen: {
+    borderWidth: 0,
+    borderRadius: 0,
   },
   backdropShade: {
     backgroundColor: 'rgba(4,7,14,.66)',
