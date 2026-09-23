@@ -641,14 +641,10 @@ export default function App() {
   async function shareScreen() {
     try {
       setStatus('SOLICITANDO CAPTURA');
-      const stream: any = await mediaDevices.getDisplayMedia({
-        video: true,
-        audio: false,
-        android: {
-          createConfigForDefaultDisplay: true,
-          resolutionScale: 1.0,
-        },
-      } as any);
+      // Use the standard MediaProjection flow for compatibility across
+      // Android TV versions. Forcing createConfigForDefaultDisplay uses an
+      // Android 14-only API and can crash older TV firmware.
+      const stream: any = await mediaDevices.getDisplayMedia();
 
       screenRef.current?.getTracks?.().forEach((track: any) => track.stop());
       screenRef.current = stream;
