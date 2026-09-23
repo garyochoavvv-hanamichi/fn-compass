@@ -1,0 +1,40 @@
+name: Publish APK to CHOREZA web
+
+on:
+  push:
+    branches:
+      - choreza-night-tv-apk
+    paths:
+      - '.github/workflows/publish-apk-to-floot.yml'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download stable v10 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/choreza
+          gh run download 35911556678 \
+            --repo garyochoavvv-hanamichi/fn-compass \
+            --name CHOREZA-NIGHT-TV-v4 \
+            --dir /tmp/choreza
+          find /tmp/choreza -maxdepth 2 -type f -ls
+          APK="$(find /tmp/choreza -type f -name '*.apk' | head -n 1)"
+          test -n "$APK"
+          SIZE="$(stat -c%s "$APK")"
+          echo "APK=$APK" >> "$GITHUB_ENV"
+          echo "SIZE=$SIZE" >> "$GITHUB_ENV"
+          test "$SIZE" = "93155697"
+
+      - name: Upload APK to CHOREZA web storage
+        env:
+          UPLOAD_URL: "https://floot-client-app-storage.s3.us-east-1.amazonaws.com/apps/678f63dd-8adf-4072-971e-ec804bc75c3a/public/static/3905dc47-569b-483c-a13b-5e25ccb80b81-CHOREZA_NIGHT_TV_v10_STABLE_SIGN_FULLSCREEN.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAZQ3DQG3ZS42FBPYH%2F20260923%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260923T201239Z&X-Amz-Expires=900&X-Amz-Signature=325a09d42c5f990ba6034a575ac933204ca185e4adb4dbb9a073911bf9cc8008&X-Amz-SignedHeaders=content-length%3Bhost&x-id=PutObject"
+        run: |
+          curl --fail-with-body --show-error --silent \
+            -X PUT \
+            -H "Content-Type: application/vnd.android.package-archive" \
+            --data-binary @"$APK" \
+            "$UPLOAD_URL"
+          echo "Uploaded $SIZE bytes successfully."
