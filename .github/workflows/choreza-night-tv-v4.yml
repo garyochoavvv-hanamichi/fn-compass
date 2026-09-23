@@ -38,12 +38,9 @@ jobs:
       - name: Install WebRTC and configure capture
         working-directory: ChorezaNightTV
         run: |
-          npm install react-native-webrtc@latest --save --legacy-peer-deps
-          SCREEN_CAPTURE="node_modules/react-native-webrtc/android/src/main/java/com/oney/WebRTCModule/ScreenCaptureController.java"
-          if [ -f "$SCREEN_CAPTURE" ]; then
-            sed -i 's/private static final int DEFAULT_FPS = 30;/private static final int DEFAULT_FPS = 60;/' "$SCREEN_CAPTURE"
-          fi
+          npm install react-native-webrtc@124.0.8 --save --legacy-peer-deps
           sed -i 's/^newArchEnabled=true/newArchEnabled=false/' android/gradle.properties || true
+          printf '\nandroid.enableDexingArtifactTransform.desugaring=false\n' >> android/gradle.properties
 
       - name: Add launcher icon
         run: |
@@ -66,6 +63,8 @@ jobs:
 
           permissions = [
               '<uses-permission android:name="android.permission.INTERNET" />',
+              '<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />',
+              '<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />',
               '<uses-permission android:name="android.permission.RECORD_AUDIO" />',
               '<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />',
               '<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />',
@@ -88,17 +87,6 @@ jobs:
               raise SystemExit("Android package not found")
           package_name = package_match.group(1).strip()
 
-          if "WebRTCModuleOptions" not in source:
-              pos = package_match.end()
-              source = source[:pos] + "\n\nimport com.oney.WebRTCModule.WebRTCModuleOptions" + source[pos:]
-
-          if "enableMediaProjectionService = true" not in source:
-              source = source.replace(
-                  "super.onCreate()",
-                  "WebRTCModuleOptions.getInstance().enableMediaProjectionService = true\n    super.onCreate()",
-                  1,
-              )
-
           if "ChorezaAudioPackage()" not in source:
               source = source.replace(
                   "PackageList(this).packages.apply {",
@@ -106,6 +94,55 @@ jobs:
                   1,
               )
           main.write_text(source)
+
+          activities = list(root.rglob("MainActivity.kt"))
+          if not activities:
+              raise SystemExit("MainActivity.kt not found")
+          activity = activities[0]
+          activity_source = activity.read_text()
+
+          if "WebRTCModuleOptions" not in activity_source:
+              activity_package = re.search(r'^package\s+([^\n]+)', activity_source, re.M)
+              if not activity_package:
+                  raise SystemExit("MainActivity package not found")
+              pos = activity_package.end()
+              activity_source = (
+                  activity_source[:pos]
+                  + "\n\nimport android.os.Build"
+                  + "\nimport android.os.Bundle"
+                  + "\nimport com.oney.WebRTCModule.WebRTCModuleOptions"
+                  + activity_source[pos:]
+              )
+
+          if "enableMediaProjectionService" not in activity_source:
+              # RN TV templates extend ReactActivity. This must happen BEFORE
+              # super.onCreate so the WebRTC module sees the option before
+              # getDisplayMedia initializes.
+              if "override fun onCreate(" not in activity_source:
+                  class_open = activity_source.find("{", activity_source.find("class MainActivity"))
+                  if class_open == -1:
+                      raise SystemExit("MainActivity class opening not found")
+                  activity_source = (
+                      activity_source[:class_open + 1]
+                      + """
+  override fun onCreate(savedInstanceState: Bundle?) {
+    WebRTCModuleOptions.getInstance().enableMediaProjectionService =
+      Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+    super.onCreate(savedInstanceState)
+  }
+
+"""
+                      + activity_source[class_open + 1:]
+                  )
+              else:
+                  activity_source = activity_source.replace(
+                      "super.onCreate(savedInstanceState)",
+                      """WebRTCModuleOptions.getInstance().enableMediaProjectionService =
+      Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+    super.onCreate(savedInstanceState)""",
+                      1,
+                  )
+          activity.write_text(activity_source)
 
           package_dir = root / "java" / Path(package_name.replace(".", "/"))
           package_dir.mkdir(parents=True, exist_ok=True)
@@ -129,6 +166,13 @@ jobs:
               text = text.replace("</application>", service_decl + "\n    </application>", 1)
               manifest.write_text(text)
           PY
+
+      - name: Add WebRTC release keep rules
+        run: |
+          cat >> ChorezaNightTV/android/app/proguard-rules.pro <<'EOF'
+          -keep class org.webrtc.** { *; }
+          -keep class com.oney.WebRTCModule.** { *; }
+          EOF
 
       - name: Build release APK
         working-directory: ChorezaNightTV
