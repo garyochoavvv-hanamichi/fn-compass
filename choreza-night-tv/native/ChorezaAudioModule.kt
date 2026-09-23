@@ -117,7 +117,7 @@ class ChorezaAudioModule(
       return
     }
 
-    val activity = currentActivity
+    val activity = reactContext.currentActivity
     if (activity == null) {
       promise.reject("E_NO_ACTIVITY", "No hay una actividad visible para solicitar captura.")
       return
