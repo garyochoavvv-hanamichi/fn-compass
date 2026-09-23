@@ -48,7 +48,7 @@ jobs:
       - name: Add launcher icon
         run: |
           mkdir -p ChorezaNightTV/android/app/src/main/res/drawable-nodpi
-          curl -L --fail             "https://choreza-night.floot.app/_cdn/static/ce5e1425-9da7-42de-8217-76ed268f86ad-choreza-night-tv-icon.png"             -o ChorezaNightTV/android/app/src/main/res/drawable-nodpi/choreza_night_tv_icon.png
+          curl -L --fail             "https://choreza-night.floot.app/_cdn/static/52f673b4-9384-40c9-be55-9cb035438ff8-choreza-night-tv-naruto-hanamichi-icon.png"             -o ChorezaNightTV/android/app/src/main/res/drawable-nodpi/choreza_night_tv_icon.png
 
       - name: Configure native Android TV features
         run: |
@@ -95,7 +95,7 @@ jobs:
           if "enableMediaProjectionService = true" not in source:
               source = source.replace(
                   "super.onCreate()",
-                  "super.onCreate()\n    WebRTCModuleOptions.getInstance().enableMediaProjectionService = true",
+                  "WebRTCModuleOptions.getInstance().enableMediaProjectionService = true\n    super.onCreate()",
                   1,
               )
 
