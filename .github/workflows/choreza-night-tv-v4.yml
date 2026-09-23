@@ -124,22 +124,19 @@ jobs:
                       raise SystemExit("MainActivity class opening not found")
                   activity_source = (
                       activity_source[:class_open + 1]
-                      + """
-  override fun onCreate(savedInstanceState: Bundle?) {
-    WebRTCModuleOptions.getInstance().enableMediaProjectionService =
-      Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
-    super.onCreate(savedInstanceState)
-  }
-
-"""
+                      + "\n  override fun onCreate(savedInstanceState: Bundle?) {"
+                      + "\n    WebRTCModuleOptions.getInstance().enableMediaProjectionService ="
+                      + "\n      Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q"
+                      + "\n    super.onCreate(savedInstanceState)"
+                      + "\n  }\n\n"
                       + activity_source[class_open + 1:]
                   )
               else:
                   activity_source = activity_source.replace(
                       "super.onCreate(savedInstanceState)",
-                      """WebRTCModuleOptions.getInstance().enableMediaProjectionService =
-      Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
-    super.onCreate(savedInstanceState)""",
+                      "WebRTCModuleOptions.getInstance().enableMediaProjectionService =\n"
+                      "      Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q\n"
+                      "    super.onCreate(savedInstanceState)",
                       1,
                   )
           activity.write_text(activity_source)
