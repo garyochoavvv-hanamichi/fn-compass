@@ -236,6 +236,7 @@ export default function App() {
   const pendingIceRef = useRef<any[]>([]);
   const guestReadyTimerRef = useRef<any>(null);
   const negotiatingRef = useRef(false);
+  const captureStartingRef = useRef(false);
   const activeRoomRef = useRef('');
   const activeRoleRef = useRef<Role>('host');
   const clientId = useRef('tv-' + Math.random().toString(36).slice(2, 10)).current;
@@ -639,6 +640,16 @@ export default function App() {
   }
 
   async function shareScreen() {
+    if (captureStartingRef.current) {
+      setStatus('CAPTURA YA EN PROCESO');
+      return;
+    }
+    if (sharing && screenRef.current) {
+      setStatus('PANTALLA YA ACTIVA');
+      return;
+    }
+
+    captureStartingRef.current = true;
     try {
       setStatus('SOLICITANDO CAPTURA');
       // Use the standard MediaProjection flow for compatibility across
@@ -689,6 +700,8 @@ export default function App() {
     } catch (error) {
       setSharing(false);
       showError(error);
+    } finally {
+      captureStartingRef.current = false;
     }
   }
 
