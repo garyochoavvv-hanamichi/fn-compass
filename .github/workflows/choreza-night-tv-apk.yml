@@ -166,7 +166,7 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon --stacktrace
 
-      - name: Prepare installable APK
+      - name: Prepare and sign installable APK
         run: |
           mkdir -p output
           APK="$(find ChorezaNightTV/android/app/build/outputs/apk/release -type f -name '*.apk' | head -n 1)"
@@ -174,12 +174,37 @@ jobs:
             echo "Release APK not found"
             exit 1
           fi
-          cp "$APK" output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk
-          sha256sum output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk > output/SHA256.txt
+
+          BUILD_TOOLS="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)"
+          ZIPALIGN="$BUILD_TOOLS/zipalign"
+          APKSIGNER="$BUILD_TOOLS/apksigner"
+          if [ ! -x "$ZIPALIGN" ] || [ ! -x "$APKSIGNER" ]; then
+            echo "Android signing tools not found in $BUILD_TOOLS"
+            exit 1
+          fi
+
+          keytool -genkeypair -v \
+            -keystore /tmp/choreza-night-tv.keystore \
+            -alias choreza-night-tv \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass choreza2026 -keypass choreza2026 \
+            -dname "CN=CHOREZA NIGHT TV,O=CHOREZA,C=PE"
+
+          "$ZIPALIGN" -p -f 4 "$APK" /tmp/choreza-aligned.apk
+          "$APKSIGNER" sign \
+            --ks /tmp/choreza-night-tv.keystore \
+            --ks-key-alias choreza-night-tv \
+            --ks-pass pass:choreza2026 \
+            --key-pass pass:choreza2026 \
+            --out output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk \
+            /tmp/choreza-aligned.apk
+
+          "$APKSIGNER" verify --verbose --print-certs output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk
           unzip -l output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk | grep -E 'index.android.bundle|assets/index.android.bundle' || {
             echo "Embedded JS bundle missing"
             exit 1
           }
+          sha256sum output/CHOREZA_NIGHT_TV_v3_STANDALONE_AUDIO_1080p60.apk > output/SHA256.txt
           ls -lh output
 
       - name: Upload APK artifact
