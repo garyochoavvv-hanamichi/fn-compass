@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {
   Alert,
   SafeAreaView,
@@ -9,6 +9,8 @@ import {
   Pressable,
   Platform,
   PermissionsAndroid,
+  DeviceEventEmitter,
+  NativeModules,
 } from 'react-native';
 import {
   mediaDevices,
@@ -22,6 +24,7 @@ import {
 const API_BASE = 'https://choreza-night.floot.app';
 const ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const RTC_CONFIG = {iceServers: [{urls: 'stun:stun.l.google.com:19302'}]};
+const {ChorezaAudio} = NativeModules;
 
 type Role = 'host' | 'guest';
 type Signal =
@@ -96,15 +99,46 @@ export default function App() {
   const [connected, setConnected] = useState(false);
   const [sharing, setSharing] = useState(false);
   const [micOn, setMicOn] = useState(false);
+  const [systemAudioOn, setSystemAudioOn] = useState(false);
+  const [systemAudioLevel, setSystemAudioLevel] = useState(0);
   const [streamURL, setStreamURL] = useState<string | null>(null);
 
   const pcRef = useRef<any>(null);
   const wsRef = useRef<WebSocket | null>(null);
   const screenRef = useRef<any>(null);
   const micRef = useRef<any>(null);
+  const audioDataChannelRef = useRef<any>(null);
   const clientId = useRef('tv-' + Math.random().toString(36).slice(2, 10)).current;
 
   const channel = useMemo(() => (room ? 'room:' + room : ''), [room]);
+
+  useEffect(() => {
+    const audioSub = DeviceEventEmitter.addListener(
+      'ChorezaSystemAudio',
+      (base64: string) => {
+        const dc = audioDataChannelRef.current;
+        if (dc?.readyState === 'open') {
+          try {
+            dc.send('A:' + base64);
+          } catch {}
+        }
+      },
+    );
+
+    const stateSub = DeviceEventEmitter.addListener(
+      'ChorezaSystemAudioState',
+      (payload: {state?: string; level?: number}) => {
+        const level = Number(payload?.level || 0);
+        setSystemAudioLevel(level);
+        if (payload?.state === 'stopped') setSystemAudioOn(false);
+      },
+    );
+
+    return () => {
+      audioSub.remove();
+      stateSub.remove();
+    };
+  }, []);
 
   async function sendSignal(message: Omit<Signal, 'from'>) {
     if (!channel) return;
@@ -119,6 +153,29 @@ export default function App() {
 
     const pc = new RTCPeerConnection(RTC_CONFIG as any);
     pcRef.current = pc;
+
+    if (activeRole === 'host') {
+      const dc = pc.createDataChannel('choreza-system-audio', {ordered: true});
+      audioDataChannelRef.current = dc;
+      dc.onopen = () => setStatus('P2P CONECTADO · AUDIO LISTO');
+      dc.onclose = () => {
+        if (systemAudioOn) setStatus('CANAL DE AUDIO DESCONECTADO');
+      };
+    }
+
+    pc.ondatachannel = (event: any) => {
+      const dc = event.channel;
+      if (dc?.label !== 'choreza-system-audio') return;
+      audioDataChannelRef.current = dc;
+      dc.onmessage = (message: any) => {
+        const value = String(message.data || '');
+        if (value.startsWith('A:')) {
+          try {
+            ChorezaAudio?.playPcmBase64(value.slice(2));
+          } catch {}
+        }
+      };
+    };
 
     pc.onicecandidate = (event: any) => {
       if (event.candidate) {
@@ -326,7 +383,27 @@ export default function App() {
       const offer = await pc.createOffer();
       await pc.setLocalDescription(offer);
       await sendSignal({type: 'offer', sdp: offer} as any);
-      setStatus('TRANSMITIENDO · 1080p / HASTA 60 FPS');
+      setStatus('PANTALLA ACTIVA · SOLICITANDO AUDIO INTERNO');
+
+      try {
+        if (!(await requestMicPermission())) {
+          throw new Error('Permiso de audio denegado.');
+        }
+        if (!ChorezaAudio?.startSystemAudioCapture) {
+          throw new Error('Módulo de audio interno no disponible.');
+        }
+        await ChorezaAudio.startSystemAudioCapture();
+        setSystemAudioOn(true);
+        setStatus('TRANSMITIENDO · 1080p60 OBJETIVO · AUDIO INTERNO');
+      } catch (audioError: any) {
+        setSystemAudioOn(false);
+        setStatus('TRANSMITIENDO VIDEO · AUDIO INTERNO NO DISPONIBLE');
+        Alert.alert(
+          'Audio interno',
+          audioError?.message ||
+            'La pantalla continúa transmitiéndose, pero Android no permitió capturar el audio interno.',
+        );
+      }
     } catch (error) {
       setSharing(false);
       showError(error);
@@ -339,6 +416,8 @@ export default function App() {
     }
     screenRef.current?.getTracks?.().forEach((track: any) => track.stop());
     micRef.current?.getTracks?.().forEach((track: any) => track.stop());
+    try { ChorezaAudio?.stopSystemAudioCapture?.(); } catch {}
+    try { ChorezaAudio?.stopPlayback?.(); } catch {}
     pcRef.current?.close?.();
     wsRef.current?.close?.();
     screenRef.current = null;
@@ -349,6 +428,8 @@ export default function App() {
     setConnected(false);
     setSharing(false);
     setMicOn(false);
+    setSystemAudioOn(false);
+    setSystemAudioLevel(0);
     setStatus('LISTO');
     setRoom('');
     setPage('home');
@@ -470,11 +551,16 @@ export default function App() {
           />
 
           <View style={styles.infoCard}>
-            <Text style={styles.infoTitle}>AUDIO DEL SISTEMA</Text>
+            <Text style={styles.infoTitle}>AUDIO INTERNO</Text>
             <Text style={styles.infoBody}>
-              Esta primera APK transmite pantalla + voz. El audio interno de otras
-              apps requiere AudioPlaybackCapture y se añadirá como pista separada
-              cuando validemos compatibilidad con tu Android TV.
+              {role === 'host'
+                ? systemAudioOn
+                  ? `Activo · señal ${Math.round(systemAudioLevel * 100)}% · película y micrófono separados`
+                  : 'Se solicitará automáticamente al compartir pantalla. Android 10+.'
+                : 'El audio interno del host se reproduce por un canal P2P separado.'}
+            </Text>
+            <Text style={styles.infoBody}>
+              Si la app fuente protege su audio o contenido, Android puede entregar silencio.
             </Text>
           </View>
 
