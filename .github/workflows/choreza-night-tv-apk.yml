@@ -39,6 +39,11 @@ jobs:
         working-directory: ChorezaNightTV
         run: |
           npm install react-native-webrtc@latest --save --legacy-peer-deps
+          SCREEN_CAPTURE="node_modules/react-native-webrtc/android/src/main/java/com/oney/WebRTCModule/ScreenCaptureController.java"
+          if [ -f "$SCREEN_CAPTURE" ]; then
+            sed -i 's/private static final int DEFAULT_FPS = 30;/private static final int DEFAULT_FPS = 60;/' "$SCREEN_CAPTURE"
+            grep 'DEFAULT_FPS' "$SCREEN_CAPTURE"
+          fi
           if [ -f android/gradle.properties ]; then
             sed -i 's/^newArchEnabled=true/newArchEnabled=false/' android/gradle.properties || true
           fi
