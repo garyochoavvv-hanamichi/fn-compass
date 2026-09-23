@@ -61,8 +61,6 @@ jobs:
               '<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />',
               '<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />',
               '<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />',
-              '<uses-feature android:name="android.software.leanback" android:required="true" />',
-              '<uses-feature android:name="android.hardware.touchscreen" android:required="false" />',
           ]
           insert = "\n    " + "\n    ".join([p for p in permissions if p not in text]) + "\n"
           text = text.replace("<application", insert + "    <application", 1)
