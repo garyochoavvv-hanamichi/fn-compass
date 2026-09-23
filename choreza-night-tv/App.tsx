@@ -236,6 +236,8 @@ export default function App() {
   const pendingIceRef = useRef<any[]>([]);
   const guestReadyTimerRef = useRef<any>(null);
   const negotiatingRef = useRef(false);
+  const offerQueuedRef = useRef(false);
+  const videoReceivedRef = useRef(false);
   const captureStartingRef = useRef(false);
   const activeRoomRef = useRef('');
   const activeRoleRef = useRef<Role>('host');
@@ -340,6 +342,8 @@ export default function App() {
     }
 
     if (remote.getVideoTracks().length > 0) {
+      videoReceivedRef.current = true;
+      clearGuestReadyLoop();
       setStreamURL(remote.toURL());
       setConnected(true);
       setStatus('P2P CONECTADO · VIDEO ACTIVO');
@@ -392,8 +396,11 @@ export default function App() {
       const state = pc.connectionState;
       if (state === 'connected') {
         setConnected(true);
-        setStatus('P2P CONECTADO');
-        clearGuestReadyLoop();
+        if (activeRoleRef.current === 'guest' && !videoReceivedRef.current) {
+          setStatus('P2P CONECTADO · ESPERANDO VIDEO');
+        } else {
+          setStatus('P2P CONECTADO');
+        }
       } else if (state === 'connecting') {
         setStatus('CONECTANDO P2P');
       } else if (state === 'disconnected') {
@@ -427,12 +434,18 @@ export default function App() {
   }
 
   async function makeOffer(roomCode: string, pcArg?: any) {
-    if (activeRoleRef.current !== 'host' || negotiatingRef.current) return;
+    if (activeRoleRef.current !== 'host') return;
     const pc = pcArg || createPeer(roomCode, 'host');
     addExistingTracks(pc);
+
+    if (negotiatingRef.current || pc.signalingState !== 'stable') {
+      offerQueuedRef.current = true;
+      return;
+    }
+
     try {
       negotiatingRef.current = true;
-      if (pc.signalingState !== 'stable') return;
+      offerQueuedRef.current = false;
       const offer = await pc.createOffer();
       await pc.setLocalDescription(offer);
       await publishTo(roomCode, {type: 'offer', sdp: offer} as any);
@@ -500,6 +513,11 @@ export default function App() {
         ) {
           await pc.setRemoteDescription(new RTCSessionDescription(msg.sdp));
           await flushPendingIce(pc);
+          if (offerQueuedRef.current) {
+            setTimeout(() => {
+              makeOffer(activeRoom, pc).catch(() => {});
+            }, 0);
+          }
           return;
         }
 
@@ -554,6 +572,8 @@ export default function App() {
     wsRef.current = null;
     audioDataChannelRef.current = null;
     pendingIceRef.current = [];
+    offerQueuedRef.current = false;
+    videoReceivedRef.current = false;
     setStreamURL(null);
     setConnected(false);
     setSharing(false);
