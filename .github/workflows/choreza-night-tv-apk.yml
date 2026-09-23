@@ -1,12 +1,6 @@
 name: Build CHOREZA NIGHT TV APK
 
 on:
-  push:
-    branches:
-      - choreza-night-tv-apk
-    paths:
-      - 'choreza-night-tv/**'
-      - '.github/workflows/choreza-night-tv-apk.yml'
   workflow_dispatch:
 
 jobs:
