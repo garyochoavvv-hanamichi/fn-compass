@@ -846,15 +846,6 @@ export default function App() {
           objectFit="contain"
           mirror={false}
         />
-        <Pressable
-          hasTVPreferredFocus
-          onPress={() => setFullscreen(false)}
-          style={({focused}: any) => [
-            styles.fullscreenExit,
-            focused && styles.fullscreenExitFocused,
-          ]}>
-          <Text style={styles.fullscreenExitText}>← VOLVER</Text>
-        </Pressable>
       </View>
     );
   }
@@ -885,22 +876,12 @@ export default function App() {
       <View style={styles.workspace}>
         <View style={styles.stage}>
           {streamURL ? (
-            <>
-              <RTCView
-                streamURL={streamURL}
-                style={styles.rtc}
-                objectFit="contain"
-                mirror={false}
-              />
-              <Pressable
-                onPress={() => setFullscreen(true)}
-                style={({focused}: any) => [
-                  styles.fullscreenButton,
-                  focused && {borderColor: theme.accent, transform: [{scale: 1.04}]},
-                ]}>
-                <Text style={styles.fullscreenButtonText}>⛶ PANTALLA COMPLETA</Text>
-              </Pressable>
-            </>
+            <RTCView
+              streamURL={streamURL}
+              style={styles.rtc}
+              objectFit="contain"
+              mirror={false}
+            />
           ) : (
             <View style={styles.empty}>
               <View
@@ -956,6 +937,15 @@ export default function App() {
             accent={theme.accent}
           />
 
+          {!!streamURL && (
+            <FocusButton
+              title="PANTALLA COMPLETA"
+              subtitle="Video a toda la TV · Atrás para volver"
+              onPress={() => setFullscreen(true)}
+              accent={theme.accent}
+            />
+          )}
+
           {isHost && (
             <FocusButton
               title={systemAudioOn ? 'AUDIO INTERNO ACTIVO' : 'ACTIVAR AUDIO INTERNO'}
@@ -1005,44 +995,6 @@ const styles = StyleSheet.create({
   fullscreenRtc: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: '#000',
-  },
-  fullscreenButton: {
-    position: 'absolute',
-    right: 20,
-    bottom: 20,
-    borderWidth: 1,
-    borderColor: '#394253',
-    borderRadius: 12,
-    backgroundColor: 'rgba(5,8,14,.88)',
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-  },
-  fullscreenButtonText: {
-    color: '#f5f2ed',
-    fontSize: 12,
-    fontWeight: '900',
-    letterSpacing: 1.2,
-  },
-  fullscreenExit: {
-    position: 'absolute',
-    top: 28,
-    left: 28,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,.28)',
-    borderRadius: 12,
-    backgroundColor: 'rgba(5,8,14,.78)',
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-  },
-  fullscreenExitFocused: {
-    borderColor: '#ffffff',
-    transform: [{scale: 1.04}],
-  },
-  fullscreenExitText: {
-    color: '#ffffff',
-    fontSize: 13,
-    fontWeight: '900',
-    letterSpacing: 1.4,
   },
   backdropShade: {
     backgroundColor: 'rgba(4,7,14,.66)',
