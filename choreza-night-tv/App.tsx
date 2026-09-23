@@ -837,27 +837,17 @@ export default function App() {
 
   const isHost = role === 'host';
 
-  if (fullscreen && streamURL) {
-    return (
-      <View style={styles.fullscreenPage}>
-        <RTCView
-          streamURL={streamURL}
-          style={styles.fullscreenRtc}
-          objectFit="contain"
-          mirror={false}
-        />
-      </View>
-    );
-  }
-
   return (
-    <SafeAreaView style={styles.page}>
-      <ThemeBackdrop
-        activeIndex={activeThemeIndex}
-        fadeValues={fadeValues}
-        roomMode
-      />
+    <SafeAreaView style={[styles.page, fullscreen && styles.pageFullscreen]}>
+      {!fullscreen && (
+        <ThemeBackdrop
+          activeIndex={activeThemeIndex}
+          fadeValues={fadeValues}
+          roomMode
+        />
+      )}
 
+      {!fullscreen && (
       <View style={styles.topbar}>
         <Text style={styles.brand}>
           CHOREZA <Text style={{color: theme.accent}}>NIGHT TV</Text>
@@ -872,9 +862,10 @@ export default function App() {
           {status}
         </Text>
       </View>
+      )}
 
-      <View style={styles.workspace}>
-        <View style={styles.stage}>
+      <View style={[styles.workspace, fullscreen && styles.workspaceFullscreen]}>
+        <View style={[styles.stage, fullscreen && styles.stageFullscreen]}>
           {streamURL ? (
             <RTCView
               streamURL={streamURL}
@@ -907,15 +898,18 @@ export default function App() {
             </View>
           )}
 
-          <View style={styles.hud}>
-            <Text style={styles.hudText}>
-              {connected ? '● P2P CONECTADO' : '○ P2P ESPERANDO'}
-            </Text>
-            <Text style={styles.hudText}>1080p OBJETIVO</Text>
-            <Text style={styles.hudText}>HASTA 60 FPS</Text>
-          </View>
+          {!fullscreen && (
+            <View style={styles.hud}>
+              <Text style={styles.hudText}>
+                {connected ? '● P2P CONECTADO' : '○ P2P ESPERANDO'}
+              </Text>
+              <Text style={styles.hudText}>1080p OBJETIVO</Text>
+              <Text style={styles.hudText}>HASTA 60 FPS</Text>
+            </View>
+          )}
         </View>
 
+        {!fullscreen && (
         <View style={styles.sidebar}>
           <Text style={styles.eyebrow}>{isHost ? 'HOST' : 'INVITADO'}</Text>
           <Text style={styles.panelTitle}>{isHost ? 'CABINA' : 'SALA TV'}</Text>
@@ -977,6 +971,7 @@ export default function App() {
             danger
           />
         </View>
+        )}
       </View>
     </SafeAreaView>
   );
@@ -988,13 +983,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#05070d',
     padding: 28,
   },
-  fullscreenPage: {
-    flex: 1,
+  pageFullscreen: {
+    padding: 0,
     backgroundColor: '#000',
   },
-  fullscreenRtc: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: '#000',
+  workspaceFullscreen: {
+    gap: 0,
+  },
+  stageFullscreen: {
+    borderWidth: 0,
+    borderRadius: 0,
   },
   backdropShade: {
     backgroundColor: 'rgba(4,7,14,.66)',
