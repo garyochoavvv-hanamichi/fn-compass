@@ -1,11 +1,53 @@
 {
-  "updatedAt": "2026-09-23T16:41:56.933898+00:00",
+  "updatedAt": "2026-09-23T16:54:54.465079+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:0",
-    "BR": "fresh:9+recent:0"
+    "BR": "fresh:9+recent:3"
   },
   "events": [
+    {
+      "id": "4958aa569e9ab6",
+      "name": "Madison Beer Icon Mobile Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-09-24T15:00:00-05:00",
+      "end": "2026-09-24T16:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MadisonBeerMobileCup?round=S42_MadisonBeerMobileCup_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerMobileCup_BR"
+    },
+    {
+      "id": "86376c417033df",
+      "name": "Madison Beer Icon Cup Zero Build Reload",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-09-24T16:00:00-05:00",
+      "end": "2026-09-24T18:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MadisonBeerIconCup?round=S42_MadisonBeerIconCup_ZB_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerIconCup_BR"
+    },
+    {
+      "id": "e69ea59153a5de",
+      "name": "Madison Beer Icon Cup Reload",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-24T16:00:00-05:00",
+      "end": "2026-09-24T18:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MadisonBeerIconCup?round=S42_MadisonBeerIconCup_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerIconCup_BR"
+    },
     {
       "id": "d30e87bc5e3a3e",
       "name": "Fortnite Performance Evaluation",
