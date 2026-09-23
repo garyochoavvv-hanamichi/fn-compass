@@ -1,0 +1,131 @@
+name: Build CHOREZA NIGHT TV APK
+
+on:
+  push:
+    branches:
+      - choreza-night-tv-apk
+    paths:
+      - 'choreza-night-tv/**'
+      - '.github/workflows/choreza-night-tv-apk.yml'
+  workflow_dispatch:
+
+jobs:
+  build-android-tv:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout build branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Create React Native TV project
+        run: |
+          rm -rf ChorezaNightTV
+          npx --yes @react-native-community/cli@latest init ChorezaNightTV --template @react-native-tvos/template-tv --skip-git-init
+          cp choreza-night-tv/App.tsx ChorezaNightTV/App.tsx
+
+      - name: Install WebRTC
+        working-directory: ChorezaNightTV
+        run: |
+          npm install react-native-webrtc@latest --save
+          if [ -f android/gradle.properties ]; then
+            sed -i 's/^newArchEnabled=true/newArchEnabled=false/' android/gradle.properties || true
+          fi
+
+      - name: Configure MediaProjection and Android TV permissions
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path("ChorezaNightTV/android/app/src/main")
+          manifest = root / "AndroidManifest.xml"
+          text = manifest.read_text()
+
+          permissions = [
+              '<uses-permission android:name="android.permission.INTERNET" />',
+              '<uses-permission android:name="android.permission.RECORD_AUDIO" />',
+              '<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />',
+              '<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />',
+              '<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />',
+              '<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />',
+              '<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />',
+              '<uses-feature android:name="android.software.leanback" android:required="true" />',
+              '<uses-feature android:name="android.hardware.touchscreen" android:required="false" />',
+          ]
+          insert = "\n    " + "\n    ".join([p for p in permissions if p not in text]) + "\n"
+          text = text.replace("<application", insert + "    <application", 1)
+          manifest.write_text(text)
+
+          mains = list(root.rglob("MainApplication.kt")) + list(root.rglob("MainApplication.java"))
+          if not mains:
+              raise SystemExit("MainApplication not found")
+          main = mains[0]
+          source = main.read_text()
+
+          if main.suffix == ".kt":
+              if "WebRTCModuleOptions" not in source:
+                  package_match = re.search(r'^package\s+[^\n]+', source, re.M)
+                  if not package_match:
+                      raise SystemExit("Kotlin package line not found")
+                  pos = package_match.end()
+                  source = source[:pos] + "\n\nimport com.oney.WebRTCModule.WebRTCModuleOptions" + source[pos:]
+              marker = "super.onCreate()"
+              if "enableMediaProjectionService = true" not in source:
+                  source = source.replace(
+                      marker,
+                      marker + "\n    WebRTCModuleOptions.getInstance().enableMediaProjectionService = true",
+                      1,
+                  )
+          else:
+              if "WebRTCModuleOptions" not in source:
+                  package_match = re.search(r'^package\s+[^;]+;', source, re.M)
+                  if not package_match:
+                      raise SystemExit("Java package line not found")
+                  pos = package_match.end()
+                  source = source[:pos] + "\n\nimport com.oney.WebRTCModule.WebRTCModuleOptions;" + source[pos:]
+              marker = "super.onCreate();"
+              if "enableMediaProjectionService = true" not in source:
+                  source = source.replace(
+                      marker,
+                      marker + "\n    WebRTCModuleOptions.getInstance().enableMediaProjectionService = true;",
+                      1,
+                  )
+          main.write_text(source)
+
+          print("Configured:", manifest)
+          print("Configured:", main)
+          PY
+
+      - name: Build debug APK
+        working-directory: ChorezaNightTV/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Prepare APK
+        run: |
+          mkdir -p output
+          cp ChorezaNightTV/android/app/build/outputs/apk/debug/app-debug.apk output/CHOREZA_NIGHT_TV_v1-debug.apk
+          sha256sum output/CHOREZA_NIGHT_TV_v1-debug.apk > output/SHA256.txt
+          ls -lh output
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CHOREZA-NIGHT-TV-APK
+          path: output/*
+          if-no-files-found: error
+          retention-days: 7
