@@ -76,26 +76,6 @@ jobs:
           text = text.replace("<application", insert + "    <application", 1)
           manifest.write_text(text)
 
-          # Android 9 compatibility documented by react-native-webrtc:
-          # compile app bytecode with Java 8 source semantics and Java 11 target.
-          app_gradle = Path("ChorezaNightTV/android/app/build.gradle")
-          if app_gradle.exists():
-              gradle_text = app_gradle.read_text()
-              if "sourceCompatibility JavaVersion.VERSION_1_8" not in gradle_text:
-                  gradle_text = gradle_text.replace(
-                      "android {",
-                      "android {\n"
-                      "    compileOptions {\n"
-                      "        sourceCompatibility JavaVersion.VERSION_1_8\n"
-                      "        targetCompatibility JavaVersion.VERSION_11\n"
-                      "    }\n"
-                      "    kotlinOptions {\n"
-                      "        jvmTarget = \"11\"\n"
-                      "    }",
-                      1,
-                  )
-                  app_gradle.write_text(gradle_text)
-
           mains = list(root.rglob("MainApplication.kt"))
           if not mains:
               raise SystemExit("MainApplication.kt not found")
