@@ -105,10 +105,51 @@ jobs:
                       marker + "\n    WebRTCModuleOptions.getInstance().enableMediaProjectionService = true;",
                       1,
                   )
+          # Register the CHOREZA native audio package in the generated TV app.
+          if main.suffix == ".kt":
+              if "ChorezaAudioPackage()" not in source:
+                  source = source.replace(
+                      "PackageList(this).packages.apply {",
+                      "PackageList(this).packages.apply {\n        add(ChorezaAudioPackage())",
+                      1,
+                  )
+          else:
+              # Current TV template is Kotlin; keep a hard failure instead of silently
+              # shipping an APK without internal audio on an unexpected Java template.
+              raise SystemExit("Expected Kotlin MainApplication for CHOREZA audio package")
+
           main.write_text(source)
+
+          package_match = re.search(r'^package\\s+([^\\n]+)', source, re.M)
+          if not package_match:
+              raise SystemExit("Android package not found")
+          package_name = package_match.group(1).strip()
+          package_dir = root / "java" / Path(package_name.replace(".", "/"))
+          package_dir.mkdir(parents=True, exist_ok=True)
+
+          for filename in [
+              "ChorezaAudioModule.kt",
+              "ChorezaAudioPackage.kt",
+              "ChorezaCaptureService.kt",
+          ]:
+              template = Path("choreza-night-tv/native") / filename
+              target = package_dir / filename
+              target.write_text(template.read_text().replace("__PACKAGE__", package_name))
+
+          service_decl = """
+              <service
+                  android:name=".ChorezaCaptureService"
+                  android:exported="false"
+                  android:foregroundServiceType="mediaProjection|microphone" />
+          """
+          text = manifest.read_text()
+          if "ChorezaCaptureService" not in text:
+              text = text.replace("</application>", service_decl + "\n    </application>", 1)
+              manifest.write_text(text)
 
           print("Configured:", manifest)
           print("Configured:", main)
+          print("Native audio package:", package_name)
           PY
 
       - name: Build debug APK
