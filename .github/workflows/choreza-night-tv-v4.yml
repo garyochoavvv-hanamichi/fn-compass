@@ -57,8 +57,8 @@ jobs:
           gradle_file = Path("ChorezaNightTV/android/app/build.gradle")
           if gradle_file.exists():
               gradle_text = gradle_file.read_text()
-              gradle_text = re.sub(r'versionCode\s+\d+', 'versionCode 10', gradle_text)
-              gradle_text = re.sub(r'versionName\s+"[^"]+"', 'versionName "10.0"', gradle_text)
+              gradle_text = re.sub(r'versionCode\s+\d+', 'versionCode 11', gradle_text)
+              gradle_text = re.sub(r'versionName\s+"[^"]+"', 'versionName "11.0"', gradle_text)
               gradle_file.write_text(gradle_text)
 
           manifest = root / "AndroidManifest.xml"
@@ -203,7 +203,7 @@ jobs:
           keytool -list -v             -keystore "$KEYSTORE"             -alias androiddebugkey             -storepass android | grep -E 'Owner:|SHA256:|Valid from' || true
 
           "$ZIPALIGN" -p -f 4 "$APK" /tmp/choreza-stable-aligned.apk
-          OUT="output/CHOREZA_NIGHT_TV_v10_STABLE_SIGN_FULLSCREEN.apk"
+          OUT="output/CHOREZA_NIGHT_TV_v11_LOW_LATENCY_SYNC.apk"
           "$APKSIGNER" sign             --ks "$KEYSTORE"             --ks-key-alias androiddebugkey             --ks-pass "pass:android"             --key-pass "pass:android"             --out "$OUT"             /tmp/choreza-stable-aligned.apk
 
           "$APKSIGNER" verify --verbose --print-certs "$OUT"
