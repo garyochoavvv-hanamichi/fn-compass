@@ -723,14 +723,15 @@ export default function App() {
           const parameters = videoSender.getParameters();
           parameters.encodings =
             parameters.encodings?.length > 0 ? parameters.encodings : [{}];
-          parameters.encodings[0].maxBitrate = 8_000_000;
-          parameters.degradationPreference = 'maintain-resolution';
+          parameters.encodings[0].maxBitrate = 6_000_000;
+          parameters.encodings[0].maxFramerate = 30;
+          parameters.degradationPreference = 'maintain-framerate';
           await videoSender.setParameters(parameters);
         } catch {}
       }
 
       await makeOffer(activeRoomRef.current, pc);
-      setStatus('TRANSMITIENDO · 1080p / HASTA 60 FPS');
+      setStatus('TRANSMITIENDO · 1080p / CINE 30 FPS · BAJA LATENCIA');
 
       /*
        * El audio interno se mantiene separado. No lo iniciamos automáticamente
@@ -931,7 +932,7 @@ export default function App() {
                 {connected ? '● P2P CONECTADO' : '○ P2P ESPERANDO'}
               </Text>
               <Text style={styles.hudText}>1080p OBJETIVO</Text>
-              <Text style={styles.hudText}>HASTA 60 FPS</Text>
+              <Text style={styles.hudText}>CINE 30 FPS</Text>
             </View>
           )}
         </View>
