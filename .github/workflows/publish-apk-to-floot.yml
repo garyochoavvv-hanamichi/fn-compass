@@ -16,7 +16,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p /tmp/choreza
-          gh run download 35911556678 \
+          gh run download 35954247996 \
             --repo garyochoavvv-hanamichi/fn-compass \
             --name CHOREZA-NIGHT-TV-v4 \
             --dir /tmp/choreza
@@ -30,7 +30,7 @@ jobs:
 
       - name: Upload APK to CHOREZA web storage
         env:
-          UPLOAD_URL: "https://floot-client-app-storage.s3.us-east-1.amazonaws.com/apps/678f63dd-8adf-4072-971e-ec804bc75c3a/public/static/3905dc47-569b-483c-a13b-5e25ccb80b81-CHOREZA_NIGHT_TV_v10_STABLE_SIGN_FULLSCREEN.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAZQ3DQG3ZS42FBPYH%2F20260923%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260923T201239Z&X-Amz-Expires=900&X-Amz-Signature=325a09d42c5f990ba6034a575ac933204ca185e4adb4dbb9a073911bf9cc8008&X-Amz-SignedHeaders=content-length%3Bhost&x-id=PutObject"
+          UPLOAD_URL: "https://floot-client-app-storage.s3.us-east-1.amazonaws.com/apps/678f63dd-8adf-4072-971e-ec804bc75c3a/public/static/cde7b51b-1fff-47ce-ab68-bbd5cdd56ae8-CHOREZA_NIGHT_TV_v11_LOW_LATENCY_SYNC.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAZQ3DQG3ZS42FBPYH%2F20260924%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260924T041604Z&X-Amz-Expires=900&X-Amz-Signature=ecd9b4177ee1fb333265884cda19f9c9a54c2c0d5679058da72da61ba11cf81c&X-Amz-SignedHeaders=content-length%3Bhost&x-id=PutObject"
         run: |
           curl --fail-with-body --show-error --silent \
             -X PUT \
