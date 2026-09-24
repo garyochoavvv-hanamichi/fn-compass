@@ -1,39 +1,7 @@
 {
-  "updatedAt": "2026-09-24T03:48:20.683067+00:00",
+  "updatedAt": "2026-09-24T03:59:00.739678+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "5a3ff9e6ce11d0": {
-      "eventId": "5a3ff9e6ce11d0",
-      "name": "Duos Ranked Cup (Zero Build)",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_BR",
-      "window": "S42_RankedCupDuos_ZB_Event4_BR",
-      "eventStart": "2026-09-20T16:00:00-05:00",
-      "eventEnd": "2026-09-20T19:00:00-05:00",
-      "updatedAt": "2026-09-21T03:50:19.123921+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
-    "3a711e4cfe1736": {
-      "eventId": "3a711e4cfe1736",
-      "name": "Duos Ranked Cup (Battle Royale)",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR",
-      "window": "S42_RankedCupDuos_Event4_BR",
-      "eventStart": "2026-09-20T16:00:00-05:00",
-      "eventEnd": "2026-09-20T19:00:00-05:00",
-      "updatedAt": "2026-09-21T03:50:19.496245+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "2adccc16f7799d": {
       "eventId": "2adccc16f7799d",
       "name": "Duos Ranked Cup (Zero Build)",
