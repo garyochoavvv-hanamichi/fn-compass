@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-09-25T06:42:13.027529+00:00",
+  "updatedAt": "2026-09-25T06:58:34.140514+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "ad21785502adcd": {
-      "eventId": "ad21785502adcd",
-      "name": "Solo Victory Cup Battle Royale",
-      "region": "NAC",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SoloVictoryCup_NAC",
-      "window": "S42_SoloVictoryCup_Event3Round2_NAC",
-      "eventStart": "2026-09-21T21:00:00-05:00",
-      "eventEnd": "2026-09-21T22:00:00-05:00",
-      "updatedAt": "2026-09-22T06:56:40.635520+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "4958aa569e9ab6": {
       "eventId": "4958aa569e9ab6",
       "name": "Madison Beer Icon Mobile Cup",
@@ -138,7 +122,7 @@
       "window": "S42_PerformanceEvaluation_Event5Round2_NAC",
       "eventStart": "2026-09-24T21:00:00-05:00",
       "eventEnd": "2026-09-24T23:00:00-05:00",
-      "updatedAt": "2026-09-25T06:42:13.027456+00:00",
+      "updatedAt": "2026-09-25T06:58:34.140405+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
