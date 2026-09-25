@@ -1,39 +1,11 @@
 {
-  "updatedAt": "2026-09-25T11:29:06.562942+00:00",
+  "updatedAt": "2026-09-25T11:45:14.207921+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:5",
-    "BR": "fallback:14 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:2"
   },
   "events": [
-    {
-      "id": "86376c417033df",
-      "name": "Madison Beer Icon Cup Zero Build Reload",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-09-24T16:00:00-05:00",
-      "end": "2026-09-24T18:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MadisonBeerIconCup?round=S42_MadisonBeerIconCup_ZB_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerIconCup_BR"
-    },
-    {
-      "id": "e69ea59153a5de",
-      "name": "Madison Beer Icon Cup Reload",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-09-24T16:00:00-05:00",
-      "end": "2026-09-24T18:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MadisonBeerIconCup?round=S42_MadisonBeerIconCup_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerIconCup_BR"
-    },
     {
       "id": "d30e87bc5e3a3e",
       "name": "Fortnite Performance Evaluation",
