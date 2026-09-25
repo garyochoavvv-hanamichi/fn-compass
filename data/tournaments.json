@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-09-25T12:57:21.096242+00:00",
+  "updatedAt": "2026-09-25T13:17:15.260762+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:11 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
     "BR": "fresh:10+recent:2"
   },
   "events": [
-    {
-      "id": "d30e87bc5e3a3e",
-      "name": "Fortnite Performance Evaluation",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-09-24T18:00:00-05:00",
-      "end": "2026-09-24T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation?round=S42_PerformanceEvaluation_Event5Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluation_NAC"
-    },
     {
       "id": "1e3fe85f0ac347",
       "name": "Madison Beer Icon Cup Zero Build Reload",
