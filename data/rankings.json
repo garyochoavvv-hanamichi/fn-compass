@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T19:05:12.082517+00:00",
+  "updatedAt": "2026-09-25T19:20:33.834742+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4958aa569e9ab6": {
@@ -123,6 +123,22 @@
       "eventStart": "2026-09-24T21:00:00-05:00",
       "eventEnd": "2026-09-24T23:00:00-05:00",
       "updatedAt": "2026-09-25T07:49:25.329159+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "881d59240d0aaa": {
+      "eventId": "881d59240d0aaa",
+      "name": "Override Series: Persona 5 Royal Mobile Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_Persona5MobileCup_BR",
+      "window": "S42_Persona5MobileCup_BR",
+      "eventStart": "2026-09-25T15:00:00-05:00",
+      "eventEnd": "2026-09-25T16:15:00-05:00",
+      "updatedAt": "2026-09-25T19:20:33.834620+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
