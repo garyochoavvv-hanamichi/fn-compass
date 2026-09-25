@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-09-25T09:05:15.932984+00:00",
+  "updatedAt": "2026-09-25T09:24:13.224160+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:10+recent:5"
+    "BR": "fresh:10+recent:4"
   },
   "events": [
-    {
-      "id": "4958aa569e9ab6",
-      "name": "Madison Beer Icon Mobile Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-24T15:00:00-05:00",
-      "end": "2026-09-24T16:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MadisonBeerMobileCup?round=S42_MadisonBeerMobileCup_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerMobileCup_BR"
-    },
     {
       "id": "86376c417033df",
       "name": "Madison Beer Icon Cup Zero Build Reload",
