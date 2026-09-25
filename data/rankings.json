@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T20:29:16.679595+00:00",
+  "updatedAt": "2026-09-25T20:45:23.387378+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4958aa569e9ab6": {
@@ -138,7 +138,7 @@
       "window": "S42_Persona5MobileCup_BR",
       "eventStart": "2026-09-25T15:00:00-05:00",
       "eventEnd": "2026-09-25T16:15:00-05:00",
-      "updatedAt": "2026-09-25T20:29:14.535562+00:00",
+      "updatedAt": "2026-09-25T20:45:19.870467+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -154,7 +154,7 @@
       "window": "S42_Persona5Cup_BR",
       "eventStart": "2026-09-25T16:00:00-05:00",
       "eventEnd": "2026-09-25T18:30:00-05:00",
-      "updatedAt": "2026-09-25T20:29:11.375790+00:00",
+      "updatedAt": "2026-09-25T20:45:19.765780+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -170,7 +170,7 @@
       "window": "S42_Persona5Cup_ZB_BR",
       "eventStart": "2026-09-25T16:00:00-05:00",
       "eventEnd": "2026-09-25T18:30:00-05:00",
-      "updatedAt": "2026-09-25T20:29:13.294214+00:00",
+      "updatedAt": "2026-09-25T20:45:21.606206+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -186,7 +186,7 @@
       "window": "S42_OverrideSeries_ZB_sep25_Event1_BR",
       "eventStart": "2026-09-25T16:00:00-05:00",
       "eventEnd": "2026-09-25T19:00:00-05:00",
-      "updatedAt": "2026-09-25T20:29:16.679510+00:00",
+      "updatedAt": "2026-09-25T20:45:23.387278+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
