@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T07:18:53.939284+00:00",
+  "updatedAt": "2026-09-25T07:34:52.691270+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "4958aa569e9ab6": {
@@ -122,7 +122,7 @@
       "window": "S42_PerformanceEvaluation_Event5Round2_NAC",
       "eventStart": "2026-09-24T21:00:00-05:00",
       "eventEnd": "2026-09-24T23:00:00-05:00",
-      "updatedAt": "2026-09-25T07:18:53.939219+00:00",
+      "updatedAt": "2026-09-25T07:34:52.691213+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
