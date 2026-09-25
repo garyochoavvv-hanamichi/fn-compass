@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-09-25T15:56:20.888282+00:00",
+  "updatedAt": "2026-09-25T16:14:43.121469+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:2",
+    "NAC": "fresh:6+recent:1",
     "BR": "fresh:10+recent:2"
   },
   "events": [
-    {
-      "id": "3c988cb0f98a97",
-      "name": "Fortnite Performance Evaluation",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-09-24T21:00:00-05:00",
-      "end": "2026-09-24T23:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluation?round=S42_PerformanceEvaluation_Event5Round2_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluation_NAC"
-    },
     {
       "id": "881d59240d0aaa",
       "name": "Override Series: Persona 5 Royal Mobile Cup",
