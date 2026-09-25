@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T04:58:02.513060+00:00",
+  "updatedAt": "2026-09-25T05:16:05.236167+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "066e1a82187f99": {
@@ -138,7 +138,7 @@
       "window": "S42_MadisonBeerIconCup_ZB_NAC",
       "eventStart": "2026-09-24T18:00:00-05:00",
       "eventEnd": "2026-09-24T20:30:00-05:00",
-      "updatedAt": "2026-09-25T04:57:57.777489+00:00",
+      "updatedAt": "2026-09-25T05:16:02.133183+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -154,7 +154,7 @@
       "window": "S42_MadisonBeerIconCup_NAC",
       "eventStart": "2026-09-24T18:00:00-05:00",
       "eventEnd": "2026-09-24T20:30:00-05:00",
-      "updatedAt": "2026-09-25T04:58:01.014454+00:00",
+      "updatedAt": "2026-09-25T05:16:02.407648+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -170,7 +170,7 @@
       "window": "S42_PerformanceEvaluation_Event5Round2_NAC",
       "eventStart": "2026-09-24T21:00:00-05:00",
       "eventEnd": "2026-09-24T23:00:00-05:00",
-      "updatedAt": "2026-09-25T04:58:02.512976+00:00",
+      "updatedAt": "2026-09-25T05:16:05.236091+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
