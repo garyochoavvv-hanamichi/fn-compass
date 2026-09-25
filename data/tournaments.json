@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-25T17:00:33.918665+00:00",
+  "updatedAt": "2026-09-25T17:18:51.470317+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:4+recent:3",
-    "BR": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:8+recent:4"
   },
   "events": [
     {
@@ -38,7 +38,7 @@
       "id": "3df2cc6835627e",
       "name": "Override Series: Persona 5 Royal Cup Zero Build Reload",
       "region": "BR",
-      "format": "SOLO",
+      "format": "DUO",
       "mode": "RELOAD",
       "zeroBuild": true,
       "platform": "MULTI",
@@ -150,7 +150,7 @@
       "id": "87dd5d2f4e4fc6",
       "name": "Mobile Reload (Mini Venture) Victory Cup",
       "region": "BR",
-      "format": "SOLO",
+      "format": "DUO",
       "mode": "RELOAD",
       "zeroBuild": false,
       "platform": "MOBILE",
@@ -189,20 +189,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_FNCS%20GC%20LAN_NAC"
     },
     {
-      "id": "e93029c790a070",
-      "name": "Fortnite Global Championship",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-09-26T17:00:00-05:00",
-      "end": "2026-09-27T16:59:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/FNCS%20GC%20LAN?round=MannekenPis_Day2",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_FNCS%20GC%20LAN_BR"
-    },
-    {
       "id": "2143c9edec455b",
       "name": "Mobile Reload (Mini Venture) Victory Cup",
       "region": "BR",
@@ -215,6 +201,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event2_Round2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
+    },
+    {
+      "id": "e93029c790a070",
+      "name": "Fortnite Global Championship",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-26T17:00:00-05:00",
+      "end": "2026-09-27T16:59:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/FNCS%20GC%20LAN?round=MannekenPis_Day2",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_FNCS%20GC%20LAN_BR"
     },
     {
       "id": "f81806eea8456e",
