@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-26T01:45:08.113764+00:00",
+  "updatedAt": "2026-09-26T01:56:59.604197+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fresh:4+recent:6",
     "BR": "fallback:14 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
@@ -217,6 +217,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_FNCS%20GC%20LAN_BR"
     },
     {
+      "id": "f0854f43648955",
+      "name": "Mobile Reload (Mini Venture) Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-09-26T19:00:00-05:00",
+      "end": "2026-09-26T20:10:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event2_Round2_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
+    },
+    {
       "id": "f81806eea8456e",
       "name": "FNCS Solos Qualifiers",
       "region": "BR",
@@ -257,6 +271,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event5_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_BR"
+    },
+    {
+      "id": "e31d8700952c52",
+      "name": "FNCS Solos Qualifiers",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-28T18:00:00-05:00",
+      "end": "2026-09-28T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual1Round1Day1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_NAC"
+    },
+    {
+      "id": "298eee2dcd378a",
+      "name": "Solo Ranked Cup (Battle Royale)",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-09-28T18:00:00-05:00",
+      "end": "2026-09-28T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event5_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_NAC"
     },
     {
       "id": "d79ef2c30b7308",
