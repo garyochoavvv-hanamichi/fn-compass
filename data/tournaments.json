@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-09-26T09:14:14.209289+00:00",
+  "updatedAt": "2026-09-26T09:29:34.580761+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:5+recent:6",
-    "BR": "fresh:8+recent:6"
+    "BR": "fresh:8+recent:5"
   },
   "events": [
-    {
-      "id": "881d59240d0aaa",
-      "name": "Override Series: Persona 5 Royal Mobile Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-09-25T15:00:00-05:00",
-      "end": "2026-09-25T16:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_Persona5MobileCup?round=S42_Persona5MobileCup_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_Persona5MobileCup_BR"
-    },
     {
       "id": "8a3e0f1f0c8107",
       "name": "Override Series: Persona 5 Royal Cup Reload",
