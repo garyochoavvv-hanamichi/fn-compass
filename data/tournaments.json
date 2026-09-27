@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-27T19:33:17.997093+00:00",
+  "updatedAt": "2026-09-27T19:44:49.065083+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:1",
-    "BR": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:1"
   },
   "events": [
     {
@@ -243,6 +243,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event3_Round1_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
+    },
+    {
+      "id": "9ffb5d1912a631",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-03T16:00:00-05:00",
+      "end": "2026-10-03T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event5Round1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
     }
   ]
 }
