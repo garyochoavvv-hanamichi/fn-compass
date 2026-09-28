@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T03:04:53.039520+00:00",
+  "updatedAt": "2026-09-28T03:24:39.905264+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "86376c417033df": {
@@ -27,22 +27,6 @@
       "eventStart": "2026-09-24T16:00:00-05:00",
       "eventEnd": "2026-09-24T18:30:00-05:00",
       "updatedAt": "2026-09-25T03:24:46.030640+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
-    "3f591720cba626": {
-      "eventId": "3f591720cba626",
-      "name": "Madison Beer Icon Mobile Cup",
-      "region": "NAC",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerMobileCup_NAC",
-      "window": "S42_MadisonBeerMobileCup_NAC",
-      "eventStart": "2026-09-24T17:00:00-05:00",
-      "eventEnd": "2026-09-24T18:15:00-05:00",
-      "updatedAt": "2026-09-25T03:08:46.359063+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
