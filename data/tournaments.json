@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-28T16:32:10.184957+00:00",
+  "updatedAt": "2026-09-28T16:50:26.432421+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:0",
-    "BR": "fresh:10+recent:0"
+    "BR": "fresh:10+recent:2"
   },
   "events": [
     {
@@ -173,6 +173,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event5_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
+    },
+    {
+      "id": "2d89bcd0ae121e",
+      "name": "PlayStation NickEh30 Icon Cup Zero Build",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-09-30T16:00:00-05:00",
+      "end": "2026-09-30T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PSNickEh30_ZB?round=S42_PSNickEh30_ZB_Qualifier_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_ZB_BR"
+    },
+    {
+      "id": "cf99ee40548c3e",
+      "name": "PlayStation NickEh30 Icon Cup Battle Royale",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "CONSOLE",
+      "start": "2026-09-30T16:00:00-05:00",
+      "end": "2026-09-30T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PSNickEh30?round=S42_PSNickEh30_Qualifier_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_BR"
     },
     {
       "id": "a28c4c7ad01755",
