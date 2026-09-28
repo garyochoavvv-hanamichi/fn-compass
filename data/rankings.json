@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-09-28T00:58:50.476337+00:00",
+  "updatedAt": "2026-09-28T01:17:59.465679+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "4958aa569e9ab6": {
-      "eventId": "4958aa569e9ab6",
-      "name": "Madison Beer Icon Mobile Cup",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MadisonBeerMobileCup_BR",
-      "window": "S42_MadisonBeerMobileCup_BR",
-      "eventStart": "2026-09-24T15:00:00-05:00",
-      "eventEnd": "2026-09-24T16:15:00-05:00",
-      "updatedAt": "2026-09-25T00:59:12.516097+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "86376c417033df": {
       "eventId": "86376c417033df",
       "name": "Madison Beer Icon Cup Zero Build Reload",
@@ -330,7 +314,7 @@
       "window": "MannekenPis_Day2",
       "eventStart": "2026-09-26T17:00:00-05:00",
       "eventEnd": "2026-09-27T16:59:00-05:00",
-      "updatedAt": "2026-09-28T00:58:49.620509+00:00",
+      "updatedAt": "2026-09-28T01:17:58.521511+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -362,7 +346,7 @@
       "window": "MannekenPis_Day2",
       "eventStart": "2026-09-26T17:00:00-05:00",
       "eventEnd": "2026-09-27T16:59:00-05:00",
-      "updatedAt": "2026-09-28T00:58:50.476241+00:00",
+      "updatedAt": "2026-09-28T01:17:59.465575+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
