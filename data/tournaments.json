@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T08:58:15.318875+00:00",
+  "updatedAt": "2026-09-29T09:20:14.079137+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:5+recent:3",
@@ -206,7 +206,7 @@
       "id": "0ddb5915ee3e29",
       "name": "PlayStation NickEh30 Icon Cup Battle Royale",
       "region": "NAC",
-      "format": "DUO",
+      "format": "SOLO",
       "mode": "BR",
       "zeroBuild": false,
       "platform": "CONSOLE",
