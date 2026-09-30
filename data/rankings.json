@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T22:27:58.968223+00:00",
+  "updatedAt": "2026-09-30T22:45:59.455739+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "e24a72f726e4bc": {
@@ -234,7 +234,7 @@
       "window": "S42_PSNickEh30_ZB_Qualifier_BR",
       "eventStart": "2026-09-30T16:00:00-05:00",
       "eventEnd": "2026-09-30T19:00:00-05:00",
-      "updatedAt": "2026-09-30T22:27:55.439080+00:00",
+      "updatedAt": "2026-09-30T22:45:55.383446+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -250,7 +250,7 @@
       "window": "S42_PSNickEh30_Qualifier_BR",
       "eventStart": "2026-09-30T16:00:00-05:00",
       "eventEnd": "2026-09-30T19:00:00-05:00",
-      "updatedAt": "2026-09-30T22:27:56.729305+00:00",
+      "updatedAt": "2026-09-30T22:45:56.210652+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -266,7 +266,7 @@
       "window": "S42_PSNickEh30_Qualifier_NAC",
       "eventStart": "2026-09-30T18:00:00-05:00",
       "eventEnd": "2026-09-30T21:00:00-05:00",
-      "updatedAt": "2026-09-30T22:27:58.968120+00:00",
+      "updatedAt": "2026-09-30T22:45:57.907436+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -282,7 +282,7 @@
       "window": "S42_PSNickEh30_ZB_Qualifier_NAC",
       "eventStart": "2026-09-30T18:00:00-05:00",
       "eventEnd": "2026-09-30T21:00:00-05:00",
-      "updatedAt": "2026-09-30T22:27:58.904246+00:00",
+      "updatedAt": "2026-09-30T22:45:59.455649+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
