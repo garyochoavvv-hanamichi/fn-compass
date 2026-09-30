@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T20:10:50.078274+00:00",
+  "updatedAt": "2026-09-30T20:29:40.273781+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "e24a72f726e4bc": {
@@ -219,6 +219,38 @@
       "eventStart": "2026-09-29T18:00:00-05:00",
       "eventEnd": "2026-09-29T21:00:00-05:00",
       "updatedAt": "2026-09-30T05:55:09.399562+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "2d89bcd0ae121e": {
+      "eventId": "2d89bcd0ae121e",
+      "name": "PlayStation NickEh30 Icon Cup Zero Build",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_ZB_BR",
+      "window": "S42_PSNickEh30_ZB_Qualifier_BR",
+      "eventStart": "2026-09-30T16:00:00-05:00",
+      "eventEnd": "2026-09-30T19:00:00-05:00",
+      "updatedAt": "2026-09-30T20:29:40.010485+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "cf99ee40548c3e": {
+      "eventId": "cf99ee40548c3e",
+      "name": "PlayStation NickEh30 Icon Cup Battle Royale",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_BR",
+      "window": "S42_PSNickEh30_Qualifier_BR",
+      "eventStart": "2026-09-30T16:00:00-05:00",
+      "eventEnd": "2026-09-30T19:00:00-05:00",
+      "updatedAt": "2026-09-30T20:29:40.273691+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
