@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-01T19:03:18.088109+00:00",
+  "updatedAt": "2026-10-01T19:23:42.871028+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:8+recent:0",
-    "BR": "fresh:10+recent:0"
+    "BR": "fresh:9+recent:1"
   },
   "events": [
     {
@@ -234,7 +234,7 @@
       "id": "78a8da0da64691",
       "name": "Console Zero Build Solo Victory Cup",
       "region": "BR",
-      "format": "DUO",
+      "format": "SOLO",
       "mode": "BR",
       "zeroBuild": true,
       "platform": "CONSOLE",
