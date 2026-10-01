@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T22:08:59.543909+00:00",
+  "updatedAt": "2026-10-01T22:25:26.233546+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "f81806eea8456e": {
@@ -251,6 +251,22 @@
       "eventStart": "2026-09-30T18:00:00-05:00",
       "eventEnd": "2026-09-30T21:00:00-05:00",
       "updatedAt": "2026-10-01T05:55:07.292171+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "5cf16fb969ae8b": {
+      "eventId": "5cf16fb969ae8b",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC",
+      "window": "S42_PerformanceEvaluation_Event6Round1_NAC",
+      "eventStart": "2026-10-01T18:00:00-05:00",
+      "eventEnd": "2026-10-01T20:00:00-05:00",
+      "updatedAt": "2026-10-01T22:25:26.233473+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
