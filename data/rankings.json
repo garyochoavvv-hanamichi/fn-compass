@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T05:36:57.803706+00:00",
+  "updatedAt": "2026-10-01T05:55:07.292250+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "f81806eea8456e": {
@@ -234,7 +234,7 @@
       "window": "S42_PSNickEh30_Qualifier_NAC",
       "eventStart": "2026-09-30T18:00:00-05:00",
       "eventEnd": "2026-09-30T21:00:00-05:00",
-      "updatedAt": "2026-10-01T05:36:56.928257+00:00",
+      "updatedAt": "2026-10-01T05:54:53.486088+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -250,7 +250,7 @@
       "window": "S42_PSNickEh30_ZB_Qualifier_NAC",
       "eventStart": "2026-09-30T18:00:00-05:00",
       "eventEnd": "2026-09-30T21:00:00-05:00",
-      "updatedAt": "2026-10-01T05:36:57.803628+00:00",
+      "updatedAt": "2026-10-01T05:55:07.292171+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
