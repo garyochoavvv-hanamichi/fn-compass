@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-01T02:37:35.720713+00:00",
+  "updatedAt": "2026-10-01T02:54:18.662970+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:0",
-    "BR": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fresh:6+recent:2",
+    "BR": "fresh:10+recent:2"
   },
   "events": [
     {
@@ -217,6 +217,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
     },
     {
+      "id": "2320efffdbfe38",
+      "name": "Mobile Reload (Mini Venture) Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-03T17:00:00-05:00",
+      "end": "2026-10-03T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event3_Round1_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
+    },
+    {
       "id": "71a4b8c6c5e152",
       "name": "Mobile Reload (Mini Venture) Victory Cup",
       "region": "BR",
@@ -229,6 +243,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event3_Round2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
+    },
+    {
+      "id": "67cea34c953bd5",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-03T18:00:00-05:00",
+      "end": "2026-10-03T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event5Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
     },
     {
       "id": "78a8da0da64691",
