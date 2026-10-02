@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-02T22:54:47.799535+00:00",
+  "updatedAt": "2026-10-02T23:08:17.128324+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:9+recent:3"
+    "BR": "fresh:10+recent:3"
   },
   "events": [
     {
@@ -285,6 +285,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event5Round2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "e17a213db953c9",
+      "name": "Arenas Test Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-04T12:00:00-05:00",
+      "end": "2026-10-04T14:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event6_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_BR"
     },
     {
       "id": "08c991c041ad8e",
