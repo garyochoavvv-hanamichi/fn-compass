@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T21:35:57.093631+00:00",
+  "updatedAt": "2026-10-02T21:51:53.954885+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "d79ef2c30b7308": {
@@ -202,7 +202,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event1_Round1_BR",
       "eventStart": "2026-10-02T16:00:00-05:00",
       "eventEnd": "2026-10-02T18:00:00-05:00",
-      "updatedAt": "2026-10-02T21:35:57.093533+00:00",
+      "updatedAt": "2026-10-02T21:51:53.954809+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
