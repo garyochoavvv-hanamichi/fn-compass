@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-02T13:01:02.719910+00:00",
+  "updatedAt": "2026-10-02T13:23:02.377580+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:8+recent:2",
+    "NAC": "fresh:6+recent:4",
     "BR": "fresh:9+recent:3"
   },
   "events": [
@@ -234,7 +234,7 @@
       "id": "96d8a58c983f90",
       "name": "FNCS Solos Qualifiers",
       "region": "NAC",
-      "format": "DUO",
+      "format": "SOLO",
       "mode": "BR",
       "zeroBuild": false,
       "platform": "MULTI",
