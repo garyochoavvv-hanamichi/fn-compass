@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-03T14:36:10.584368+00:00",
+  "updatedAt": "2026-10-03T18:38:17.011242+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:7+recent:2",
-    "BR": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fresh:7+recent:1",
+    "BR": "fresh:10+recent:3"
   },
   "events": [
-    {
-      "id": "7f6b4425750428",
-      "name": "Solo Reload Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-02T21:00:00-05:00",
-      "end": "2026-10-02T21:45:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event1_Round2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC"
-    },
     {
       "id": "09501852565162",
       "name": "Console Zero Build Solo Victory Cup",
@@ -290,7 +276,7 @@
       "id": "b4929bd2fbe018",
       "name": "FNCS Solos Qualifiers",
       "region": "BR",
-      "format": "SOLO",
+      "format": "DUO",
       "mode": "BR",
       "zeroBuild": false,
       "platform": "MULTI",
@@ -299,6 +285,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual1Round3_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_BR"
+    },
+    {
+      "id": "f49b65f6cc356c",
+      "name": "Duos Reload Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-04T16:00:00-05:00",
+      "end": "2026-10-04T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos_ZB?round=S42_RankedCupReloadDuos_ZB_Event5_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_ZB_BR"
     }
   ]
 }
