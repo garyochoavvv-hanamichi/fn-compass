@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-03T10:37:24.179481+00:00",
+  "updatedAt": "2026-10-03T11:09:18.158933+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:10+recent:4"
+    "NAC": "fresh:7+recent:3",
+    "BR": "fallback:13 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "a28c4c7ad01755",
-      "name": "Solo Reload Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-02T16:00:00-05:00",
-      "end": "2026-10-02T18:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event1_Round1_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
-    },
     {
       "id": "b613571220492f",
       "name": "Solo Reload Victory Cup",
