@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T03:24:50.491775+00:00",
+  "updatedAt": "2026-10-03T03:53:50.904288+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "d79ef2c30b7308": {
@@ -218,7 +218,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event1_Round1_NAC",
       "eventStart": "2026-10-02T18:00:00-05:00",
       "eventEnd": "2026-10-02T20:00:00-05:00",
-      "updatedAt": "2026-10-03T03:24:48.431368+00:00",
+      "updatedAt": "2026-10-03T03:53:48.950565+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -234,7 +234,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event1_Round2_BR",
       "eventStart": "2026-10-02T19:00:00-05:00",
       "eventEnd": "2026-10-02T19:45:00-05:00",
-      "updatedAt": "2026-10-03T03:24:49.101256+00:00",
+      "updatedAt": "2026-10-03T03:53:49.212597+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -250,7 +250,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event1_Round2_NAC",
       "eventStart": "2026-10-02T21:00:00-05:00",
       "eventEnd": "2026-10-02T21:45:00-05:00",
-      "updatedAt": "2026-10-03T03:24:50.491695+00:00",
+      "updatedAt": "2026-10-03T03:53:50.904184+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
