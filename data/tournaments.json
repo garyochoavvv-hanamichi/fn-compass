@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-04T23:01:09.884407+00:00",
+  "updatedAt": "2026-10-04T23:18:42.752101+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fresh:6+recent:2",
     "BR": "fresh:10+recent:2"
   },
   "events": [
@@ -215,6 +215,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event6_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_NAC"
+    },
+    {
+      "id": "c2d5a7e6d42b24",
+      "name": "Solo Ranked Cup (Zero Build)",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-05T18:00:00-05:00",
+      "end": "2026-10-05T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event6_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_NAC"
     },
     {
       "id": "9a8ec352550d92",
