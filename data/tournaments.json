@@ -1,67 +1,11 @@
 {
-  "updatedAt": "2026-10-04T13:01:50.240316+00:00",
+  "updatedAt": "2026-10-04T18:21:50.653492+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fallback:5 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "96d8a58c983f90",
-      "name": "FNCS Solos Qualifiers",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-03T18:00:00-05:00",
-      "end": "2026-10-03T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual1Round2_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_NAC"
-    },
-    {
-      "id": "40324dd2293049",
-      "name": "Duos Ranked Cup (Zero Build)",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-03T18:00:00-05:00",
-      "end": "2026-10-03T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event5_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_NAC"
-    },
-    {
-      "id": "39f24b129b0a95",
-      "name": "Duos Ranked Cup (Battle Royale)",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-03T18:00:00-05:00",
-      "end": "2026-10-03T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event5_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_NAC"
-    },
-    {
-      "id": "8369309fb9ed9c",
-      "name": "Mobile Reload (Mini Venture) Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-03T19:00:00-05:00",
-      "end": "2026-10-03T20:10:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event3_Round2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
-    },
     {
       "id": "e17a213db953c9",
       "name": "Arenas Test Cup",
