@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-04T18:21:50.653492+00:00",
+  "updatedAt": "2026-10-04T21:18:13.405672+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:5 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:10+recent:0"
+    "NAC": "fresh:5+recent:1",
+    "BR": "fresh:10+recent:2"
   },
   "events": [
     {
@@ -35,20 +35,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
     },
     {
-      "id": "ded065a6056f91",
-      "name": "Arenas Test Cup",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-04T14:00:00-05:00",
-      "end": "2026-10-04T16:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event6_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_NAC"
-    },
-    {
       "id": "9b48d122c02824",
       "name": "Reload ZB Duos Cash Cup",
       "region": "NAC",
@@ -61,6 +47,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event4Round1_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_NAC"
+    },
+    {
+      "id": "ded065a6056f91",
+      "name": "Arenas Test Cup",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-04T14:00:00-05:00",
+      "end": "2026-10-04T16:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event6_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_NAC"
     },
     {
       "id": "b4929bd2fbe018",
@@ -189,6 +189,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_BR"
     },
     {
+      "id": "15907a533ce111",
+      "name": "FNCS Solos Qualifiers",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-05T18:00:00-05:00",
+      "end": "2026-10-05T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual2Round1Day1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_NAC"
+    },
+    {
       "id": "9a8ec352550d92",
       "name": "FNCS Solos Qualifiers",
       "region": "BR",
@@ -215,6 +229,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event6_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_BR"
+    },
+    {
+      "id": "d651fb2244396d",
+      "name": "Solo Reload Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-06T16:00:00-05:00",
+      "end": "2026-10-06T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event6_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR"
+    },
+    {
+      "id": "7a9da2e7794605",
+      "name": "PlayStation NickEh30 Icon Cup Battle Royale",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "CONSOLE",
+      "start": "2026-10-07T16:00:00-05:00",
+      "end": "2026-10-07T18:40:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PSNickEh30?round=S42_PSNickEh30_Final_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_BR"
     }
   ]
 }
