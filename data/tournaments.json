@@ -1,53 +1,11 @@
 {
-  "updatedAt": "2026-10-05T13:58:40.215903+00:00",
+  "updatedAt": "2026-10-05T14:24:11.274838+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:3",
+    "NAC": "fresh:6+recent:0",
     "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "9d5e8fbda41677",
-      "name": "FNCS Solos Qualifiers",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-04T18:00:00-05:00",
-      "end": "2026-10-04T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual1Round3_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_NAC"
-    },
-    {
-      "id": "0d3035bf92b66d",
-      "name": "Duos Reload Ranked Cup (Battle Royale)",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-04T18:00:00-05:00",
-      "end": "2026-10-04T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event5_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_NAC"
-    },
-    {
-      "id": "7450e5422e5044",
-      "name": "Duos Reload Ranked Cup (Zero Build)",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-04T18:00:00-05:00",
-      "end": "2026-10-04T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos_ZB?round=S42_RankedCupReloadDuos_ZB_Event5_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_ZB_NAC"
-    },
     {
       "id": "18a1cf3dfd31ac",
       "name": "FNCS Solos Qualifiers",
