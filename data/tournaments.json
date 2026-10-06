@@ -1,53 +1,11 @@
 {
-  "updatedAt": "2026-10-06T11:50:00.888098+00:00",
+  "updatedAt": "2026-10-06T12:02:46.421045+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:3",
-    "BR": "fresh:10+recent:3"
+    "NAC": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "18a1cf3dfd31ac",
-      "name": "FNCS Solos Qualifiers",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-05T16:00:00-05:00",
-      "end": "2026-10-05T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual2Round1Day1_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_BR"
-    },
-    {
-      "id": "36e3c06aaa3613",
-      "name": "Solo Ranked Cup (Battle Royale)",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-05T16:00:00-05:00",
-      "end": "2026-10-05T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event6_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_BR"
-    },
-    {
-      "id": "0441a1e34c7ddf",
-      "name": "Solo Ranked Cup (Zero Build)",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-05T16:00:00-05:00",
-      "end": "2026-10-05T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event6_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_BR"
-    },
     {
       "id": "15907a533ce111",
       "name": "FNCS Solos Qualifiers",
