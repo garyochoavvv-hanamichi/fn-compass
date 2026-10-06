@@ -1,53 +1,11 @@
 {
-  "updatedAt": "2026-10-06T13:50:35.034088+00:00",
+  "updatedAt": "2026-10-06T14:05:58.926669+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:3",
+    "NAC": "fresh:6+recent:0",
     "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "15907a533ce111",
-      "name": "FNCS Solos Qualifiers",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-05T18:00:00-05:00",
-      "end": "2026-10-05T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual2Round1Day1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_NAC"
-    },
-    {
-      "id": "279d20c3786961",
-      "name": "Solo Ranked Cup (Battle Royale)",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-05T18:00:00-05:00",
-      "end": "2026-10-05T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event6_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_NAC"
-    },
-    {
-      "id": "c2d5a7e6d42b24",
-      "name": "Solo Ranked Cup (Zero Build)",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-05T18:00:00-05:00",
-      "end": "2026-10-05T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event6_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_NAC"
-    },
     {
       "id": "9a8ec352550d92",
       "name": "FNCS Solos Qualifiers",
