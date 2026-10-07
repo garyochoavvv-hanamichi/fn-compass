@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T22:04:40.043493+00:00",
+  "updatedAt": "2026-10-07T22:22:19.403846+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "e17a213db953c9": {
@@ -362,7 +362,23 @@
       "window": "S42_PSNickEh30_Final_BR",
       "eventStart": "2026-10-07T16:00:00-05:00",
       "eventEnd": "2026-10-07T18:40:00-05:00",
-      "updatedAt": "2026-10-07T22:04:40.043415+00:00",
+      "updatedAt": "2026-10-07T22:22:18.647698+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "a586afb93fcb86": {
+      "eventId": "a586afb93fcb86",
+      "name": "PlayStation NickEh30 Icon Cup Battle Royale",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_NAC",
+      "window": "S42_PSNickEh30_Final_NAC",
+      "eventStart": "2026-10-07T18:00:00-05:00",
+      "eventEnd": "2026-10-07T20:40:00-05:00",
+      "updatedAt": "2026-10-07T22:22:19.403708+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
