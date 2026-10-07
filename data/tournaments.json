@@ -1,53 +1,11 @@
 {
-  "updatedAt": "2026-10-07T13:50:06.625774+00:00",
+  "updatedAt": "2026-10-07T14:03:23.718666+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:3",
+    "NAC": "fresh:6+recent:0",
     "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "238d7affef2b3a",
-      "name": "FNCS Solos Qualifiers",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-06T18:00:00-05:00",
-      "end": "2026-10-06T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloQualifiers?round=S42_FNCSSoloQualifiers_Qual2Round1Day2_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloQualifiers_NAC"
-    },
-    {
-      "id": "cf42030db86abc",
-      "name": "Solo Reload Ranked Cup (Battle Royale)",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-06T18:00:00-05:00",
-      "end": "2026-10-06T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event6_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_NAC"
-    },
-    {
-      "id": "27042a5bcb54ac",
-      "name": "Solo Reload Ranked Cup (Zero Build)",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-06T18:00:00-05:00",
-      "end": "2026-10-06T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event6_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
-    },
     {
       "id": "7a9da2e7794605",
       "name": "PlayStation NickEh30 Icon Cup Battle Royale",
