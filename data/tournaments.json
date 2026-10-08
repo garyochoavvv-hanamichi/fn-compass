@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-08T17:36:51.330375+00:00",
+  "updatedAt": "2026-10-08T17:54:51.088926+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:0",
+    "NAC": "fresh:8+recent:1",
     "BR": "fresh:10+recent:0"
   },
   "events": [
@@ -91,6 +91,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
     },
     {
+      "id": "899a9176dc0bba",
+      "name": "Street Fighter Mobile Cup",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-09T17:00:00-05:00",
+      "end": "2026-10-09T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterMobileCup?round=S42_StreetFighterMobileCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterMobileCup_NAC"
+    },
+    {
       "id": "4a2b65a39ee761",
       "name": "Reload ZB Duos Cash Cup",
       "region": "NAC",
@@ -108,7 +122,7 @@
       "id": "729e60fdd390ab",
       "name": "Solo Reload Victory Cup",
       "region": "NAC",
-      "format": "DUO",
+      "format": "SOLO",
       "mode": "RELOAD",
       "zeroBuild": false,
       "platform": "MULTI",
@@ -117,6 +131,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event2_Round1_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC"
+    },
+    {
+      "id": "985a3ef174b35e",
+      "name": "Street Fighter Cup Zero Build Reload",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-09T18:00:00-05:00",
+      "end": "2026-10-09T20:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterCup?round=S42_StreetFighterCup_ZB_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterCup_NAC"
+    },
+    {
+      "id": "ac7a413c327bbb",
+      "name": "Street Fighter Cup Reload",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-09T18:00:00-05:00",
+      "end": "2026-10-09T20:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterCup?round=S42_StreetFighterCup_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterCup_NAC"
     },
     {
       "id": "bd772847b993ec",
