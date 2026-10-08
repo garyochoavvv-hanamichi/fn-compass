@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T22:12:32.605838+00:00",
+  "updatedAt": "2026-10-08T22:32:48.131887+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "18a1cf3dfd31ac": {
@@ -234,7 +234,39 @@
       "window": "S42_PSNickEh30_ZB_Final_BR",
       "eventStart": "2026-10-08T16:00:00-05:00",
       "eventEnd": "2026-10-08T18:40:00-05:00",
-      "updatedAt": "2026-10-08T22:12:32.605735+00:00",
+      "updatedAt": "2026-10-08T22:32:46.777310+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "3f2986548f24a5": {
+      "eventId": "3f2986548f24a5",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC",
+      "window": "S42_PerformanceEvaluation_Event7Round1_NAC",
+      "eventStart": "2026-10-08T18:00:00-05:00",
+      "eventEnd": "2026-10-08T20:00:00-05:00",
+      "updatedAt": "2026-10-08T22:32:46.465785+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "8ec8382ac4969e": {
+      "eventId": "8ec8382ac4969e",
+      "name": "PlayStation NickEh30 Icon Cup Zero Build",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_ZB_NAC",
+      "window": "S42_PSNickEh30_ZB_Final_NAC",
+      "eventStart": "2026-10-08T18:00:00-05:00",
+      "eventEnd": "2026-10-08T20:40:00-05:00",
+      "updatedAt": "2026-10-08T22:32:48.131801+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
