@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-08T00:49:58.414312+00:00",
+  "updatedAt": "2026-10-08T01:07:05.070550+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "ded065a6056f91": {
-      "eventId": "ded065a6056f91",
-      "name": "Arenas Test Cup",
-      "region": "NAC",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_NAC",
-      "window": "S42_ArenaTestCup_Event6_NAC",
-      "eventStart": "2026-10-04T14:00:00-05:00",
-      "eventEnd": "2026-10-04T16:00:00-05:00",
-      "updatedAt": "2026-10-05T00:55:36.684574+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "9b48d122c02824": {
       "eventId": "9b48d122c02824",
       "name": "Reload ZB Duos Cash Cup",
@@ -330,7 +314,7 @@
       "window": "S42_PSNickEh30_Final_BR",
       "eventStart": "2026-10-07T16:00:00-05:00",
       "eventEnd": "2026-10-07T18:40:00-05:00",
-      "updatedAt": "2026-10-08T00:49:57.964310+00:00",
+      "updatedAt": "2026-10-08T01:07:03.428571+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -346,7 +330,7 @@
       "window": "S42_PSNickEh30_Final_NAC",
       "eventStart": "2026-10-07T18:00:00-05:00",
       "eventEnd": "2026-10-07T20:40:00-05:00",
-      "updatedAt": "2026-10-08T00:49:58.414195+00:00",
+      "updatedAt": "2026-10-08T01:07:05.070476+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
