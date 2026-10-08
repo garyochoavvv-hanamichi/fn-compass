@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-08T11:36:28.350582+00:00",
+  "updatedAt": "2026-10-08T11:54:26.380433+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:10+recent:1"
+    "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "7a9da2e7794605",
-      "name": "PlayStation NickEh30 Icon Cup Battle Royale",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "CONSOLE",
-      "start": "2026-10-07T16:00:00-05:00",
-      "end": "2026-10-07T18:40:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PSNickEh30?round=S42_PSNickEh30_Final_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_BR"
-    },
     {
       "id": "a586afb93fcb86",
       "name": "PlayStation NickEh30 Icon Cup Battle Royale",
