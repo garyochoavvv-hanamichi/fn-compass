@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-08T05:59:16.082322+00:00",
+  "updatedAt": "2026-10-08T06:27:25.552566+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:1",
+    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
     "BR": "fresh:10+recent:1"
   },
   "events": [
