@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-09T14:18:57.354329+00:00",
+  "updatedAt": "2026-10-09T14:42:09.725713+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:1",
+    "NAC": "fresh:6+recent:3",
     "BR": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
@@ -119,20 +119,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_NAC"
     },
     {
-      "id": "729e60fdd390ab",
-      "name": "Solo Reload Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-09T18:00:00-05:00",
-      "end": "2026-10-09T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event2_Round1_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC"
-    },
-    {
       "id": "985a3ef174b35e",
       "name": "Street Fighter Cup Zero Build Reload",
       "region": "NAC",
@@ -159,6 +145,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterCup?round=S42_StreetFighterCup_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterCup_NAC"
+    },
+    {
+      "id": "729e60fdd390ab",
+      "name": "Solo Reload Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-09T18:00:00-05:00",
+      "end": "2026-10-09T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event2_Round1_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC"
     },
     {
       "id": "bd772847b993ec",
@@ -215,6 +215,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloFastTracks?round=S42_FNCSSoloFastTracks_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloFastTracks_BR"
+    },
+    {
+      "id": "50397a368530ab",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-10T13:00:00-05:00",
+      "end": "2026-10-10T15:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event6Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
+    },
+    {
+      "id": "c27bde41900aa0",
+      "name": "FNCS Solos Fast Track",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-10T14:00:00-05:00",
+      "end": "2026-10-10T15:45:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSoloFastTracks?round=S42_FNCSSoloFastTracks_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSoloFastTracks_NAC"
     },
     {
       "id": "7926014a3a775e",
