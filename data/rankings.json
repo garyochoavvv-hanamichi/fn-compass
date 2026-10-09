@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T04:03:15.540253+00:00",
+  "updatedAt": "2026-10-09T04:25:30.854716+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "15907a533ce111": {
@@ -202,7 +202,7 @@
       "window": "S42_PerformanceEvaluation_Event7Round1_NAC",
       "eventStart": "2026-10-08T18:00:00-05:00",
       "eventEnd": "2026-10-08T20:00:00-05:00",
-      "updatedAt": "2026-10-09T04:03:12.174360+00:00",
+      "updatedAt": "2026-10-09T04:25:30.717225+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -218,13 +218,13 @@
       "window": "S42_PSNickEh30_ZB_Final_NAC",
       "eventStart": "2026-10-08T18:00:00-05:00",
       "eventEnd": "2026-10-08T20:40:00-05:00",
-      "updatedAt": "2026-10-09T04:03:12.728516+00:00",
+      "updatedAt": "2026-10-09T04:25:28.398393+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": null
+      "lastError": "fresh: HTTPError: HTTP Error 422: Unprocessable Entity"
     },
     "51b3621812e420": {
       "eventId": "51b3621812e420",
@@ -234,7 +234,7 @@
       "window": "S42_PerformanceEvaluation_Event7Round2_NAC",
       "eventStart": "2026-10-08T21:00:00-05:00",
       "eventEnd": "2026-10-08T23:00:00-05:00",
-      "updatedAt": "2026-10-09T04:03:15.540170+00:00",
+      "updatedAt": "2026-10-09T04:25:30.854626+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
