@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-09T01:17:41.049591+00:00",
+  "updatedAt": "2026-10-09T01:38:48.057117+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:8+recent:1",
+    "NAC": "fresh:7+recent:2",
     "BR": "fresh:10+recent:3"
   },
   "events": [
@@ -21,20 +21,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_ZB_BR"
     },
     {
-      "id": "3f2986548f24a5",
-      "name": "Fortnite Performance Evaluation",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-08T18:00:00-05:00",
-      "end": "2026-10-08T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluationTrios?round=S42_PerformanceEvaluation_Event7Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC"
-    },
-    {
       "id": "8ec8382ac4969e",
       "name": "PlayStation NickEh30 Icon Cup Zero Build",
       "region": "NAC",
@@ -47,6 +33,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PSNickEh30_ZB?round=S42_PSNickEh30_ZB_Final_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PSNickEh30_ZB_NAC"
+    },
+    {
+      "id": "3f2986548f24a5",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-08T18:00:00-05:00",
+      "end": "2026-10-08T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluationTrios?round=S42_PerformanceEvaluation_Event7Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC"
     },
     {
       "id": "51b3621812e420",
