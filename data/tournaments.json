@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-09T22:33:57.331517+00:00",
+  "updatedAt": "2026-10-09T22:51:51.856207+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:2",
-    "BR": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:4"
   },
   "events": [
     {
@@ -21,20 +21,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterMobileCup_BR"
     },
     {
-      "id": "14ccf29aad314b",
-      "name": "Reload ZB Duos Cash Cup",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-09T16:00:00-05:00",
-      "end": "2026-10-09T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event4Round2_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
-    },
-    {
       "id": "36602a3624bc24",
       "name": "Street Fighter Cup Zero Build Reload",
       "region": "BR",
@@ -43,7 +29,7 @@
       "zeroBuild": true,
       "platform": "MULTI",
       "start": "2026-10-09T16:00:00-05:00",
-      "end": "2026-10-09T18:30:00-05:00",
+      "end": "2026-10-09T19:15:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterCup?round=S42_StreetFighterCup_ZB_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterCup_BR"
@@ -57,10 +43,24 @@
       "zeroBuild": false,
       "platform": "MULTI",
       "start": "2026-10-09T16:00:00-05:00",
-      "end": "2026-10-09T18:30:00-05:00",
+      "end": "2026-10-09T19:15:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterCup?round=S42_StreetFighterCup_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterCup_BR"
+    },
+    {
+      "id": "14ccf29aad314b",
+      "name": "Reload ZB Duos Cash Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-09T16:00:00-05:00",
+      "end": "2026-10-09T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event4Round2_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
     },
     {
       "id": "cbf972f63420fe",
@@ -285,6 +285,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event6_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_BR"
+    },
+    {
+      "id": "3b6cc0b2566d6d",
+      "name": "Duos Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-10T16:00:00-05:00",
+      "end": "2026-10-10T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event6_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
+    },
+    {
+      "id": "63c4e78524ff7d",
+      "name": "Mobile Reload (Mini Venture) Victory Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-10T17:00:00-05:00",
+      "end": "2026-10-10T18:10:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event4_Round2_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
     }
   ]
 }
