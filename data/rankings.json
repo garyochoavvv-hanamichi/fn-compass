@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T17:13:10.844330+00:00",
+  "updatedAt": "2026-10-10T17:29:55.765162+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "7a9da2e7794605": {
@@ -298,7 +298,7 @@
       "window": "S42_ConsoleVCC_SolosZB_Event6Round1_BR",
       "eventStart": "2026-10-10T11:00:00-05:00",
       "eventEnd": "2026-10-10T13:00:00-05:00",
-      "updatedAt": "2026-10-10T17:13:10.100687+00:00",
+      "updatedAt": "2026-10-10T17:29:53.519075+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -314,7 +314,23 @@
       "window": "S42_FNCSSoloFastTracks_BR",
       "eventStart": "2026-10-10T12:00:00-05:00",
       "eventEnd": "2026-10-10T13:45:00-05:00",
-      "updatedAt": "2026-10-10T17:13:10.844235+00:00",
+      "updatedAt": "2026-10-10T17:29:55.187956+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "50397a368530ab": {
+      "eventId": "50397a368530ab",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC",
+      "window": "S42_ConsoleVCC_SolosZB_Event6Round1_NAC",
+      "eventStart": "2026-10-10T13:00:00-05:00",
+      "eventEnd": "2026-10-10T15:00:00-05:00",
+      "updatedAt": "2026-10-10T17:29:55.765083+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
