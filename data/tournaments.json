@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-10T20:18:28.090885+00:00",
+  "updatedAt": "2026-10-10T20:36:35.553548+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:1",
-    "BR": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:3"
   },
   "events": [
     {
@@ -271,6 +271,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos_ZB?round=S42_RankedCupReloadDuos_ZB_Event6_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_ZB_BR"
+    },
+    {
+      "id": "a882156ca50eee",
+      "name": "Duos Reload Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-11T16:00:00-05:00",
+      "end": "2026-10-11T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event6_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_BR"
     }
   ]
 }
