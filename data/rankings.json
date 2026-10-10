@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T17:46:06.113509+00:00",
+  "updatedAt": "2026-10-10T17:58:40.069677+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "7a9da2e7794605": {
@@ -298,7 +298,7 @@
       "window": "S42_ConsoleVCC_SolosZB_Event6Round1_BR",
       "eventStart": "2026-10-10T11:00:00-05:00",
       "eventEnd": "2026-10-10T13:00:00-05:00",
-      "updatedAt": "2026-10-10T17:46:03.242478+00:00",
+      "updatedAt": "2026-10-10T17:58:37.727004+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -314,7 +314,7 @@
       "window": "S42_FNCSSoloFastTracks_BR",
       "eventStart": "2026-10-10T12:00:00-05:00",
       "eventEnd": "2026-10-10T13:45:00-05:00",
-      "updatedAt": "2026-10-10T17:46:06.113422+00:00",
+      "updatedAt": "2026-10-10T17:58:39.082322+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -330,7 +330,7 @@
       "window": "S42_ConsoleVCC_SolosZB_Event6Round1_NAC",
       "eventStart": "2026-10-10T13:00:00-05:00",
       "eventEnd": "2026-10-10T15:00:00-05:00",
-      "updatedAt": "2026-10-10T17:46:05.014644+00:00",
+      "updatedAt": "2026-10-10T17:58:40.069582+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
