@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T04:50:53.918777+00:00",
+  "updatedAt": "2026-10-10T05:03:49.089962+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "238d7affef2b3a": {
@@ -250,7 +250,7 @@
       "window": "S42_ReloadCashCup_DuosZB_Event4Round2_NAC",
       "eventStart": "2026-10-09T18:00:00-05:00",
       "eventEnd": "2026-10-09T20:15:00-05:00",
-      "updatedAt": "2026-10-10T04:50:51.241647+00:00",
+      "updatedAt": "2026-10-10T05:03:48.183170+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -266,7 +266,7 @@
       "window": "S42_StreetFighterCup_ZB_NAC",
       "eventStart": "2026-10-09T18:00:00-05:00",
       "eventEnd": "2026-10-09T20:30:00-05:00",
-      "updatedAt": "2026-10-10T04:50:49.476653+00:00",
+      "updatedAt": "2026-10-10T05:03:45.963880+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -282,7 +282,7 @@
       "window": "S42_StreetFighterCup_NAC",
       "eventStart": "2026-10-09T18:00:00-05:00",
       "eventEnd": "2026-10-09T20:30:00-05:00",
-      "updatedAt": "2026-10-10T04:50:49.024275+00:00",
+      "updatedAt": "2026-10-10T05:03:46.072782+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -330,7 +330,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event2_Round2_NAC",
       "eventStart": "2026-10-09T21:00:00-05:00",
       "eventEnd": "2026-10-09T21:45:00-05:00",
-      "updatedAt": "2026-10-10T04:50:53.918685+00:00",
+      "updatedAt": "2026-10-10T05:03:49.089882+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
