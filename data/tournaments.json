@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-10T11:13:52.545821+00:00",
+  "updatedAt": "2026-10-10T11:31:31.625629+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:13 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fallback:14 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fallback:13 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
     {
@@ -33,34 +33,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterCup?round=S42_StreetFighterCup_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterCup_BR"
-    },
-    {
-      "id": "14ccf29aad314b",
-      "name": "Reload ZB Duos Cash Cup",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-09T16:00:00-05:00",
-      "end": "2026-10-09T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event4Round2_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
-    },
-    {
-      "id": "899a9176dc0bba",
-      "name": "Street Fighter Mobile Cup",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-09T17:00:00-05:00",
-      "end": "2026-10-09T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_StreetFighterMobileCup?round=S42_StreetFighterMobileCup_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_StreetFighterMobileCup_NAC"
     },
     {
       "id": "985a3ef174b35e",
