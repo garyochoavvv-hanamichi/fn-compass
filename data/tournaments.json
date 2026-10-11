@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-11T01:35:25.307790+00:00",
+  "updatedAt": "2026-10-11T01:52:15.431034+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:8 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fresh:5+recent:5",
     "BR": "fresh:10+recent:8"
   },
   "events": [
@@ -257,6 +257,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event5Round1_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
+    },
+    {
+      "id": "795e0d3ed89ada",
+      "name": "Arenas Test Cup",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-11T14:00:00-05:00",
+      "end": "2026-10-11T16:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event7_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_NAC"
+    },
+    {
+      "id": "b04ec210b76944",
+      "name": "Reload ZB Duos Cash Cup",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-11T14:00:00-05:00",
+      "end": "2026-10-11T16:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event5Round1_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_NAC"
     },
     {
       "id": "9c23f813d39b71",
