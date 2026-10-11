@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T16:43:57.372137+00:00",
+  "updatedAt": "2026-10-11T16:59:00.905843+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "39bfc2540e74aa": {
@@ -522,7 +522,7 @@
       "window": "S42_ArenaTestCup_Event7_BR",
       "eventStart": "2026-10-11T12:00:00-05:00",
       "eventEnd": "2026-10-11T14:00:00-05:00",
-      "updatedAt": "2026-10-11T16:43:57.046052+00:00",
+      "updatedAt": "2026-10-11T16:59:00.289383+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -538,7 +538,7 @@
       "window": "S42_ReloadCashCup_DuosZB_Event5Round1_BR",
       "eventStart": "2026-10-11T12:00:00-05:00",
       "eventEnd": "2026-10-11T14:30:00-05:00",
-      "updatedAt": "2026-10-11T16:43:57.372029+00:00",
+      "updatedAt": "2026-10-11T16:59:00.905745+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
