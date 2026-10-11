@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-11T08:58:08.671051+00:00",
+  "updatedAt": "2026-10-11T09:18:25.267621+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:5+recent:6",
-    "BR": "fresh:10+recent:5"
+    "BR": "fresh:10+recent:4"
   },
   "events": [
-    {
-      "id": "aa5d0386a147ac",
-      "name": "Mobile Reload (Mini Venture) Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-10T15:00:00-05:00",
-      "end": "2026-10-10T16:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event4_Round1_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
-    },
     {
       "id": "6db486bbc918a3",
       "name": "Console Zero Build Solo Victory Cup",
