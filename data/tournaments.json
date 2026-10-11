@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-11T05:50:00.683562+00:00",
+  "updatedAt": "2026-10-11T06:02:09.180595+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:5+recent:8",
-    "BR": "fresh:10+recent:8"
+    "BR": "fresh:10+recent:7"
   },
   "events": [
-    {
-      "id": "877bd9bcff56ce",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-10-10T11:00:00-05:00",
-      "end": "2026-10-10T13:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event6Round1_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
-    },
     {
       "id": "aa8dacd1321c6d",
       "name": "FNCS Solos Fast Track",
