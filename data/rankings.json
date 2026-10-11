@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T16:04:49.328807+00:00",
+  "updatedAt": "2026-10-11T16:24:42.788701+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "39bfc2540e74aa": {
@@ -507,6 +507,38 @@
       "eventStart": "2026-10-10T19:00:00-05:00",
       "eventEnd": "2026-10-10T20:10:00-05:00",
       "updatedAt": "2026-10-11T04:56:15.349351+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "0edac0d8e2b143": {
+      "eventId": "0edac0d8e2b143",
+      "name": "Arenas Test Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_BR",
+      "window": "S42_ArenaTestCup_Event7_BR",
+      "eventStart": "2026-10-11T12:00:00-05:00",
+      "eventEnd": "2026-10-11T14:00:00-05:00",
+      "updatedAt": "2026-10-11T16:24:41.303575+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "2018b24c2db9ab": {
+      "eventId": "2018b24c2db9ab",
+      "name": "Reload ZB Duos Cash Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR",
+      "window": "S42_ReloadCashCup_DuosZB_Event5Round1_BR",
+      "eventStart": "2026-10-11T12:00:00-05:00",
+      "eventEnd": "2026-10-11T14:30:00-05:00",
+      "updatedAt": "2026-10-11T16:24:42.788582+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
