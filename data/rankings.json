@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T05:32:50.852667+00:00",
+  "updatedAt": "2026-10-11T05:50:09.163959+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "39bfc2540e74aa": {
@@ -458,7 +458,7 @@
       "window": "S42_FNCSSoloQualifiers_Qual2Round2_NAC",
       "eventStart": "2026-10-10T18:00:00-05:00",
       "eventEnd": "2026-10-10T21:00:00-05:00",
-      "updatedAt": "2026-10-11T05:32:48.439652+00:00",
+      "updatedAt": "2026-10-11T05:50:07.408506+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -474,7 +474,7 @@
       "window": "S42_RankedCupDuos_ZB_Event6_NAC",
       "eventStart": "2026-10-10T18:00:00-05:00",
       "eventEnd": "2026-10-10T21:00:00-05:00",
-      "updatedAt": "2026-10-11T05:32:49.542971+00:00",
+      "updatedAt": "2026-10-11T05:50:07.699280+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -490,7 +490,7 @@
       "window": "S42_RankedCupDuos_Event6_NAC",
       "eventStart": "2026-10-10T18:00:00-05:00",
       "eventEnd": "2026-10-10T21:00:00-05:00",
-      "updatedAt": "2026-10-11T05:32:50.852577+00:00",
+      "updatedAt": "2026-10-11T05:50:09.163895+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
