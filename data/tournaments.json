@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-12T08:44:25.715052+00:00",
+  "updatedAt": "2026-10-12T09:04:01.752658+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:5",
+    "NAC": "fresh:4+recent:6",
     "BR": "fresh:10+recent:3"
   },
   "events": [
-    {
-      "id": "795e0d3ed89ada",
-      "name": "Arenas Test Cup",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-11T14:00:00-05:00",
-      "end": "2026-10-11T16:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event7_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_NAC"
-    },
     {
       "id": "b04ec210b76944",
       "name": "Reload ZB Duos Cash Cup",
