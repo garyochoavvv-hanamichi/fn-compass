@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T20:34:15.978967+00:00",
+  "updatedAt": "2026-10-12T20:56:02.795190+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "e32b8cc8793967": {
@@ -618,7 +618,7 @@
       "window": "S42_RankedCupSolo_Event7_BR",
       "eventStart": "2026-10-12T16:00:00-05:00",
       "eventEnd": "2026-10-12T19:00:00-05:00",
-      "updatedAt": "2026-10-12T20:34:12.557140+00:00",
+      "updatedAt": "2026-10-12T20:55:57.528387+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -634,7 +634,7 @@
       "window": "S42_RankedCupSolo_ZB_Event7_BR",
       "eventStart": "2026-10-12T16:00:00-05:00",
       "eventEnd": "2026-10-12T19:00:00-05:00",
-      "updatedAt": "2026-10-12T20:34:14.709578+00:00",
+      "updatedAt": "2026-10-12T20:55:59.225869+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -650,13 +650,13 @@
       "window": "S42_ReloadCashCup_DuosZB_Event4Round2_mg_BR",
       "eventStart": "2026-10-12T16:00:00-05:00",
       "eventEnd": "2026-10-12T18:15:00-05:00",
-      "updatedAt": "2026-10-12T20:34:12.926011+00:00",
+      "updatedAt": "2026-10-12T20:56:00.280868+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "fresh: HTTPError: HTTP Error 422: Unprocessable Entity"
+      "lastError": null
     },
     "baadf8075732f5": {
       "eventId": "baadf8075732f5",
@@ -666,7 +666,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event3_Round1_BR",
       "eventStart": "2026-10-12T16:00:00-05:00",
       "eventEnd": "2026-10-12T18:00:00-05:00",
-      "updatedAt": "2026-10-12T20:34:15.978863+00:00",
+      "updatedAt": "2026-10-12T20:56:02.795053+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
