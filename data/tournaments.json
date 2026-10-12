@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-12T16:11:23.859729+00:00",
+  "updatedAt": "2026-10-12T16:33:53.085218+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:6 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fresh:7+recent:0",
     "BR": "fresh:10+recent:0"
   },
   "events": [
@@ -159,6 +159,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event7_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR"
+    },
+    {
+      "id": "26f9c93351ba22",
+      "name": "Elite Kado Thorne Cup Reload",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-13T18:00:00-05:00",
+      "end": "2026-10-13T20:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?round=S42_EliteKadoThorneCup_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_EliteKadoThorneCup_NAC"
     },
     {
       "id": "e7a27e1555526c",
