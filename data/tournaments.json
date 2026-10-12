@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-12T00:13:45.152357+00:00",
+  "updatedAt": "2026-10-12T00:47:30.104991+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fallback:5 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:5"
   },
   "events": [
     {
@@ -213,6 +213,76 @@
       "start": "2026-10-12T19:00:00-05:00",
       "end": "2026-10-12T19:45:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event3_Round2_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
+    },
+    {
+      "id": "9ad2eddf768179",
+      "name": "Solo Reload Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-13T16:00:00-05:00",
+      "end": "2026-10-13T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event7_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_BR"
+    },
+    {
+      "id": "d0118987ecea87",
+      "name": "Solo Reload Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-13T16:00:00-05:00",
+      "end": "2026-10-13T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event7_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR"
+    },
+    {
+      "id": "464de146441a2f",
+      "name": "Reload ZB Duos Cash Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-16T16:00:00-05:00",
+      "end": "2026-10-16T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event5Round2_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
+    },
+    {
+      "id": "bd92dac1af53e3",
+      "name": "Solo Reload Victory Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-16T16:00:00-05:00",
+      "end": "2026-10-16T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event4_Round1_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
+    },
+    {
+      "id": "d139071f082931",
+      "name": "Solo Reload Victory Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-16T19:00:00-05:00",
+      "end": "2026-10-16T19:45:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event4_Round2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
     }
