@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-13T17:58:38.016111+00:00",
+  "updatedAt": "2026-10-13T18:25:57.463468+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:10+recent:0"
+    "NAC": "fresh:6+recent:2",
+    "BR": "fresh:10+recent:2"
   },
   "events": [
     {
@@ -38,7 +38,7 @@
       "id": "d0118987ecea87",
       "name": "Solo Reload Ranked Cup (Zero Build)",
       "region": "BR",
-      "format": "DUO",
+      "format": "SOLO",
       "mode": "RELOAD",
       "zeroBuild": true,
       "platform": "MULTI",
@@ -91,6 +91,34 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
     },
     {
+      "id": "2d896f1427786a",
+      "name": "Mobile Test Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-15T15:00:00-05:00",
+      "end": "2026-10-15T16:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileTestCup?round=S42_MobileTestCup_Event1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_BR"
+    },
+    {
+      "id": "3b97ecf52f1e3c",
+      "name": "Mobile Test Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-15T17:00:00-05:00",
+      "end": "2026-10-15T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileTestCup?round=S42_MobileTestCup_Event1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_NAC"
+    },
+    {
       "id": "f1d243e476d925",
       "name": "Fortnite Performance Evaluation",
       "region": "NAC",
@@ -117,6 +145,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluationTrios?round=S42_PerformanceEvaluation_Event8Round2_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC"
+    },
+    {
+      "id": "26f9b164e1c365",
+      "name": "Mobile Test Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-16T15:00:00-05:00",
+      "end": "2026-10-16T16:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileTestCup?round=S42_MobileTestCup_Event2_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_BR"
     },
     {
       "id": "464de146441a2f",
