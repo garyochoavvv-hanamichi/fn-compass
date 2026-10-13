@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-13T07:40:34.832063+00:00",
+  "updatedAt": "2026-10-13T08:01:27.435352+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fallback:11 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fallback:11 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:5"
   },
   "events": [
     {
@@ -313,6 +313,62 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event4_Round2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
+    },
+    {
+      "id": "7209e1bae505c2",
+      "name": "Mobile Reload (Mini Venture) Victory Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-17T15:00:00-05:00",
+      "end": "2026-10-17T16:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event5_Round1_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
+    },
+    {
+      "id": "79fb6a7b9a4d57",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-17T16:00:00-05:00",
+      "end": "2026-10-17T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event7Round1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "7d75e76f95df07",
+      "name": "FNCS Solos Heats",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-17T16:00:00-05:00",
+      "end": "2026-10-17T18:40:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage?round=S42_FNCSSolo_HeatsStage_Heat1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_HeatsStage_BR"
+    },
+    {
+      "id": "de88ce373f90a4",
+      "name": "Duos Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-17T16:00:00-05:00",
+      "end": "2026-10-17T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event7_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_BR"
     }
   ]
 }
