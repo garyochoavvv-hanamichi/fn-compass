@@ -1,39 +1,11 @@
 {
-  "updatedAt": "2026-10-14T13:35:25.593982+00:00",
+  "updatedAt": "2026-10-14T14:09:36.372152+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:2",
+    "NAC": "fresh:6+recent:0",
     "BR": "fresh:10+recent:0"
   },
   "events": [
-    {
-      "id": "e7a27e1555526c",
-      "name": "Solo Reload Ranked Cup (Battle Royale)",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-13T18:00:00-05:00",
-      "end": "2026-10-13T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event7_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_NAC"
-    },
-    {
-      "id": "a65398de0455df",
-      "name": "Solo Reload Ranked Cup (Zero Build)",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-13T18:00:00-05:00",
-      "end": "2026-10-13T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event7_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
-    },
     {
       "id": "2d896f1427786a",
       "name": "Mobile Test Cup",
