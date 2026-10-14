@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-14T11:08:20.425693+00:00",
+  "updatedAt": "2026-10-14T11:42:16.159765+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:3",
-    "BR": "fresh:10+recent:3"
+    "BR": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "5e6c5854baaff1",
-      "name": "Elite Kado Thorne Cup Reload",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-13T16:00:00-05:00",
-      "end": "2026-10-13T18:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_EliteKadoThorneCup?round=S42_EliteKadoThorneCup_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_EliteKadoThorneCup_BR"
-    },
     {
       "id": "9ad2eddf768179",
       "name": "Solo Reload Ranked Cup (Battle Royale)",
