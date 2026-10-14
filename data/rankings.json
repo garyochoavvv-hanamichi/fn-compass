@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T23:54:57.311835+00:00",
+  "updatedAt": "2026-10-14T00:24:46.579842+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "c27bde41900aa0": {
@@ -506,7 +506,7 @@
       "window": "S42_EliteKadoThorneCup_BR",
       "eventStart": "2026-10-13T16:00:00-05:00",
       "eventEnd": "2026-10-13T18:30:00-05:00",
-      "updatedAt": "2026-10-13T23:54:50.759273+00:00",
+      "updatedAt": "2026-10-14T00:24:39.230775+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -522,7 +522,7 @@
       "window": "S42_RankedCupSoloReload_Event7_BR",
       "eventStart": "2026-10-13T16:00:00-05:00",
       "eventEnd": "2026-10-13T19:00:00-05:00",
-      "updatedAt": "2026-10-13T23:54:51.749363+00:00",
+      "updatedAt": "2026-10-14T00:24:40.262859+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -538,7 +538,7 @@
       "window": "S42_RankedCupSoloReload_ZB_Event7_BR",
       "eventStart": "2026-10-13T16:00:00-05:00",
       "eventEnd": "2026-10-13T19:00:00-05:00",
-      "updatedAt": "2026-10-13T23:54:53.165608+00:00",
+      "updatedAt": "2026-10-14T00:24:42.309239+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -554,7 +554,7 @@
       "window": "S42_EliteKadoThorneCup_NAC",
       "eventStart": "2026-10-13T18:00:00-05:00",
       "eventEnd": "2026-10-13T20:30:00-05:00",
-      "updatedAt": "2026-10-13T23:54:54.447341+00:00",
+      "updatedAt": "2026-10-14T00:24:43.081963+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -570,13 +570,13 @@
       "window": "S42_RankedCupSoloReload_Event7_NAC",
       "eventStart": "2026-10-13T18:00:00-05:00",
       "eventEnd": "2026-10-13T21:00:00-05:00",
-      "updatedAt": "2026-10-13T23:54:55.943618+00:00",
+      "updatedAt": "2026-10-14T00:24:44.231401+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "fresh: HTTPError: HTTP Error 503: Service Unavailable"
+      "lastError": null
     },
     "a65398de0455df": {
       "eventId": "a65398de0455df",
@@ -586,7 +586,7 @@
       "window": "S42_RankedCupSoloReload_ZB_Event7_NAC",
       "eventStart": "2026-10-13T18:00:00-05:00",
       "eventEnd": "2026-10-13T21:00:00-05:00",
-      "updatedAt": "2026-10-13T23:54:57.311724+00:00",
+      "updatedAt": "2026-10-14T00:24:46.579750+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,

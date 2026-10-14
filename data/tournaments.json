@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-13T23:54:49.060642+00:00",
+  "updatedAt": "2026-10-14T00:24:36.496166+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:2",
-    "BR": "fresh:10+recent:2"
+    "BR": "fresh:10+recent:3"
   },
   "events": [
     {
@@ -285,6 +285,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event7_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_BR"
+    },
+    {
+      "id": "ccc5c1eb9b1acf",
+      "name": "Duos Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-17T16:00:00-05:00",
+      "end": "2026-10-17T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event7_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
     }
   ]
 }
