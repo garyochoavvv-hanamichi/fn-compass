@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T19:01:03.788712+00:00",
+  "updatedAt": "2026-10-15T19:32:08.944655+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "0fe5f59517823a": {
@@ -235,6 +235,22 @@
       "eventStart": "2026-10-13T18:00:00-05:00",
       "eventEnd": "2026-10-13T21:00:00-05:00",
       "updatedAt": "2026-10-14T05:51:21.539679+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "2d896f1427786a": {
+      "eventId": "2d896f1427786a",
+      "name": "Mobile Test Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_BR",
+      "window": "S42_MobileTestCup_Event1_BR",
+      "eventStart": "2026-10-15T15:00:00-05:00",
+      "eventEnd": "2026-10-15T16:15:00-05:00",
+      "updatedAt": "2026-10-15T19:32:08.944576+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
