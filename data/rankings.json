@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T21:41:53.069632+00:00",
+  "updatedAt": "2026-10-16T22:10:07.943923+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "5e6c5854baaff1": {
@@ -170,7 +170,7 @@
       "window": "S42_MobileTestCup_Event2_BR",
       "eventStart": "2026-10-16T15:00:00-05:00",
       "eventEnd": "2026-10-16T16:15:00-05:00",
-      "updatedAt": "2026-10-16T21:41:49.420753+00:00",
+      "updatedAt": "2026-10-16T22:10:04.535864+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -186,7 +186,7 @@
       "window": "S42_ReloadCashCup_DuosZB_Event5Round2_BR",
       "eventStart": "2026-10-16T16:00:00-05:00",
       "eventEnd": "2026-10-16T18:15:00-05:00",
-      "updatedAt": "2026-10-16T21:41:50.289421+00:00",
+      "updatedAt": "2026-10-16T22:10:05.255637+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -202,7 +202,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event4_Round1_BR",
       "eventStart": "2026-10-16T16:00:00-05:00",
       "eventEnd": "2026-10-16T18:00:00-05:00",
-      "updatedAt": "2026-10-16T21:41:51.735963+00:00",
+      "updatedAt": "2026-10-16T22:10:07.198316+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -218,7 +218,7 @@
       "window": "S42_MobileTestCup_Event2_NAC",
       "eventStart": "2026-10-16T17:00:00-05:00",
       "eventEnd": "2026-10-16T18:15:00-05:00",
-      "updatedAt": "2026-10-16T21:41:53.069559+00:00",
+      "updatedAt": "2026-10-16T22:10:07.943828+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
