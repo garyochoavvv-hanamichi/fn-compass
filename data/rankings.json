@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T07:03:04.950297+00:00",
+  "updatedAt": "2026-10-16T07:40:44.449822+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "5e6c5854baaff1": {
@@ -154,13 +154,13 @@
       "window": "S42_PerformanceEvaluation_Event8Round2_NAC",
       "eventStart": "2026-10-15T21:00:00-05:00",
       "eventEnd": "2026-10-15T23:00:00-05:00",
-      "updatedAt": "2026-10-16T07:03:04.950202+00:00",
+      "updatedAt": "2026-10-16T07:40:44.449720+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": null
+      "lastError": "fresh: HTTPError: HTTP Error 403: Forbidden"
     }
   }
 }
