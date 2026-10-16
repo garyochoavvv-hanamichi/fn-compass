@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T23:52:40.100881+00:00",
+  "updatedAt": "2026-10-16T00:13:03.280178+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "0fe5f59517823a": {
@@ -250,7 +250,7 @@
       "window": "S42_MobileTestCup_Event1_BR",
       "eventStart": "2026-10-15T15:00:00-05:00",
       "eventEnd": "2026-10-15T16:15:00-05:00",
-      "updatedAt": "2026-10-15T23:52:36.951503+00:00",
+      "updatedAt": "2026-10-16T00:13:01.274839+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -266,7 +266,7 @@
       "window": "S42_MobileTestCup_Event1_NAC",
       "eventStart": "2026-10-15T17:00:00-05:00",
       "eventEnd": "2026-10-15T18:15:00-05:00",
-      "updatedAt": "2026-10-15T23:52:37.439178+00:00",
+      "updatedAt": "2026-10-16T00:13:01.369505+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -282,7 +282,7 @@
       "window": "S42_PerformanceEvaluation_Event8Round1_NAC",
       "eventStart": "2026-10-15T18:00:00-05:00",
       "eventEnd": "2026-10-15T20:00:00-05:00",
-      "updatedAt": "2026-10-15T23:52:40.100808+00:00",
+      "updatedAt": "2026-10-16T00:13:03.280097+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
