@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-16T08:50:52.660757+00:00",
+  "updatedAt": "2026-10-16T09:19:31.665570+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:6+recent:3",
-    "BR": "fresh:10+recent:2"
+    "BR": "fresh:10+recent:1"
   },
   "events": [
-    {
-      "id": "2d896f1427786a",
-      "name": "Mobile Test Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-15T15:00:00-05:00",
-      "end": "2026-10-15T16:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileTestCup?round=S42_MobileTestCup_Event1_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_BR"
-    },
     {
       "id": "3b97ecf52f1e3c",
       "name": "Mobile Test Cup",
