@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-16T10:59:23.378253+00:00",
+  "updatedAt": "2026-10-16T11:30:46.119090+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:10+recent:1"
+    "NAC": "fallback:8 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fallback:11 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "3b97ecf52f1e3c",
-      "name": "Mobile Test Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-15T17:00:00-05:00",
-      "end": "2026-10-15T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileTestCup?round=S42_MobileTestCup_Event1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_NAC"
-    },
     {
       "id": "f1d243e476d925",
       "name": "Fortnite Performance Evaluation",
