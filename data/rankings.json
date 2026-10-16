@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T04:41:35.115176+00:00",
+  "updatedAt": "2026-10-16T05:13:00.995841+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "e7f6527c9b3433": {
@@ -27,22 +27,6 @@
       "eventStart": "2026-10-12T18:00:00-05:00",
       "eventEnd": "2026-10-12T21:00:00-05:00",
       "updatedAt": "2026-10-13T05:54:56.348093+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
-    "17e074fcff1a08": {
-      "eventId": "17e074fcff1a08",
-      "name": "Solo Reload Victory Cup",
-      "region": "NAC",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC",
-      "window": "S42_ReloadSoloVictoryCup_Event3_Round1_NAC",
-      "eventStart": "2026-10-12T18:00:00-05:00",
-      "eventEnd": "2026-10-12T20:00:00-05:00",
-      "updatedAt": "2026-10-13T04:53:50.782068+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -218,7 +202,7 @@
       "window": "S42_PerformanceEvaluation_Event8Round2_NAC",
       "eventStart": "2026-10-15T21:00:00-05:00",
       "eventEnd": "2026-10-15T23:00:00-05:00",
-      "updatedAt": "2026-10-16T04:41:35.115092+00:00",
+      "updatedAt": "2026-10-16T05:13:00.995754+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
