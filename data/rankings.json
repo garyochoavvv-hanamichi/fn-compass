@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T00:56:44.487825+00:00",
+  "updatedAt": "2026-10-16T01:28:13.579001+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "0fe5f59517823a": {
@@ -266,7 +266,7 @@
       "window": "S42_MobileTestCup_Event1_NAC",
       "eventStart": "2026-10-15T17:00:00-05:00",
       "eventEnd": "2026-10-15T18:15:00-05:00",
-      "updatedAt": "2026-10-16T00:56:43.482674+00:00",
+      "updatedAt": "2026-10-16T01:28:11.799952+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -282,7 +282,23 @@
       "window": "S42_PerformanceEvaluation_Event8Round1_NAC",
       "eventStart": "2026-10-15T18:00:00-05:00",
       "eventEnd": "2026-10-15T20:00:00-05:00",
-      "updatedAt": "2026-10-16T00:56:44.487678+00:00",
+      "updatedAt": "2026-10-16T01:28:11.966554+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "d44f3f63bfd926": {
+      "eventId": "d44f3f63bfd926",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC",
+      "window": "S42_PerformanceEvaluation_Event8Round2_NAC",
+      "eventStart": "2026-10-15T21:00:00-05:00",
+      "eventEnd": "2026-10-15T23:00:00-05:00",
+      "updatedAt": "2026-10-16T01:28:13.578857+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
