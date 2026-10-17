@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-17T05:01:49.577285+00:00",
+  "updatedAt": "2026-10-17T05:29:51.513503+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "26f9c93351ba22": {
-      "eventId": "26f9c93351ba22",
-      "name": "Elite Kado Thorne Cup Reload",
-      "region": "NAC",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_EliteKadoThorneCup_NAC",
-      "window": "S42_EliteKadoThorneCup_NAC",
-      "eventStart": "2026-10-13T18:00:00-05:00",
-      "eventEnd": "2026-10-13T20:30:00-05:00",
-      "updatedAt": "2026-10-14T05:16:16.668477+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "e7a27e1555526c": {
       "eventId": "e7a27e1555526c",
       "name": "Solo Reload Ranked Cup (Battle Royale)",
@@ -234,7 +218,7 @@
       "window": "S42_ReloadSoloVictoryCup_Event4_Round2_NAC",
       "eventStart": "2026-10-16T21:00:00-05:00",
       "eventEnd": "2026-10-16T21:45:00-05:00",
-      "updatedAt": "2026-10-17T05:01:49.577198+00:00",
+      "updatedAt": "2026-10-17T05:29:51.513409+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
