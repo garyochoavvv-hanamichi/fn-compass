@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T17:54:38.033078+00:00",
+  "updatedAt": "2026-10-17T18:15:52.220995+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "2d896f1427786a": {
@@ -202,7 +202,23 @@
       "window": "S42_FNCSSolo_HeatsStage_Heat1_BR",
       "eventStart": "2026-10-17T12:00:00-05:00",
       "eventEnd": "2026-10-17T14:40:00-05:00",
-      "updatedAt": "2026-10-17T17:54:38.032986+00:00",
+      "updatedAt": "2026-10-17T18:15:51.920241+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "0d92dd5622f4f5": {
+      "eventId": "0d92dd5622f4f5",
+      "name": "FNCS Solos Heats",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_HeatsStage_NAC",
+      "window": "S42_FNCSSolo_HeatsStage_Heat1_NAC",
+      "eventStart": "2026-10-17T14:00:00-05:00",
+      "eventEnd": "2026-10-17T16:40:00-05:00",
+      "updatedAt": "2026-10-17T18:15:52.220910+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
