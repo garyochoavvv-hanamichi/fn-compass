@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-17T09:58:29.784168+00:00",
+  "updatedAt": "2026-10-17T10:25:02.919797+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:7+recent:5",
-    "BR": "fallback:13 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:6"
   },
   "events": [
     {
@@ -355,6 +355,48 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event7Round2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "2720d924cf261d",
+      "name": "Arenas Test Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-18T12:00:00-05:00",
+      "end": "2026-10-18T14:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event8_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_BR"
+    },
+    {
+      "id": "65c8dca545a1d7",
+      "name": "FNCS Solos Heats",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-18T12:00:00-05:00",
+      "end": "2026-10-18T14:40:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage?round=S42_FNCSSolo_HeatsStage_Heat2_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_HeatsStage_BR"
+    },
+    {
+      "id": "f1917e86488a1e",
+      "name": "Reload ZB Duos Cash Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-18T12:00:00-05:00",
+      "end": "2026-10-18T14:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event6Round1_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
     }
   ]
 }
