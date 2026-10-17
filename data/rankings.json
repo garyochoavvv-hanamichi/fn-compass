@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T18:49:16.876052+00:00",
+  "updatedAt": "2026-10-17T19:10:26.014035+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "2d896f1427786a": {
@@ -202,7 +202,7 @@
       "window": "S42_FNCSSolo_HeatsStage_Heat1_BR",
       "eventStart": "2026-10-17T12:00:00-05:00",
       "eventEnd": "2026-10-17T14:40:00-05:00",
-      "updatedAt": "2026-10-17T18:49:16.822589+00:00",
+      "updatedAt": "2026-10-17T19:10:24.074209+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -218,7 +218,7 @@
       "window": "S42_FNCSSolo_HeatsStage_Heat1_NAC",
       "eventStart": "2026-10-17T14:00:00-05:00",
       "eventEnd": "2026-10-17T16:40:00-05:00",
-      "updatedAt": "2026-10-17T18:49:16.875976+00:00",
+      "updatedAt": "2026-10-17T19:10:26.013949+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
