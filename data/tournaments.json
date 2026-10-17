@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-17T02:06:13.235110+00:00",
+  "updatedAt": "2026-10-17T02:35:30.223993+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:2",
+    "NAC": "fresh:7+recent:3",
     "BR": "fresh:9+recent:5"
   },
   "events": [
@@ -299,6 +299,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PurgeCup?round=S42_PurgeCup_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PurgeCup_NAC"
+    },
+    {
+      "id": "9561ddefa932fb",
+      "name": "Lady Liberty Cup Zero Build",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-17T18:00:00-05:00",
+      "end": "2026-10-17T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PurgeCup?round=S42_PurgeCup_ZB_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PurgeCup_NAC"
+    },
+    {
+      "id": "8811a2c459ca39",
+      "name": "Duos Ranked Cup (Zero Build)",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-17T18:00:00-05:00",
+      "end": "2026-10-17T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event7_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_NAC"
     },
     {
       "id": "f65be6df39eeac",
