@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-17T14:32:32.995468+00:00",
+  "updatedAt": "2026-10-17T14:57:22.298941+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:8+recent:1",
+    "NAC": "fresh:8+recent:0",
     "BR": "fresh:9+recent:4"
   },
   "events": [
-    {
-      "id": "325ed6d9c63353",
-      "name": "Solo Reload Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-16T21:00:00-05:00",
-      "end": "2026-10-16T21:45:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event4_Round2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC"
-    },
     {
       "id": "b3ef1e9ca1b9b2",
       "name": "FNCS Solos Heats",
