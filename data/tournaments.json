@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-18T12:39:15.959687+00:00",
+  "updatedAt": "2026-10-18T13:13:53.957007+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:8+recent:7",
-    "BR": "fresh:10+recent:1"
+    "NAC": "fresh:8+recent:5",
+    "BR": "fresh:10+recent:0"
   },
   "events": [
     {
@@ -61,48 +61,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event7_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_NAC"
-    },
-    {
-      "id": "5d8931ca1cbc77",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-10-17T18:00:00-05:00",
-      "end": "2026-10-17T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event7Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
-    },
-    {
-      "id": "4dce2df8b54e86",
-      "name": "Mobile Reload (Mini Venture) Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-17T19:00:00-05:00",
-      "end": "2026-10-17T20:10:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileVictoryCup?round=S42_MobileVictoryCup_Event5_Round2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_NAC"
-    },
-    {
-      "id": "f65be6df39eeac",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-10-17T19:00:00-05:00",
-      "end": "2026-10-17T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event7Round2_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
     },
     {
       "id": "e8ad2e1be2b468",
