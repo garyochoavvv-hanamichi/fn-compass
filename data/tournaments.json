@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-18T00:17:35.380627+00:00",
+  "updatedAt": "2026-10-18T01:02:55.814083+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:2",
-    "BR": "fresh:10+recent:9"
+    "NAC": "fresh:5+recent:3",
+    "BR": "fresh:10+recent:10"
   },
   "events": [
     {
@@ -161,20 +161,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileVictoryCup_ReloadminiV_BR"
     },
     {
-      "id": "5d8931ca1cbc77",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-10-17T18:00:00-05:00",
-      "end": "2026-10-17T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event7Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
-    },
-    {
       "id": "3e439a96be202b",
       "name": "Lady Liberty Cup Battle Royale",
       "region": "NAC",
@@ -229,6 +215,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event7_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_NAC"
+    },
+    {
+      "id": "5d8931ca1cbc77",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-17T18:00:00-05:00",
+      "end": "2026-10-17T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event7Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
     },
     {
       "id": "4dce2df8b54e86",
@@ -383,6 +383,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_MobileTestCup?round=S42_MobileTestCup_Event3_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_BR"
+    },
+    {
+      "id": "26a981ed1426e8",
+      "name": "FNCS Solos Last Chance Qualifier",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-19T16:00:00-05:00",
+      "end": "2026-10-19T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_LCQ?round=S42_FNCSSolo_LastChanceQualifier_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_LCQ_BR"
     }
   ]
 }
