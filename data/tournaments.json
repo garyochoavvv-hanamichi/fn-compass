@@ -1,67 +1,11 @@
 {
-  "updatedAt": "2026-10-18T11:44:40.557604+00:00",
+  "updatedAt": "2026-10-18T12:05:41.074919+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:8+recent:7",
-    "BR": "fallback:15 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fallback:15 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fallback:11 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "778a54e115b8ae",
-      "name": "Lady Liberty Cup Battle Royale",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-17T16:00:00-05:00",
-      "end": "2026-10-17T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PurgeCup?round=S42_PurgeCup_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PurgeCup_BR"
-    },
-    {
-      "id": "d2f3b085ad576f",
-      "name": "Lady Liberty Cup Zero Build",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-17T16:00:00-05:00",
-      "end": "2026-10-17T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PurgeCup?round=S42_PurgeCup_ZB_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PurgeCup_BR"
-    },
-    {
-      "id": "de88ce373f90a4",
-      "name": "Duos Ranked Cup (Zero Build)",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-17T16:00:00-05:00",
-      "end": "2026-10-17T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event7_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_BR"
-    },
-    {
-      "id": "ccc5c1eb9b1acf",
-      "name": "Duos Ranked Cup (Battle Royale)",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-17T16:00:00-05:00",
-      "end": "2026-10-17T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event7_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
-    },
     {
       "id": "3e439a96be202b",
       "name": "Lady Liberty Cup Battle Royale",
