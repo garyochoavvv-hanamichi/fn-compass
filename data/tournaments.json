@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-18T11:16:51.248214+00:00",
+  "updatedAt": "2026-10-18T11:44:40.557604+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:8+recent:7",
-    "BR": "fallback:16 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fallback:15 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
     {
@@ -61,20 +61,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event7_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
-    },
-    {
-      "id": "7d75e76f95df07",
-      "name": "FNCS Solos Heats",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-17T16:00:00-05:00",
-      "end": "2026-10-17T18:40:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage?round=S42_FNCSSolo_HeatsStage_Heat1_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_HeatsStage_BR"
     },
     {
       "id": "3e439a96be202b",
