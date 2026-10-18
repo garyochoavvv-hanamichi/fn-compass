@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-18T03:32:41.158193+00:00",
+  "updatedAt": "2026-10-18T04:04:41.955669+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:3+recent:8",
+    "NAC": "fresh:7+recent:9",
     "BR": "fresh:10+recent:10"
   },
   "events": [
@@ -332,7 +332,7 @@
       "id": "bd40b2213c1ce8",
       "name": "FNCS Solos Heats",
       "region": "NAC",
-      "format": "SOLO",
+      "format": "DUO",
       "mode": "BR",
       "zeroBuild": false,
       "platform": "MULTI",
@@ -341,6 +341,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage?round=S42_FNCSSolo_HeatsStage_Heat2_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_HeatsStage_NAC"
+    },
+    {
+      "id": "e7ad8cb1e7804b",
+      "name": "Reload ZB Duos Cash Cup",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-18T14:00:00-05:00",
+      "end": "2026-10-18T16:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event6Round1_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_NAC"
     },
     {
       "id": "67730319856246",
@@ -411,6 +425,62 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event7_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_BR"
+    },
+    {
+      "id": "dde426c1378183",
+      "name": "Champion Teal Knight FNCS Mobile Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-18T17:00:00-05:00",
+      "end": "2026-10-18T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionTealKnightFNCSCup_Mobile?round=S42_ChampionTealKnightFNCSCup_Mobile_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionTealKnightFNCSCup_Mobile_NAC"
+    },
+    {
+      "id": "033de875757400",
+      "name": "Champion Teal Knight FNCS Cup Zero Build",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-18T18:00:00-05:00",
+      "end": "2026-10-18T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionTealKnightFNCSCup_ZB?round=S42_ChampionTealKnightFNCSCup_ZB_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionTealKnightFNCSCup_ZB_NAC"
+    },
+    {
+      "id": "5fee433c0ed532",
+      "name": "Champion Teal Knight FNCS Cup Battle Royale",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-18T18:00:00-05:00",
+      "end": "2026-10-18T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionTealKnightFNCSCup?round=S42_ChampionTealKnightFNCSCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionTealKnightFNCSCup_NAC"
+    },
+    {
+      "id": "acd05cecf4b9a9",
+      "name": "Duos Reload Ranked Cup (Battle Royale)",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-18T18:00:00-05:00",
+      "end": "2026-10-18T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event7_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_NAC"
     },
     {
       "id": "686e59cecb90df",
