@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-18T20:03:19.951075+00:00",
+  "updatedAt": "2026-10-18T20:30:14.591222+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:8+recent:0",
-    "BR": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:10+recent:3"
   },
   "events": [
     {
@@ -255,6 +255,48 @@
       "start": "2026-10-19T16:00:00-05:00",
       "end": "2026-10-19T19:00:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_LCQ?round=S42_FNCSSolo_LastChanceQualifier_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_LCQ_BR"
+    },
+    {
+      "id": "2ddf80573fc0e2",
+      "name": "Solo Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-19T16:00:00-05:00",
+      "end": "2026-10-19T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo?round=S42_RankedCupSolo_Event8_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_BR"
+    },
+    {
+      "id": "df7187a89c08b0",
+      "name": "Solo Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-19T16:00:00-05:00",
+      "end": "2026-10-19T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSolo_ZB?round=S42_RankedCupSolo_ZB_Event8_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_BR"
+    },
+    {
+      "id": "77d16de6e5d983",
+      "name": "FNCS Solos Last Chance Qualifier",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-20T16:00:00-05:00",
+      "end": "2026-10-20T18:10:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_LCQ?round=S42_FNCSSolo_LastChanceLobby_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_LCQ_BR"
     }
