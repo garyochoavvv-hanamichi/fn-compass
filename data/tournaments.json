@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-19T04:13:39.721657+00:00",
+  "updatedAt": "2026-10-19T04:52:11.393722+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:4+recent:8",
+    "NAC": "fresh:7+recent:8",
     "BR": "fresh:9+recent:8"
   },
   "events": [
@@ -383,6 +383,48 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event8_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR"
+    },
+    {
+      "id": "1db30dcb3b4129",
+      "name": "FNCS Solos Last Chance Qualifier",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-20T18:00:00-05:00",
+      "end": "2026-10-20T20:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_LCQ?round=S42_FNCSSolo_LastChanceLobby_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_LCQ_NAC"
+    },
+    {
+      "id": "3162756012782a",
+      "name": "Solo Reload Ranked Cup (Battle Royale)",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-20T18:00:00-05:00",
+      "end": "2026-10-20T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload?round=S42_RankedCupSoloReload_Event8_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_NAC"
+    },
+    {
+      "id": "7a68dbbf00796d",
+      "name": "Solo Reload Ranked Cup (Zero Build)",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-20T18:00:00-05:00",
+      "end": "2026-10-20T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event8_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
     },
     {
       "id": "a1a85d259d3376",
