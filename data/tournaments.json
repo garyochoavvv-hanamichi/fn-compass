@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-19T10:51:25.385891+00:00",
+  "updatedAt": "2026-10-19T11:18:43.603554+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:7+recent:5",
+    "NAC": "fresh:7+recent:4",
     "BR": "fresh:9+recent:4"
   },
   "events": [
@@ -61,20 +61,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event7_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_BR"
-    },
-    {
-      "id": "dde426c1378183",
-      "name": "Champion Teal Knight FNCS Mobile Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-18T17:00:00-05:00",
-      "end": "2026-10-18T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionTealKnightFNCSCup_Mobile?round=S42_ChampionTealKnightFNCSCup_Mobile_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionTealKnightFNCSCup_Mobile_NAC"
     },
     {
       "id": "033de875757400",
