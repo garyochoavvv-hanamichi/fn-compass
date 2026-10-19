@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-19T08:17:04.795698+00:00",
+  "updatedAt": "2026-10-19T09:00:23.512217+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:7+recent:8",
+    "NAC": "fresh:7+recent:7",
     "BR": "fresh:9+recent:5"
   },
   "events": [
-    {
-      "id": "dbd6142776e532",
-      "name": "Arenas Test Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-18T14:00:00-05:00",
-      "end": "2026-10-18T16:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event8_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_NAC"
-    },
     {
       "id": "bd40b2213c1ce8",
       "name": "FNCS Solos Heats",
