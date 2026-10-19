@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-19T15:21:20.028389+00:00",
+  "updatedAt": "2026-10-19T15:56:40.447259+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:7+recent:0",
-    "BR": "fresh:9+recent:0"
+    "NAC": "fresh:8+recent:0",
+    "BR": "fresh:10+recent:2"
   },
   "events": [
     {
@@ -119,6 +119,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSolo_ZB_NAC"
     },
     {
+      "id": "971221fb057b9c",
+      "name": "Slender Man Mobile Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-20T15:00:00-05:00",
+      "end": "2026-10-20T16:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_SlenderManMobileCup?round=S42_SlenderManMobileCup_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SlenderManMobileCup_BR"
+    },
+    {
       "id": "77d16de6e5d983",
       "name": "FNCS Solos Last Chance Qualifier",
       "region": "BR",
@@ -150,7 +164,7 @@
       "id": "9e6a4a48316cbc",
       "name": "Solo Reload Ranked Cup (Zero Build)",
       "region": "BR",
-      "format": "DUO",
+      "format": "SOLO",
       "mode": "RELOAD",
       "zeroBuild": true,
       "platform": "MULTI",
@@ -159,6 +173,48 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupSoloReload_ZB?round=S42_RankedCupSoloReload_ZB_Event8_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_BR"
+    },
+    {
+      "id": "daf19249154d66",
+      "name": "Slender Man Cup Zero Build Reload",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-20T16:00:00-05:00",
+      "end": "2026-10-20T18:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_SlenderManCup?round=S42_SlenderManCup_ZB_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SlenderManCup_BR"
+    },
+    {
+      "id": "f853df487ea921",
+      "name": "Slender Man Cup Reload",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-20T16:00:00-05:00",
+      "end": "2026-10-20T18:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_SlenderManCup?round=S42_SlenderManCup_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SlenderManCup_BR"
+    },
+    {
+      "id": "93e52a9ff4bc41",
+      "name": "Slender Man Mobile Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-20T17:00:00-05:00",
+      "end": "2026-10-20T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_SlenderManMobileCup?round=S42_SlenderManMobileCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SlenderManMobileCup_NAC"
     },
     {
       "id": "1db30dcb3b4129",
