@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-19T09:00:23.512217+00:00",
+  "updatedAt": "2026-10-19T09:37:45.216554+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:7+recent:7",
-    "BR": "fresh:9+recent:5"
+    "NAC": "fresh:7+recent:6",
+    "BR": "fallback:13 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
     {
@@ -19,34 +19,6 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_HeatsStage?round=S42_FNCSSolo_HeatsStage_Heat2_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_HeatsStage_NAC"
-    },
-    {
-      "id": "e7ad8cb1e7804b",
-      "name": "Reload ZB Duos Cash Cup",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-18T14:00:00-05:00",
-      "end": "2026-10-18T16:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event6Round1_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_NAC"
-    },
-    {
-      "id": "67730319856246",
-      "name": "Champion Teal Knight FNCS Mobile Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MOBILE",
-      "start": "2026-10-18T15:00:00-05:00",
-      "end": "2026-10-18T16:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ChampionTealKnightFNCSCup_Mobile?round=S42_ChampionTealKnightFNCSCup_Mobile_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ChampionTealKnightFNCSCup_Mobile_BR"
     },
     {
       "id": "866cf669e6e2f9",
