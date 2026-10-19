@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T04:52:18.745599+00:00",
+  "updatedAt": "2026-10-19T05:22:47.378222+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "d44f3f63bfd926": {
@@ -650,7 +650,7 @@
       "window": "S42_ChampionTealKnightFNCSCup_ZB_NAC",
       "eventStart": "2026-10-18T18:00:00-05:00",
       "eventEnd": "2026-10-18T21:00:00-05:00",
-      "updatedAt": "2026-10-19T04:52:13.548733+00:00",
+      "updatedAt": "2026-10-19T05:22:43.187525+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -666,7 +666,7 @@
       "window": "S42_ChampionTealKnightFNCSCup_NAC",
       "eventStart": "2026-10-18T18:00:00-05:00",
       "eventEnd": "2026-10-18T21:00:00-05:00",
-      "updatedAt": "2026-10-19T04:52:14.051431+00:00",
+      "updatedAt": "2026-10-19T05:22:44.315922+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -682,7 +682,7 @@
       "window": "S42_RankedCupReloadDuos_Event7_NAC",
       "eventStart": "2026-10-18T18:00:00-05:00",
       "eventEnd": "2026-10-18T21:00:00-05:00",
-      "updatedAt": "2026-10-19T04:52:15.747428+00:00",
+      "updatedAt": "2026-10-19T05:22:45.500174+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -698,7 +698,7 @@
       "window": "S42_RankedCupReloadDuos_ZB_Event7_NAC",
       "eventStart": "2026-10-18T18:00:00-05:00",
       "eventEnd": "2026-10-18T21:00:00-05:00",
-      "updatedAt": "2026-10-19T04:52:18.745496+00:00",
+      "updatedAt": "2026-10-19T05:22:47.378115+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
