@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-20T23:23:53.261482+00:00",
+  "updatedAt": "2026-10-21T01:49:28.826709+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:1",
-    "BR": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fresh:4+recent:4",
+    "BR": "fresh:8+recent:6"
   },
   "events": [
     {
@@ -105,20 +105,6 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SlenderManMobileCup_NAC"
     },
     {
-      "id": "1db30dcb3b4129",
-      "name": "FNCS Solos Last Chance Qualifier",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-20T18:00:00-05:00",
-      "end": "2026-10-20T20:10:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_LCQ?round=S42_FNCSSolo_LastChanceLobby_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_LCQ_NAC"
-    },
-    {
       "id": "3162756012782a",
       "name": "Solo Reload Ranked Cup (Battle Royale)",
       "region": "NAC",
@@ -147,6 +133,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupSoloReload_ZB_NAC"
     },
     {
+      "id": "1db30dcb3b4129",
+      "name": "FNCS Solos Last Chance Qualifier",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-20T18:00:00-05:00",
+      "end": "2026-10-20T20:10:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_LCQ?round=S42_FNCSSolo_LastChanceLobby_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_LCQ_NAC"
+    },
+    {
       "id": "3deb80524238f2",
       "name": "Slender Man Cup Zero Build Reload",
       "region": "NAC",
@@ -173,6 +173,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_SlenderManCup?round=S42_SlenderManCup_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_SlenderManCup_NAC"
+    },
+    {
+      "id": "54b6d4bfb06417",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-22T18:00:00-05:00",
+      "end": "2026-10-22T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluationTrios?round=S42_PerformanceEvaluation_Event9Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC"
+    },
+    {
+      "id": "8b1a5f4d7b697e",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-22T21:00:00-05:00",
+      "end": "2026-10-22T23:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluationTrios?round=S42_PerformanceEvaluation_Event9Round2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC"
     },
     {
       "id": "a1a85d259d3376",
@@ -215,6 +243,76 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event5_Round2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
+    },
+    {
+      "id": "a037ce6fee4b78",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-24T16:00:00-05:00",
+      "end": "2026-10-24T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "3e1835371e6f64",
+      "name": "Duos Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-24T16:00:00-05:00",
+      "end": "2026-10-24T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event8_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_BR"
+    },
+    {
+      "id": "040b9e0c1f1118",
+      "name": "Duos Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-24T16:00:00-05:00",
+      "end": "2026-10-24T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event8_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
+    },
+    {
+      "id": "2be7e2a6961568",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-24T19:00:00-05:00",
+      "end": "2026-10-24T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round2_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "9963e1a43defe7",
+      "name": "Duos Reload Ranked Cup (Zero Build)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-25T16:00:00-05:00",
+      "end": "2026-10-25T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos_ZB?round=S42_RankedCupReloadDuos_ZB_Event8_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_ZB_BR"
     }
   ]
 }
