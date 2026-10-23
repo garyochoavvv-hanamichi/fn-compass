@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-10-23T09:36:49.100495+00:00",
+  "updatedAt": "2026-10-23T14:26:12.055365+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:2",
-    "BR": "fresh:5+recent:3"
+    "NAC": "fresh:5+recent:3",
+    "BR": "fresh:7+recent:3"
   },
   "events": [
-    {
-      "id": "54b6d4bfb06417",
-      "name": "Fortnite Performance Evaluation",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-22T18:00:00-05:00",
-      "end": "2026-10-22T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_PerformanceEvaluationTrios?round=S42_PerformanceEvaluation_Event9Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC"
-    },
     {
       "id": "8b1a5f4d7b697e",
       "name": "Fortnite Performance Evaluation",
@@ -119,18 +105,60 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC"
     },
     {
-      "id": "a037ce6fee4b78",
+      "id": "ce776e7eaab963",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-24T11:00:00-05:00",
+      "end": "2026-10-24T13:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "fea6cd2db33cd0",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-24T13:00:00-05:00",
+      "end": "2026-10-24T15:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
+    },
+    {
+      "id": "4e826c2ac12510",
       "name": "Console Zero Build Solo Victory Cup",
       "region": "BR",
       "format": "DUO",
       "mode": "BR",
       "zeroBuild": true,
       "platform": "CONSOLE",
-      "start": "2026-10-24T16:00:00-05:00",
-      "end": "2026-10-24T18:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_BR",
+      "start": "2026-10-24T14:00:00-05:00",
+      "end": "2026-10-24T15:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
+    },
+    {
+      "id": "cfe01f9693dd4f",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-24T16:00:00-05:00",
+      "end": "2026-10-24T17:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
     },
     {
       "id": "3e1835371e6f64",
@@ -159,6 +187,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event8_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_BR"
+    },
+    {
+      "id": "a037ce6fee4b78",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-24T16:00:00-05:00",
+      "end": "2026-10-24T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
     },
     {
       "id": "bf474f4c209352",
