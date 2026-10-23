@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-10-22T21:27:40.499320+00:00",
+  "updatedAt": "2026-10-23T00:06:35.471056+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "686e59cecb90df": {
-      "eventId": "686e59cecb90df",
-      "name": "Mobile Test Cup",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_MobileTestCup_BR",
-      "window": "S42_MobileTestCup_Event3_BR",
-      "eventStart": "2026-10-19T15:00:00-05:00",
-      "eventEnd": "2026-10-19T16:15:00-05:00",
-      "updatedAt": "2026-10-19T22:57:02.504323+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "26a981ed1426e8": {
       "eventId": "26a981ed1426e8",
       "name": "FNCS Solos Last Chance Qualifier",
@@ -315,6 +299,22 @@
       "eventStart": "2026-10-20T18:00:00-05:00",
       "eventEnd": "2026-10-20T20:30:00-05:00",
       "updatedAt": "2026-10-21T01:49:44.692396+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "54b6d4bfb06417": {
+      "eventId": "54b6d4bfb06417",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_PerformanceEvaluationTrios_NAC",
+      "window": "S42_PerformanceEvaluation_Event9Round1_NAC",
+      "eventStart": "2026-10-22T18:00:00-05:00",
+      "eventEnd": "2026-10-22T20:00:00-05:00",
+      "updatedAt": "2026-10-23T00:06:35.470957+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
