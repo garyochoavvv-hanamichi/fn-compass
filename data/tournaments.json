@@ -1,81 +1,11 @@
 {
-  "updatedAt": "2026-10-24T09:03:33.704980+00:00",
+  "updatedAt": "2026-10-24T13:16:26.764904+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:7+recent:6"
+    "NAC": "fresh:6+recent:2",
+    "BR": "fresh:7+recent:3"
   },
   "events": [
-    {
-      "id": "a1a85d259d3376",
-      "name": "Reload ZB Duos Cash Cup",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-23T16:00:00-05:00",
-      "end": "2026-10-23T18:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event6Round2_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_BR"
-    },
-    {
-      "id": "ce0d483d700a3b",
-      "name": "Solo Reload Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-23T16:00:00-05:00",
-      "end": "2026-10-23T18:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event5_Round1_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
-    },
-    {
-      "id": "178a08c1ebd13b",
-      "name": "Reload ZB Duos Cash Cup",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-23T18:00:00-05:00",
-      "end": "2026-10-23T20:15:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadCashCup_DuosZB?round=S42_ReloadCashCup_DuosZB_Event6Round2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadCashCup_DuosZB_NAC"
-    },
-    {
-      "id": "feeedfed790a8f",
-      "name": "Solo Reload Victory Cup",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-23T18:00:00-05:00",
-      "end": "2026-10-23T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event5_Round1_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_NAC"
-    },
-    {
-      "id": "711153a5efd1c9",
-      "name": "Solo Reload Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-23T19:00:00-05:00",
-      "end": "2026-10-23T19:45:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ReloadSoloVictoryCup?round=S42_ReloadSoloVictoryCup_Event5_Round2_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ReloadSoloVictoryCup_BR"
-    },
     {
       "id": "d92cc281a0156b",
       "name": "Solo Reload Victory Cup",
@@ -231,18 +161,46 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
     },
     {
-      "id": "bf474f4c209352",
-      "name": "Console Zero Build Solo Victory Cup",
+      "id": "ddc4c75faab0ef",
+      "name": "HamiKuma Mobile Cup",
       "region": "NAC",
-      "format": "DUO",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-24T17:00:00-05:00",
+      "end": "2026-10-24T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_HamiKumaMobileCup?round=S42_HamiKumaMobileCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_HamiKumaMobileCup_NAC"
+    },
+    {
+      "id": "2363bf9bfd549f",
+      "name": "HamiKuma Cup Battle Royale",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-24T18:00:00-05:00",
+      "end": "2026-10-24T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_HamiKumaCup?round=S42_HamiKumaCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_HamiKumaCup_NAC"
+    },
+    {
+      "id": "3ab23cb3181b27",
+      "name": "HamiKuma Cup Zero Build",
+      "region": "NAC",
+      "format": "TRIO",
       "mode": "BR",
       "zeroBuild": true,
-      "platform": "CONSOLE",
+      "platform": "MULTI",
       "start": "2026-10-24T18:00:00-05:00",
-      "end": "2026-10-24T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_NAC",
+      "end": "2026-10-24T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_HamiKumaCup?round=S42_HamiKumaCup_ZB_NAC",
       "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_HamiKumaCup_NAC"
     },
     {
       "id": "7f9bd96da2db96",
@@ -257,6 +215,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event8_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_NAC"
+    },
+    {
+      "id": "bf474f4c209352",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "CONSOLE",
+      "start": "2026-10-24T18:00:00-05:00",
+      "end": "2026-10-24T20:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
     },
     {
       "id": "2be7e2a6961568",
