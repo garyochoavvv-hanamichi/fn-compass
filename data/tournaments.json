@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-24T19:03:30.391011+00:00",
+  "updatedAt": "2026-10-24T21:33:53.912505+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:6+recent:1",
-    "BR": "fresh:8+recent:3"
+    "NAC": "fresh:6+recent:2",
+    "BR": "fresh:7+recent:7"
   },
   "events": [
     {
@@ -203,6 +203,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_NAC"
     },
     {
+      "id": "0de6feaf49222a",
+      "name": "Duos Ranked Cup (Battle Royale)",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-24T18:00:00-05:00",
+      "end": "2026-10-24T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event8_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_NAC"
+    },
+    {
       "id": "bf474f4c209352",
       "name": "Console Zero Build Solo Victory Cup",
       "region": "NAC",
@@ -243,6 +257,48 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaCashCup?round=S42_ArenaCashCup_Event1_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaCashCup_BR"
+    },
+    {
+      "id": "d8b8da465fe194",
+      "name": "Inoxtag Icon Mobile Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-25T15:00:00-05:00",
+      "end": "2026-10-25T16:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_InoxtagIconMobileCup?round=S42_InoxtagIconMobileCup_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_InoxtagIconMobileCup_BR"
+    },
+    {
+      "id": "a3a4ee1a815e49",
+      "name": "Inoxtag Icon Cup Battle Royale",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-25T16:00:00-05:00",
+      "end": "2026-10-25T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_InoxtagIconCup?round=S42_InoxtagIconCup_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_InoxtagIconCup_BR"
+    },
+    {
+      "id": "d31922386099ce",
+      "name": "Inoxtag Icon Cup Zero Build",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-10-25T16:00:00-05:00",
+      "end": "2026-10-25T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_InoxtagIconCup?round=S42_InoxtagIconCup_ZB_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_InoxtagIconCup_BR"
     },
     {
       "id": "9963e1a43defe7",
