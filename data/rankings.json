@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T13:16:26.765502+00:00",
+  "updatedAt": "2026-10-24T16:42:27.864651+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "54b6d4bfb06417": {
@@ -123,6 +123,22 @@
       "eventStart": "2026-10-23T21:00:00-05:00",
       "eventEnd": "2026-10-23T21:45:00-05:00",
       "updatedAt": "2026-10-24T04:28:03.865427+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "ce776e7eaab963": {
+      "eventId": "ce776e7eaab963",
+      "name": "Console Zero Build Solo Victory Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR",
+      "window": "S42_ConsoleVCC_SolosZB_Event8Round1_BR",
+      "eventStart": "2026-10-24T11:00:00-05:00",
+      "eventEnd": "2026-10-24T13:00:00-05:00",
+      "updatedAt": "2026-10-24T16:42:27.864572+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
