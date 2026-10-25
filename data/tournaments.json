@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-25T19:15:27.700684+00:00",
+  "updatedAt": "2026-10-25T21:53:22.257792+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:0",
-    "BR": "fresh:9+recent:1"
+    "NAC": "fresh:6+recent:0",
+    "BR": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
     {
@@ -173,6 +173,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_Final?round=S42_FNCSSolo_Final_Day1_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_Final_BR"
+    },
+    {
+      "id": "4e6334df276d33",
+      "name": "FNCS Solos Finals",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-26T18:00:00-05:00",
+      "end": "2026-10-26T20:40:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_Final?round=S42_FNCSSolo_Final_Day1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_Final_NAC"
     },
     {
       "id": "53502546656f4f",
