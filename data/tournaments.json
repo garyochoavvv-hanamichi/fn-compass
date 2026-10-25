@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-24T23:40:24.784591+00:00",
+  "updatedAt": "2026-10-25T01:40:43.141155+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:8 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:8+recent:6"
+    "NAC": "fresh:5+recent:4",
+    "BR": "fresh:7+recent:10"
   },
   "events": [
     {
@@ -313,6 +313,62 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos_ZB?round=S42_RankedCupReloadDuos_ZB_Event8_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_ZB_BR"
+    },
+    {
+      "id": "e3b653fc409877",
+      "name": "Duos Reload Ranked Cup (Battle Royale)",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-25T16:00:00-05:00",
+      "end": "2026-10-25T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupReloadDuos?round=S42_RankedCupReloadDuos_Event8_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupReloadDuos_BR"
+    },
+    {
+      "id": "54813fa0a0ed77",
+      "name": "Inoxtag Icon Mobile Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-10-25T17:00:00-05:00",
+      "end": "2026-10-25T18:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_InoxtagIconMobileCup?round=S42_InoxtagIconMobileCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_InoxtagIconMobileCup_NAC"
+    },
+    {
+      "id": "764ce07bca2e96",
+      "name": "FNCS Solos Finals",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-26T16:00:00-05:00",
+      "end": "2026-10-26T18:40:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_Final?round=S42_FNCSSolo_Final_Day1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_Final_BR"
+    },
+    {
+      "id": "53502546656f4f",
+      "name": "FNCS Solos Finals",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-10-27T16:00:00-05:00",
+      "end": "2026-10-27T18:40:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_Final?round=S42_FNCSSolo_Final_Day2_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_Final_BR"
     }
   ]
 }
