@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T16:37:25.922795+00:00",
+  "updatedAt": "2026-10-25T19:15:30.309468+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "54b6d4bfb06417": {
@@ -410,7 +410,23 @@
       "window": "S42_ArenaCashCup_Event1_BR",
       "eventStart": "2026-10-25T12:00:00-05:00",
       "eventEnd": "2026-10-25T14:00:00-05:00",
-      "updatedAt": "2026-10-25T16:37:25.922708+00:00",
+      "updatedAt": "2026-10-25T19:15:30.281174+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "d8b8da465fe194": {
+      "eventId": "d8b8da465fe194",
+      "name": "Inoxtag Icon Mobile Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_InoxtagIconMobileCup_BR",
+      "window": "S42_InoxtagIconMobileCup_BR",
+      "eventStart": "2026-10-25T15:00:00-05:00",
+      "eventEnd": "2026-10-25T16:15:00-05:00",
+      "updatedAt": "2026-10-25T19:15:30.309367+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,

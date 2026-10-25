@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-25T16:37:24.284579+00:00",
+  "updatedAt": "2026-10-25T19:15:27.700684+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:5+recent:0",
-    "BR": "fresh:7+recent:1"
+    "BR": "fresh:9+recent:1"
   },
   "events": [
     {
@@ -187,6 +187,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S42_FNCSSolo_Final?round=S42_FNCSSolo_Final_Day2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_Final_BR"
+    },
+    {
+      "id": "3fa9f195127b3b",
+      "name": "Arenas Test Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-02T16:00:00-05:00",
+      "end": "2026-11-02T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ArenaTestCup?round=S42_ArenaTestCup_Event9_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaTestCup_BR"
+    },
+    {
+      "id": "e6757ef31be304",
+      "name": "FNCS Solos Reload Qualifiers",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-03T16:00:00-05:00",
+      "end": "2026-11-03T18:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReloadQualifiers?round=S43_FNCSSoloReloadQualifiers_Qual1Round1Day1_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReloadQualifiers_BR"
     }
   ]
 }
