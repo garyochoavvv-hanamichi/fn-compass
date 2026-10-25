@@ -1,95 +1,11 @@
 {
-  "updatedAt": "2026-10-25T12:20:53.205364+00:00",
+  "updatedAt": "2026-10-25T16:37:24.284579+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:5+recent:5",
-    "BR": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fresh:5+recent:0",
+    "BR": "fresh:7+recent:1"
   },
   "events": [
-    {
-      "id": "2363bf9bfd549f",
-      "name": "HamiKuma Cup Battle Royale",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-24T18:00:00-05:00",
-      "end": "2026-10-24T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_HamiKumaCup?round=S42_HamiKumaCup_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_HamiKumaCup_NAC"
-    },
-    {
-      "id": "3ab23cb3181b27",
-      "name": "HamiKuma Cup Zero Build",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-24T18:00:00-05:00",
-      "end": "2026-10-24T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_HamiKumaCup?round=S42_HamiKumaCup_ZB_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_HamiKumaCup_NAC"
-    },
-    {
-      "id": "7f9bd96da2db96",
-      "name": "Duos Ranked Cup (Zero Build)",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-10-24T18:00:00-05:00",
-      "end": "2026-10-24T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos_ZB?round=S42_RankedCupDuos_ZB_Event8_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_ZB_NAC"
-    },
-    {
-      "id": "0de6feaf49222a",
-      "name": "Duos Ranked Cup (Battle Royale)",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-10-24T18:00:00-05:00",
-      "end": "2026-10-24T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_RankedCupDuos?round=S42_RankedCupDuos_Event8_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_RankedCupDuos_NAC"
-    },
-    {
-      "id": "bf474f4c209352",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-10-24T18:00:00-05:00",
-      "end": "2026-10-24T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_NAC"
-    },
-    {
-      "id": "2be7e2a6961568",
-      "name": "Console Zero Build Solo Victory Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "BR",
-      "zeroBuild": true,
-      "platform": "CONSOLE",
-      "start": "2026-10-24T19:00:00-05:00",
-      "end": "2026-10-24T20:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S42_ConsoleVCC_SolosZB?round=S42_ConsoleVCC_SolosZB_Event8Round2_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ConsoleVCC_SolosZB_BR"
-    },
     {
       "id": "1144d81d1c6229",
       "name": "Arenas Cash Cup",

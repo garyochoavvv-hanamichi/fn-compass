@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T12:20:53.206025+00:00",
+  "updatedAt": "2026-10-25T16:37:25.922795+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "54b6d4bfb06417": {
@@ -395,6 +395,22 @@
       "eventStart": "2026-10-24T19:00:00-05:00",
       "eventEnd": "2026-10-24T20:00:00-05:00",
       "updatedAt": "2026-10-25T01:41:01.811594+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "1144d81d1c6229": {
+      "eventId": "1144d81d1c6229",
+      "name": "Arenas Cash Cup",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaCashCup_BR",
+      "window": "S42_ArenaCashCup_Event1_BR",
+      "eventStart": "2026-10-25T12:00:00-05:00",
+      "eventEnd": "2026-10-25T14:00:00-05:00",
+      "updatedAt": "2026-10-25T16:37:25.922708+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
