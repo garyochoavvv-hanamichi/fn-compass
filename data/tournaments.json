@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-27T23:13:48.111780+00:00",
+  "updatedAt": "2026-10-28T02:21:27.436779+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:4+recent:0",
-    "BR": "fresh:10+recent:0"
+    "NAC": "fallback:4 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fresh:10+recent:1"
   },
   "events": [
     {
@@ -201,6 +201,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_LCQ?round=S43_FNCSSoloReload_LastChanceLobby_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_LCQ_BR"
+    },
+    {
+      "id": "6ae7acb3b4cff2",
+      "name": "FNCS Solos Reload Finals",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-21T16:00:00-05:00",
+      "end": "2026-11-21T19:45:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_Final?round=S43_FNCSSoloReload_Final_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_Final_BR"
     }
   ]
 }
