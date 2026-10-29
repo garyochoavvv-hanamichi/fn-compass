@@ -1,39 +1,7 @@
 {
-  "updatedAt": "2026-10-28T20:32:00.225068+00:00",
+  "updatedAt": "2026-10-29T00:21:07.161035+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "1144d81d1c6229": {
-      "eventId": "1144d81d1c6229",
-      "name": "Arenas Cash Cup",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_ArenaCashCup_BR",
-      "window": "S42_ArenaCashCup_Event1_BR",
-      "eventStart": "2026-10-25T12:00:00-05:00",
-      "eventEnd": "2026-10-25T14:00:00-05:00",
-      "updatedAt": "2026-10-25T21:53:24.290076+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
-    "d8b8da465fe194": {
-      "eventId": "d8b8da465fe194",
-      "name": "Inoxtag Icon Mobile Cup",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_InoxtagIconMobileCup_BR",
-      "window": "S42_InoxtagIconMobileCup_BR",
-      "eventStart": "2026-10-25T15:00:00-05:00",
-      "eventEnd": "2026-10-25T16:15:00-05:00",
-      "updatedAt": "2026-10-25T23:44:09.353690+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "a3a4ee1a815e49": {
       "eventId": "a3a4ee1a815e49",
       "name": "Inoxtag Icon Cup Battle Royale",
