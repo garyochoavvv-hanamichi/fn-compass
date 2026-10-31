@@ -1,38 +1,5 @@
 {
-  "updatedAt": "2026-10-30T23:47:15.734651+00:00",
+  "updatedAt": "2026-10-31T02:47:29.365698+00:00",
   "source": "Fortnite Tracker public event leaderboards",
-  "events": {
-    "53502546656f4f": {
-      "eventId": "53502546656f4f",
-      "name": "FNCS Solos Finals",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_Final_BR",
-      "window": "S42_FNCSSolo_Final_Day2_BR",
-      "eventStart": "2026-10-27T16:00:00-05:00",
-      "eventEnd": "2026-10-27T18:40:00-05:00",
-      "updatedAt": "2026-10-28T02:21:29.526178+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
-    "6679dcc751c0fa": {
-      "eventId": "6679dcc751c0fa",
-      "name": "FNCS Solos Finals",
-      "region": "NAC",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S42_FNCSSolo_Final_NAC",
-      "window": "S42_FNCSSolo_Final_Day2_NAC",
-      "eventStart": "2026-10-27T18:00:00-05:00",
-      "eventEnd": "2026-10-27T21:10:00-05:00",
-      "updatedAt": "2026-10-28T02:21:30.686960+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    }
-  }
+  "events": {}
 }
