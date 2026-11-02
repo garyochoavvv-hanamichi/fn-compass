@@ -1,39 +1,11 @@
 {
-  "updatedAt": "2026-11-02T09:40:48.917433+00:00",
+  "updatedAt": "2026-11-02T19:48:18.509862+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:7+recent:3",
-    "BR": "fresh:9+recent:8"
+    "NAC": "fresh:7+recent:2",
+    "BR": "fallback:16 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "6c3d6a63045f25",
-      "name": "Solo Reload Test Cup",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-01T16:00:00-05:00",
-      "end": "2026-11-01T18:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SoloReloadTestCup?round=S43_SoloReloadTestCup_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SoloReloadTestCup_BR"
-    },
-    {
-      "id": "b5e7f005f4d365",
-      "name": "Solo Reload Test Cup",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-01T19:00:00-05:00",
-      "end": "2026-11-01T21:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SoloReloadTestCup?round=S43_SoloReloadTestCup_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SoloReloadTestCup_NAC"
-    },
     {
       "id": "3fa9f195127b3b",
       "name": "Arenas Test Cup",
