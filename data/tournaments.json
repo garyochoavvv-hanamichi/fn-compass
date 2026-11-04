@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-03T22:04:22.298219+00:00",
+  "updatedAt": "2026-11-04T02:15:10.171945+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fresh:8+recent:1",
-    "BR": "fresh:9+recent:6"
+    "BR": "fresh:9+recent:8"
   },
   "events": [
     {
@@ -271,6 +271,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupReloadDuos?round=S43_RankedCupReloadDuos_Event2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupReloadDuos_BR"
+    },
+    {
+      "id": "4988721aa5da54",
+      "name": "Duos Reload Ranked Cup Zero Build",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-09T16:00:00-05:00",
+      "end": "2026-11-09T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupReloadDuos_ZB?round=S43_RankedCupReloadDuos_ZB_Event2_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupReloadDuos_ZB_BR"
+    },
+    {
+      "id": "35be5eed6c7cb7",
+      "name": "Squads Victory Cup Battle Royale",
+      "region": "BR",
+      "format": "SQUAD",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-09T16:00:00-05:00",
+      "end": "2026-11-09T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SquadsVictoryCup?round=S43_SquadsVictoryCup_Event1_Round1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SquadsVictoryCup_BR"
     },
     {
       "id": "dbe698662482df",
