@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T17:26:12.125869+00:00",
+  "updatedAt": "2026-11-04T22:47:15.929360+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "6c3d6a63045f25": {
@@ -219,6 +219,22 @@
       "eventStart": "2026-11-03T19:00:00-05:00",
       "eventEnd": "2026-11-03T22:00:00-05:00",
       "updatedAt": "2026-11-04T02:15:20.324472+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "e55f05ab9a51f7": {
+      "eventId": "e55f05ab9a51f7",
+      "name": "FNCS Solos Reload Qualifiers",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReloadQualifiers_BR",
+      "window": "S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_BR",
+      "eventStart": "2026-11-04T16:00:00-05:00",
+      "eventEnd": "2026-11-04T18:30:00-05:00",
+      "updatedAt": "2026-11-04T22:47:15.929273+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
