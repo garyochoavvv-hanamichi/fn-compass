@@ -1,39 +1,11 @@
 {
-  "updatedAt": "2026-11-05T10:16:54.567966+00:00",
+  "updatedAt": "2026-11-05T18:07:15.325307+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:8+recent:1",
-    "BR": "fresh:9+recent:6"
+    "NAC": "fresh:7+recent:4",
+    "BR": "fresh:8+recent:9"
   },
   "events": [
-    {
-      "id": "e55f05ab9a51f7",
-      "name": "FNCS Solos Reload Qualifiers",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-04T16:00:00-05:00",
-      "end": "2026-11-04T18:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReloadQualifiers?round=S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReloadQualifiers_BR"
-    },
-    {
-      "id": "a12a5dd1d2edc9",
-      "name": "FNCS Solos Reload Qualifiers",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-04T19:00:00-05:00",
-      "end": "2026-11-04T21:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReloadQualifiers?round=S43_FNCSSoloReloadQualifiers_Qual1Round1Day2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReloadQualifiers_NAC"
-    },
     {
       "id": "377125823097d4",
       "name": "Fortnite Performance Evaluation",
@@ -63,6 +35,48 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
     },
     {
+      "id": "ca0dc2711d9d7f",
+      "name": "One Piece: Zoro Mobile Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-11-06T15:00:00-05:00",
+      "end": "2026-11-06T16:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceZoroCup_Mobile?round=S43_OnePieceZoroCup_Mobile_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceZoroCup_Mobile_BR"
+    },
+    {
+      "id": "ccf55430375672",
+      "name": "One Piece: Zoro Cup Battle Royale",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-06T16:00:00-05:00",
+      "end": "2026-11-06T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceZoroCup?round=S43_OnePieceZoroCup_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceZoroCup_BR"
+    },
+    {
+      "id": "15d6b1c41ad706",
+      "name": "One Piece: Zoro Cup Zero Build",
+      "region": "BR",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-06T16:00:00-05:00",
+      "end": "2026-11-06T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceZoroCup_ZB?round=S43_OnePieceZoroCup_ZB_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceZoroCup_ZB_BR"
+    },
+    {
       "id": "0a4d174ae42ee8",
       "name": "Arenas Fight Night",
       "region": "BR",
@@ -75,6 +89,48 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ArenaFightNight?round=FightNight_Final1_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ArenaFightNight_BR"
+    },
+    {
+      "id": "9e9054da5f9f74",
+      "name": "One Piece: Zoro Mobile Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-11-06T18:00:00-05:00",
+      "end": "2026-11-06T19:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceZoroCup_Mobile?round=S43_OnePieceZoroCup_Mobile_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceZoroCup_Mobile_NAC"
+    },
+    {
+      "id": "6944e6aedafe1b",
+      "name": "One Piece: Zoro Cup Battle Royale",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-06T19:00:00-05:00",
+      "end": "2026-11-06T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceZoroCup?round=S43_OnePieceZoroCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceZoroCup_NAC"
+    },
+    {
+      "id": "c9f2e4728e1e3a",
+      "name": "One Piece: Zoro Cup Zero Build",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-06T19:00:00-05:00",
+      "end": "2026-11-06T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceZoroCup_ZB?round=S43_OnePieceZoroCup_ZB_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceZoroCup_ZB_NAC"
     },
     {
       "id": "a87a8de6d39399",
