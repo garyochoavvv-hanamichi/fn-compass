@@ -1,39 +1,11 @@
 {
-  "updatedAt": "2026-11-06T11:31:14.187052+00:00",
+  "updatedAt": "2026-11-06T18:21:37.981703+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:11 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: HTTPError: HTTP Error 503: Service Unavailable)",
+    "NAC": "fresh:6+recent:3",
     "BR": "fresh:8+recent:9"
   },
   "events": [
-    {
-      "id": "377125823097d4",
-      "name": "Fortnite Performance Evaluation",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-05T19:00:00-05:00",
-      "end": "2026-11-05T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PerformanceEvaluationTrios?round=S43_PerformanceEvaluation_Event1Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
-    },
-    {
-      "id": "b6a4aa07feced4",
-      "name": "Fortnite Performance Evaluation",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-05T22:00:00-05:00",
-      "end": "2026-11-06T00:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PerformanceEvaluationTrios?round=S43_PerformanceEvaluation_Event1Round2_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
-    },
     {
       "id": "ca0dc2711d9d7f",
       "name": "One Piece: Zoro Mobile Cup",
