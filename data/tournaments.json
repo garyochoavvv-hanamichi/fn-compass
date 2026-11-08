@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-07T23:37:27.112386+00:00",
+  "updatedAt": "2026-11-08T02:42:41.994356+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fallback:6 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fallback:13 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:9+recent:7"
   },
   "events": [
     {
@@ -201,6 +201,48 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SquadsVictoryCup?round=S43_SquadsVictoryCup_Event1_Round2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SquadsVictoryCup_BR"
+    },
+    {
+      "id": "09050990fd38a2",
+      "name": "Arenas Cash Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-10T16:00:00-05:00",
+      "end": "2026-11-10T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ArenaCashCup?round=S43_ArenaCashCup_Event1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ArenaCashCup_BR"
+    },
+    {
+      "id": "06dd1691708df9",
+      "name": "Solo Ranked Cup Zero Build",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-10T16:00:00-05:00",
+      "end": "2026-11-10T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo_ZB?round=S43_RankedCupSolo_ZB_Event2_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_ZB_BR"
+    },
+    {
+      "id": "f1d36cfea061b4",
+      "name": "Solo Ranked Cup Battle Royale",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-10T16:00:00-05:00",
+      "end": "2026-11-10T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo?round=S43_RankedCupSolo_Event2_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_BR"
     },
     {
       "id": "dbe698662482df",
