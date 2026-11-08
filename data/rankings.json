@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T09:33:02.172769+00:00",
+  "updatedAt": "2026-11-08T16:16:14.398743+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "377125823097d4": {
@@ -203,6 +203,22 @@
       "eventStart": "2026-11-07T19:00:00-05:00",
       "eventEnd": "2026-11-07T21:30:00-05:00",
       "updatedAt": "2026-11-08T02:42:47.669221+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "c9096267e2ce6f": {
+      "eventId": "c9096267e2ce6f",
+      "name": "Reload ZB Duos Cash Cup Zero Build",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_BR",
+      "window": "S43_ReloadZBDuosCashCup_Event1Round1_BR",
+      "eventStart": "2026-11-08T12:00:00-05:00",
+      "eventEnd": "2026-11-08T14:30:00-05:00",
+      "updatedAt": "2026-11-08T16:16:14.398665+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
