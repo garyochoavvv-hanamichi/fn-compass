@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T20:37:12.763608+00:00",
+  "updatedAt": "2026-11-09T00:00:37.824698+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "377125823097d4": {
@@ -234,7 +234,7 @@
       "window": "S43_ReloadZBDuosCashCup_Event1Round1_NAC",
       "eventStart": "2026-11-08T15:00:00-05:00",
       "eventEnd": "2026-11-08T17:30:00-05:00",
-      "updatedAt": "2026-11-08T20:36:39.695525+00:00",
+      "updatedAt": "2026-11-09T00:00:35.053295+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -250,13 +250,29 @@
       "window": "S43_FNCSSoloReloadQualifiers_Qual1Round3_BR",
       "eventStart": "2026-11-08T16:00:00-05:00",
       "eventEnd": "2026-11-08T18:30:00-05:00",
-      "updatedAt": "2026-11-08T20:37:12.763524+00:00",
+      "updatedAt": "2026-11-09T00:00:35.320379+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
       "cutoffs": [],
       "rows": [],
-      "lastError": "fresh: TimeoutError: The read operation timed out"
+      "lastError": null
+    },
+    "15dc65f340d63a": {
+      "eventId": "15dc65f340d63a",
+      "name": "FNCS Solos Reload Qualifiers",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReloadQualifiers_NAC",
+      "window": "S43_FNCSSoloReloadQualifiers_Qual1Round3_NAC",
+      "eventStart": "2026-11-08T19:00:00-05:00",
+      "eventEnd": "2026-11-08T21:30:00-05:00",
+      "updatedAt": "2026-11-09T00:00:37.824620+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
     }
   }
 }
