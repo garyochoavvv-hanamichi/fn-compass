@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-11-10T15:40:59.261020+00:00",
+  "updatedAt": "2026-11-10T21:26:24.938651+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:1 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fresh:9+recent:0",
     "BR": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "316d26300630db",
-      "name": "Squads Victory Cup Battle Royale",
-      "region": "NAC",
-      "format": "SQUAD",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-09T22:00:00-05:00",
-      "end": "2026-11-09T23:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SquadsVictoryCup?round=S43_SquadsVictoryCup_Event1_Round2_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SquadsVictoryCup_NAC"
-    },
     {
       "id": "09050990fd38a2",
       "name": "Arenas Cash Cup",
@@ -63,6 +49,76 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_BR"
     },
     {
+      "id": "bc647045a7b077",
+      "name": "Arenas Cash Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-10T19:00:00-05:00",
+      "end": "2026-11-10T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ArenaCashCup?round=S43_ArenaCashCup_Event1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ArenaCashCup_NAC"
+    },
+    {
+      "id": "3e925f0e755a59",
+      "name": "Solo Ranked Cup Zero Build",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-10T19:00:00-05:00",
+      "end": "2026-11-10T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo_ZB?round=S43_RankedCupSolo_ZB_Event2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_ZB_NAC"
+    },
+    {
+      "id": "f12b1db8d32966",
+      "name": "Solo Ranked Cup Battle Royale",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-10T19:00:00-05:00",
+      "end": "2026-11-10T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo?round=S43_RankedCupSolo_Event2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_NAC"
+    },
+    {
+      "id": "a94e369ea64ee8",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-12T19:00:00-05:00",
+      "end": "2026-11-12T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PerformanceEvaluationTrios?round=S43_PerformanceEvaluation_Event2Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
+    },
+    {
+      "id": "318e62ce0d2161",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-12T22:00:00-05:00",
+      "end": "2026-11-13T00:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PerformanceEvaluationTrios?round=S43_PerformanceEvaluation_Event2Round2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
+    },
+    {
       "id": "3a815367514faa",
       "name": "Arenas Fight Night",
       "region": "BR",
@@ -91,6 +147,34 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_BR"
     },
     {
+      "id": "21c82bd4accd9d",
+      "name": "Reload ZB Duos Cash Cup Zero Build",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-13T19:00:00-05:00",
+      "end": "2026-11-13T21:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ReloadZBDuosCashCup?round=S43_ReloadZBDuosCashCup_Event1Round2_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_NAC"
+    },
+    {
+      "id": "84b268bde1048c",
+      "name": "Trios Cash Cup Battle Royale",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-14T15:00:00-05:00",
+      "end": "2026-11-14T18:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_TriosCashCup?round=S43_TriosCashCup_Event2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_TriosCashCup_NAC"
+    },
+    {
       "id": "dbe698662482df",
       "name": "FNCS Solos Reload Heats",
       "region": "BR",
@@ -103,6 +187,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_HeatsStage?round=S43_FNCSSoloReload_HeatsStage_Heat1_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_HeatsStage_BR"
+    },
+    {
+      "id": "616767ef1d3aab",
+      "name": "FNCS Solos Reload Heats",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-14T19:00:00-05:00",
+      "end": "2026-11-14T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_HeatsStage?round=S43_FNCSSoloReload_HeatsStage_Heat1_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_HeatsStage_NAC"
+    },
+    {
+      "id": "241d2f86654d15",
+      "name": "Reload ZB Duos Cash Cup Zero Build",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-15T15:00:00-05:00",
+      "end": "2026-11-15T17:30:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ReloadZBDuosCashCup?round=S43_ReloadZBDuosCashCup_Event2Round1_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_NAC"
     },
     {
       "id": "4bca01265a62b2",
