@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T15:14:14.736296+00:00",
+  "updatedAt": "2026-11-13T21:27:16.559116+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "09050990fd38a2": {
@@ -155,6 +155,38 @@
       "eventStart": "2026-11-12T22:00:00-05:00",
       "eventEnd": "2026-11-13T00:00:00-05:00",
       "updatedAt": "2026-11-13T06:57:45.339958+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "3a815367514faa": {
+      "eventId": "3a815367514faa",
+      "name": "Arenas Fight Night",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ArenaFightNight_BR",
+      "window": "FightNight_Final2_BR",
+      "eventStart": "2026-11-13T15:30:00-05:00",
+      "eventEnd": "2026-11-13T16:00:00-05:00",
+      "updatedAt": "2026-11-13T21:27:15.571437+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "c6ce5059ea2521": {
+      "eventId": "c6ce5059ea2521",
+      "name": "Reload ZB Duos Cash Cup Zero Build",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_BR",
+      "window": "S43_ReloadZBDuosCashCup_Event1Round2_BR",
+      "eventStart": "2026-11-13T16:00:00-05:00",
+      "eventEnd": "2026-11-13T18:15:00-05:00",
+      "updatedAt": "2026-11-13T21:27:16.559021+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
