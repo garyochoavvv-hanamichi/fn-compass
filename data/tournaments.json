@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-11-13T06:57:41.657153+00:00",
+  "updatedAt": "2026-11-13T15:14:14.735530+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:13 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fallback:12 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
     "BR": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "a94e369ea64ee8",
-      "name": "Fortnite Performance Evaluation",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-12T19:00:00-05:00",
-      "end": "2026-11-12T21:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PerformanceEvaluationTrios?round=S43_PerformanceEvaluation_Event2Round1_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
-    },
     {
       "id": "318e62ce0d2161",
       "name": "Fortnite Performance Evaluation",
