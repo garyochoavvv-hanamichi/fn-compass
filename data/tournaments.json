@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-12T19:06:28.120849+00:00",
+  "updatedAt": "2026-11-13T00:17:11.409341+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: HTTPError: HTTP Error 503: Service Unavailable)",
+    "NAC": "fresh:7+recent:6",
     "BR": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
@@ -63,10 +63,52 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_BR"
     },
     {
+      "id": "cce6f43ed3158f",
+      "name": "One Piece: Buggy Mobile Cup",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MOBILE",
+      "start": "2026-11-13T18:00:00-05:00",
+      "end": "2026-11-13T19:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceBuggyCup_Mobile?round=S43_OnePieceBuggyCup_Mobile_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceBuggyCup_Mobile_NAC"
+    },
+    {
+      "id": "3f932498a78deb",
+      "name": "One Piece: Buggy Cup Battle Royale",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-13T19:00:00-05:00",
+      "end": "2026-11-13T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceBuggyCup?round=S43_OnePieceBuggyCup_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceBuggyCup_NAC"
+    },
+    {
+      "id": "6bd023b0ca72d5",
+      "name": "One Piece: Buggy Cup Zero Build",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-13T19:00:00-05:00",
+      "end": "2026-11-13T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_OnePieceBuggyCup_ZB?round=S43_OnePieceBuggyCup_ZB_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_OnePieceBuggyCup_ZB_NAC"
+    },
+    {
       "id": "21c82bd4accd9d",
       "name": "Reload ZB Duos Cash Cup Zero Build",
       "region": "NAC",
-      "format": "TRIO",
+      "format": "DUO",
       "mode": "RELOAD",
       "zeroBuild": true,
       "platform": "MULTI",
