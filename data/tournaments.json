@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-14T19:51:20.779584+00:00",
+  "updatedAt": "2026-11-14T23:28:53.581183+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fresh:10+recent:1",
     "BR": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
@@ -187,6 +187,62 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_LCQ?round=S43_FNCSSoloReload_LastChanceLobby_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_LCQ_BR"
+    },
+    {
+      "id": "c119ff12342131",
+      "name": "FNCS Solos Reload Last Chance Qualifier",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-17T19:00:00-05:00",
+      "end": "2026-11-17T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_LCQ?round=S43_FNCSSoloReload_LastChanceLobby_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_LCQ_NAC"
+    },
+    {
+      "id": "c681639e525614",
+      "name": "Solo Ranked Cup Zero Build",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-17T19:00:00-05:00",
+      "end": "2026-11-17T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo_ZB?round=S43_RankedCupSolo_ZB_Event3_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_ZB_NAC"
+    },
+    {
+      "id": "7543835232ebfd",
+      "name": "Solo Ranked Cup Battle Royale",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-17T19:00:00-05:00",
+      "end": "2026-11-17T22:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo?round=S43_RankedCupSolo_Event3_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_NAC"
+    },
+    {
+      "id": "cdbeae583481fe",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-19T19:00:00-05:00",
+      "end": "2026-11-19T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PerformanceEvaluationTrios?round=S43_PerformanceEvaluation_Event3Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
     },
     {
       "id": "6ae7acb3b4cff2",
