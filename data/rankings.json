@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T23:29:00.194042+00:00",
+  "updatedAt": "2026-11-15T03:00:02.632221+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "077019b48e1e93": {
@@ -186,7 +186,7 @@
       "window": "S43_TriosCashCup_Event2_NAC",
       "eventStart": "2026-11-14T15:00:00-05:00",
       "eventEnd": "2026-11-14T18:00:00-05:00",
-      "updatedAt": "2026-11-14T23:28:57.311591+00:00",
+      "updatedAt": "2026-11-15T03:00:00.701294+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -202,7 +202,7 @@
       "window": "S43_FNCSSoloReload_HeatsStage_Heat1_BR",
       "eventStart": "2026-11-14T16:00:00-05:00",
       "eventEnd": "2026-11-14T19:00:00-05:00",
-      "updatedAt": "2026-11-14T23:28:58.305357+00:00",
+      "updatedAt": "2026-11-15T03:00:00.565837+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -218,7 +218,7 @@
       "window": "S43_FNCSSoloReload_HeatsStage_Heat1_NAC",
       "eventStart": "2026-11-14T19:00:00-05:00",
       "eventEnd": "2026-11-14T22:00:00-05:00",
-      "updatedAt": "2026-11-14T23:29:00.193970+00:00",
+      "updatedAt": "2026-11-15T03:00:02.632140+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
