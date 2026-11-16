@@ -1,25 +1,11 @@
 {
-  "updatedAt": "2026-11-16T01:49:51.781214+00:00",
+  "updatedAt": "2026-11-16T08:39:40.329678+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fallback:11 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "NAC": "fresh:10+recent:2",
+    "BR": "fresh:9+recent:2"
   },
   "events": [
-    {
-      "id": "e022594c2b7160",
-      "name": "Reload ZB Duos Cash Cup Zero Build",
-      "region": "BR",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-11-15T12:00:00-05:00",
-      "end": "2026-11-15T14:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ReloadZBDuosCashCup?round=S43_ReloadZBDuosCashCup_Event2Round1_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_BR"
-    },
     {
       "id": "241d2f86654d15",
       "name": "Reload ZB Duos Cash Cup Zero Build",
@@ -245,6 +231,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
     },
     {
+      "id": "0d5c61f8a7a016",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-19T22:00:00-05:00",
+      "end": "2026-11-20T00:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PerformanceEvaluationTrios?round=S43_PerformanceEvaluation_Event3Round2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC"
+    },
+    {
       "id": "c1beeb588c43a8",
       "name": "Arenas Fight Night",
       "region": "BR",
@@ -262,7 +262,7 @@
       "id": "58bc5c9bc1ade2",
       "name": "Reload ZB Duos Cash Cup Zero Build",
       "region": "BR",
-      "format": "DUO",
+      "format": "TRIO",
       "mode": "RELOAD",
       "zeroBuild": true,
       "platform": "MULTI",
@@ -271,6 +271,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ReloadZBDuosCashCup?round=S43_ReloadZBDuosCashCup_Event2Round2_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_BR"
+    },
+    {
+      "id": "889007c6eab810",
+      "name": "Reload ZB Duos Cash Cup Zero Build",
+      "region": "NAC",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-20T19:00:00-05:00",
+      "end": "2026-11-20T21:15:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ReloadZBDuosCashCup?round=S43_ReloadZBDuosCashCup_Event2Round2_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_NAC"
+    },
+    {
+      "id": "768c2432ccbeb2",
+      "name": "FNCS Solos Reload Finals",
+      "region": "NAC",
+      "format": "SOLO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-21T13:00:00-05:00",
+      "end": "2026-11-21T17:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_Final?round=S43_FNCSSoloReload_Final_NAC",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_Final_NAC"
     },
     {
       "id": "6ae7acb3b4cff2",
@@ -285,6 +313,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_Final?round=S43_FNCSSoloReload_Final_BR",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_Final_BR"
+    },
+    {
+      "id": "095b207a73d7b8",
+      "name": "Trios Cash Cup Battle Royale",
+      "region": "BR",
+      "format": "TRIO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-22T12:00:00-05:00",
+      "end": "2026-11-22T15:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_TriosCashCup?round=S43_TriosCashCup_Event3_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_TriosCashCup_BR"
     }
   ]
 }
