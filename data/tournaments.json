@@ -1,53 +1,11 @@
 {
-  "updatedAt": "2026-11-16T08:39:40.329678+00:00",
+  "updatedAt": "2026-11-16T18:56:33.308155+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:10+recent:2",
-    "BR": "fresh:9+recent:2"
+    "NAC": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fresh:9+recent:1"
   },
   "events": [
-    {
-      "id": "241d2f86654d15",
-      "name": "Reload ZB Duos Cash Cup Zero Build",
-      "region": "NAC",
-      "format": "DUO",
-      "mode": "RELOAD",
-      "zeroBuild": true,
-      "platform": "MULTI",
-      "start": "2026-11-15T15:00:00-05:00",
-      "end": "2026-11-15T17:30:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ReloadZBDuosCashCup?round=S43_ReloadZBDuosCashCup_Event2Round1_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ReloadZBDuosCashCup_NAC"
-    },
-    {
-      "id": "4bca01265a62b2",
-      "name": "FNCS Solos Reload Heats",
-      "region": "BR",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-15T16:00:00-05:00",
-      "end": "2026-11-15T19:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_HeatsStage?round=S43_FNCSSoloReload_HeatsStage_Heat2_BR",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_HeatsStage_BR"
-    },
-    {
-      "id": "46b729b42cacc7",
-      "name": "FNCS Solos Reload Heats",
-      "region": "NAC",
-      "format": "SOLO",
-      "mode": "RELOAD",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-15T19:00:00-05:00",
-      "end": "2026-11-15T22:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_HeatsStage?round=S43_FNCSSoloReload_HeatsStage_Heat2_NAC",
-      "mapUrl": "https://fortnite.gg/?map=reload",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_HeatsStage_NAC"
-    },
     {
       "id": "b61e4a91d40604",
       "name": "FNCS Solos Reload Last Chance Qualifier",
