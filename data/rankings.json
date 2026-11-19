@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T16:58:58.963604+00:00",
+  "updatedAt": "2026-11-19T23:28:54.099462+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "b61e4a91d40604": {
@@ -187,6 +187,22 @@
       "eventStart": "2026-11-17T19:00:00-05:00",
       "eventEnd": "2026-11-17T22:00:00-05:00",
       "updatedAt": "2026-11-18T01:51:28.308588+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "cdbeae583481fe": {
+      "eventId": "cdbeae583481fe",
+      "name": "Fortnite Performance Evaluation",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PerformanceEvaluationTrios_NAC",
+      "window": "S43_PerformanceEvaluation_Event3Round1_NAC",
+      "eventStart": "2026-11-19T19:00:00-05:00",
+      "eventEnd": "2026-11-19T21:00:00-05:00",
+      "updatedAt": "2026-11-19T23:28:54.099391+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
