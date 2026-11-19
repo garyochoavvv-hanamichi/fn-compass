@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-11-18T18:18:46.136160+00:00",
+  "updatedAt": "2026-11-19T00:33:12.753021+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "NAC": "fresh:9+recent:0",
     "BR": "fallback:9 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
@@ -85,7 +85,7 @@
       "zeroBuild": false,
       "platform": "MULTI",
       "start": "2026-11-21T13:00:00-05:00",
-      "end": "2026-11-21T17:00:00-05:00",
+      "end": "2026-11-21T17:20:00-05:00",
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_FNCSSoloReload_Final?round=S43_FNCSSoloReload_Final_NAC",
       "mapUrl": "https://fortnite.gg/?map=reload",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_Final_NAC"
@@ -217,6 +217,20 @@
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupReloadDuos_ZB_NAC"
     },
     {
+      "id": "e84d759d384978",
+      "name": "Squads Victory Cup Battle Royale",
+      "region": "NAC",
+      "format": "SQUAD",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-23T19:00:00-05:00",
+      "end": "2026-11-23T21:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SquadsVictoryCup?round=S43_SquadsVictoryCup_Event2_Round1_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SquadsVictoryCup_NAC"
+    },
+    {
       "id": "217d6ca5cec5bc",
       "name": "Squads Victory Cup Battle Royale",
       "region": "BR",
@@ -229,6 +243,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SquadsVictoryCup?round=S43_SquadsVictoryCup_Event2_Round2_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SquadsVictoryCup_BR"
+    },
+    {
+      "id": "5a6b6b857cb1f5",
+      "name": "Squads Victory Cup Battle Royale",
+      "region": "NAC",
+      "format": "SQUAD",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-23T22:00:00-05:00",
+      "end": "2026-11-23T23:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_SquadsVictoryCup?round=S43_SquadsVictoryCup_Event2_Round2_NAC",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_SquadsVictoryCup_NAC"
     }
   ]
 }
