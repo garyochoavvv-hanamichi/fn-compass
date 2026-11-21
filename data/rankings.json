@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T16:58:20.668149+00:00",
+  "updatedAt": "2026-11-21T22:07:31.595215+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "cdbeae583481fe": {
@@ -75,6 +75,38 @@
       "eventStart": "2026-11-20T19:00:00-05:00",
       "eventEnd": "2026-11-20T21:15:00-05:00",
       "updatedAt": "2026-11-21T02:05:58.029840+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "768c2432ccbeb2": {
+      "eventId": "768c2432ccbeb2",
+      "name": "FNCS Solos Reload Finals",
+      "region": "NAC",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_Final_NAC",
+      "window": "S43_FNCSSoloReload_Final_NAC",
+      "eventStart": "2026-11-21T13:00:00-05:00",
+      "eventEnd": "2026-11-21T17:20:00-05:00",
+      "updatedAt": "2026-11-21T22:07:31.595146+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "6ae7acb3b4cff2": {
+      "eventId": "6ae7acb3b4cff2",
+      "name": "FNCS Solos Reload Finals",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_FNCSSoloReload_Final_BR",
+      "window": "S43_FNCSSoloReload_Final_BR",
+      "eventStart": "2026-11-21T16:00:00-05:00",
+      "eventEnd": "2026-11-21T19:45:00-05:00",
+      "updatedAt": "2026-11-21T22:07:30.880599+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
