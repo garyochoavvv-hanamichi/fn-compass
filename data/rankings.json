@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T22:07:31.595215+00:00",
+  "updatedAt": "2026-11-22T02:11:08.586646+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "cdbeae583481fe": {
@@ -90,7 +90,7 @@
       "window": "S43_FNCSSoloReload_Final_NAC",
       "eventStart": "2026-11-21T13:00:00-05:00",
       "eventEnd": "2026-11-21T17:20:00-05:00",
-      "updatedAt": "2026-11-21T22:07:31.595146+00:00",
+      "updatedAt": "2026-11-22T02:11:07.343478+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
@@ -106,7 +106,7 @@
       "window": "S43_FNCSSoloReload_Final_BR",
       "eventStart": "2026-11-21T16:00:00-05:00",
       "eventEnd": "2026-11-21T19:45:00-05:00",
-      "updatedAt": "2026-11-21T22:07:30.880599+00:00",
+      "updatedAt": "2026-11-22T02:11:08.586568+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
