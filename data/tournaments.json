@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-22T17:27:11.243504+00:00",
+  "updatedAt": "2026-11-22T22:43:04.974232+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fresh:7+recent:0",
-    "BR": "fresh:9+recent:0"
+    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fresh:9+recent:1"
   },
   "events": [
     {
@@ -229,6 +229,20 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_PlayStationCup_ZB?round=S43_PlayStationCup_ZB_Final_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PlayStationCup_ZB_BR"
+    },
+    {
+      "id": "97fcae8ec3db46",
+      "name": "Solo Ranked Cup Zero Build",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-24T16:00:00-05:00",
+      "end": "2026-11-24T19:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo_ZB?round=S43_RankedCupSolo_ZB_Event4_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_ZB_BR"
     }
   ]
 }
