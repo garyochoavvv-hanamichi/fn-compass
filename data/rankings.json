@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T09:47:47.695278+00:00",
+  "updatedAt": "2026-11-22T17:27:13.878136+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
     "cdbeae583481fe": {
@@ -107,6 +107,22 @@
       "eventStart": "2026-11-21T16:00:00-05:00",
       "eventEnd": "2026-11-21T19:45:00-05:00",
       "updatedAt": "2026-11-22T02:11:08.586568+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "095b207a73d7b8": {
+      "eventId": "095b207a73d7b8",
+      "name": "Trios Cash Cup Battle Royale",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_TriosCashCup_BR",
+      "window": "S43_TriosCashCup_Event3_BR",
+      "eventStart": "2026-11-22T12:00:00-05:00",
+      "eventEnd": "2026-11-22T15:00:00-05:00",
+      "updatedAt": "2026-11-22T17:27:13.878057+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
