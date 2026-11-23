@@ -1,39 +1,11 @@
 {
-  "updatedAt": "2026-11-23T03:10:41.577256+00:00",
+  "updatedAt": "2026-11-23T12:41:51.873243+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
-    "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fresh:9+recent:2"
+    "NAC": "fallback:6 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
+    "BR": "fallback:10 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
   },
   "events": [
-    {
-      "id": "095b207a73d7b8",
-      "name": "Trios Cash Cup Battle Royale",
-      "region": "BR",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-22T12:00:00-05:00",
-      "end": "2026-11-22T15:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_TriosCashCup?round=S43_TriosCashCup_Event3_BR",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_TriosCashCup_BR"
-    },
-    {
-      "id": "dec709a6dfad6d",
-      "name": "Trios Cash Cup Battle Royale",
-      "region": "NAC",
-      "format": "TRIO",
-      "mode": "BR",
-      "zeroBuild": false,
-      "platform": "MULTI",
-      "start": "2026-11-22T15:00:00-05:00",
-      "end": "2026-11-22T18:00:00-05:00",
-      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_TriosCashCup?round=S43_TriosCashCup_Event3_NAC",
-      "mapUrl": "https://fortnite.gg/",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_TriosCashCup_NAC"
-    },
     {
       "id": "094ff822780f39",
       "name": "FNCS Solos Reload Finals",
