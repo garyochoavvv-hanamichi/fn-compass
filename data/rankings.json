@@ -1,23 +1,7 @@
 {
-  "updatedAt": "2026-11-27T14:54:00.065329+00:00",
+  "updatedAt": "2026-11-27T23:11:45.167604+00:00",
   "source": "Fortnite Tracker public event leaderboards",
   "events": {
-    "c8339e5a56641f": {
-      "eventId": "c8339e5a56641f",
-      "name": "PlayStation Cup Zero Build",
-      "region": "BR",
-      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_PlayStationCup_ZB_BR",
-      "window": "S43_PlayStationCup_ZB_Final_BR",
-      "eventStart": "2026-11-24T16:00:00-05:00",
-      "eventEnd": "2026-11-24T18:40:00-05:00",
-      "updatedAt": "2026-11-24T20:41:46.351154+00:00",
-      "status": "empty",
-      "participants": null,
-      "trackerUpdated": null,
-      "cutoffs": [],
-      "rows": [],
-      "lastError": null
-    },
     "97fcae8ec3db46": {
       "eventId": "97fcae8ec3db46",
       "name": "Solo Ranked Cup Zero Build",
@@ -59,6 +43,22 @@
       "eventStart": "2026-11-24T19:00:00-05:00",
       "eventEnd": "2026-11-24T21:40:00-05:00",
       "updatedAt": "2026-11-25T03:46:10.882575+00:00",
+      "status": "empty",
+      "participants": null,
+      "trackerUpdated": null,
+      "cutoffs": [],
+      "rows": [],
+      "lastError": null
+    },
+    "2f12b766f2684b": {
+      "eventId": "2f12b766f2684b",
+      "name": "Arenas Fight Night",
+      "region": "BR",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ArenaFightNight_BR",
+      "window": "FightNight_Final4_BR",
+      "eventStart": "2026-11-27T15:30:00-05:00",
+      "eventEnd": "2026-11-27T16:00:00-05:00",
+      "updatedAt": "2026-11-27T23:11:45.167521+00:00",
       "status": "empty",
       "participants": null,
       "trackerUpdated": null,
