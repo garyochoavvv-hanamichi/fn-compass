@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-27T23:11:42.902540+00:00",
+  "updatedAt": "2026-11-28T04:44:44.364344+00:00",
   "source": "Fortnite Competitive official schedule",
   "regionStatus": {
     "NAC": "fallback:7 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)",
-    "BR": "fallback:5 (proxy S39_RankedCupDuos: 0 parsed | proxy S42_RankedCupSolo: 0 parsed | proxy S36_RankedCupTrios: 0 parsed | proxy S39_ReloadEliteSeriesFinal: 0 parsed)"
+    "BR": "fresh:5+recent:5"
   },
   "events": [
     {
@@ -19,6 +19,48 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ArenaFightNight?round=FightNight_Final4_BR",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ArenaFightNight_BR"
+    },
+    {
+      "id": "878c89787db013",
+      "name": "Duos Reload Ranked Cup Battle Royale",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-11-30T08:00:00-05:00",
+      "end": "2026-11-30T11:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupReloadDuos?round=S43_RankedCupReloadDuos_Event5_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupReloadDuos_BR"
+    },
+    {
+      "id": "e29f4b2ca8e815",
+      "name": "Duos Reload Ranked Cup Zero Build",
+      "region": "BR",
+      "format": "DUO",
+      "mode": "RELOAD",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-30T08:00:00-05:00",
+      "end": "2026-11-30T11:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupReloadDuos_ZB?round=S43_RankedCupReloadDuos_ZB_Event5_BR",
+      "mapUrl": "https://fortnite.gg/?map=reload",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupReloadDuos_ZB_BR"
+    },
+    {
+      "id": "fa23694f76b95e",
+      "name": "Zero Build Squads Test Cup",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-11-30T08:00:00-05:00",
+      "end": "2026-11-30T11:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ZeroBuildSquadsTestCup?round=S43_ZeroBuildSquadsTestCup_Event1_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ZeroBuildSquadsTestCup_BR"
     },
     {
       "id": "378910208b0783",
@@ -89,6 +131,34 @@
       "sourceUrl": "https://www.fortnite.com/competitive/events/S43_ZeroBuildSquadsTestCup?round=S43_ZeroBuildSquadsTestCup_Event1_NAC",
       "mapUrl": "https://fortnite.gg/",
       "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_ZeroBuildSquadsTestCup_NAC"
+    },
+    {
+      "id": "6fb155546ad569",
+      "name": "Solo Ranked Cup Zero Build",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": true,
+      "platform": "MULTI",
+      "start": "2026-12-01T08:00:00-05:00",
+      "end": "2026-12-01T11:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo_ZB?round=S43_RankedCupSolo_ZB_Event5_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_ZB_BR"
+    },
+    {
+      "id": "b93357216ba9eb",
+      "name": "Solo Ranked Cup Battle Royale",
+      "region": "BR",
+      "format": "SOLO",
+      "mode": "BR",
+      "zeroBuild": false,
+      "platform": "MULTI",
+      "start": "2026-12-01T08:00:00-05:00",
+      "end": "2026-12-01T11:00:00-05:00",
+      "sourceUrl": "https://www.fortnite.com/competitive/events/S43_RankedCupSolo?round=S43_RankedCupSolo_Event5_BR",
+      "mapUrl": "https://fortnite.gg/",
+      "trackerUrl": "https://fortnitetracker.com/events/epicgames_S43_RankedCupSolo_BR"
     },
     {
       "id": "38f37a6425c857",
